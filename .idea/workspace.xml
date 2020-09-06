@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5a5f0986-22c8-49cc-b861-4e0ff5ccc638" name="Default Changelist" comment="" />
+    <list default="true" id="5a5f0986-22c8-49cc-b861-4e0ff5ccc638" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/team02.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/team02.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/team02/src/app/components/mainpage/header/header.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/team02/src/app/components/mainpage/header/header.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/team02/src/app/components/mainpage/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/team02/src/app/components/mainpage/header/header.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/team02/src/app/components/mainpage/home/home.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/team02/src/app/components/mainpage/home/home.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/team02/src/app/components/mainpage/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/team02/src/app/components/mainpage/home/home.component.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,8 +28,32 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="configurable.group.build" />
+  </component>
+  <component name="RunManager" selected="npm.Angular CLI Server">
+    <configuration name="E2E Tests (team02)" type="JavaScriptTestRunnerProtractor">
+      <config-file value="$PROJECT_DIR$/team02/e2e/protractor.conf.js" />
+      <node-interpreter value="project" />
+      <protractor-options value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular CLI Server" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/team02/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -34,6 +66,7 @@
       <option name="presentableId" value="Default" />
       <updated>1599120959025</updated>
       <workItem from="1599120960882" duration="27000" />
+      <workItem from="1599403382102" duration="2330000" />
     </task>
     <servers />
   </component>

@@ -7,6 +7,10 @@ header{
   width: auto;
 }
 
+.logo2{
+  text-align: right;
+}
+
 .header-wrapper{
   padding: 1rem;
 }
