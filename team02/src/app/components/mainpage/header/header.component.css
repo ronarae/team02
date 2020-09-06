@@ -1,0 +1,34 @@
+header{
+  background-color: floralwhite;
+}
+
+.title{
+  justify-content: center;
+  display: flex;
+  align-content: center;
+}
+
+.logo1 {
+  justify-content: flex-start;
+  display: flex;
+  align-content: center;
+}
+
+.logo2 {
+  justify-content: flex-end;
+  display: flex;
+  align-content: center;
+}
+
+
+.date{
+  justify-content: right;
+  display: flex;
+  align-items: flex-end;
+}
+
+.slogan{
+  justify-content: center;
+  display: flex;
+  align-items: flex-end;
+}

@@ -7,7 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  websiteTitle = 'Amsterdam Events';
+  todayDate;
+
+  constructor() {
+    const date = new Date();
+    const dd = String(date.getDate());
+    const mm = String(date.getMonth() + 1);
+    const yy = String(date.getFullYear());
+
+    this.todayDate = dd + '/' + mm + '/' + yy;
+  }
 
   ngOnInit(): void {
   }
