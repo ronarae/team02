@@ -1,9 +1,18 @@
-.column{
+.column {
   text-align: center;
 }
 
-  .afbeelding2 img, .afbeelding4 img, .afbeelding6 img {
-       height: 180px;
-       width: auto;
-       padding-bottom: 20px;
-     }
+.afbeelding2 img, .afbeelding4 img, .afbeelding6 img {
+  height: 180px;
+  width: auto;
+  padding-bottom: 20px;
+}
+
+label {
+  display: block;
+  font: 1rem 'Fira Sans', sans-serif;
+}
+
+input, label {
+  margin: .4rem 0;
+}
