@@ -1,0 +1,18 @@
+.event-table, .event-tr, .event-td{
+  border: 5px solid navajowhite;
+  text-align: center;
+}
+
+tr.event-tr:hover {
+  background-color:papayawhip;
+}
+
+th.event-th{
+  background-color: navajowhite;
+}
+
+.btn-event{
+  float: right;
+  background-color: darkorange;
+  font-weight: bolder;
+}

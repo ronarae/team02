@@ -1,18 +1,25 @@
-<table style="width:100%">
-  <tr>
-    <th>Title</th>
-    <th>Start</th>
-    <th>End</th>
-    <th>Status</th>
-    <th>Entrance Fee</th>
-    <th>Max Participants</th>
-  </tr>
-  <tr *ngFor= "let event of aEvents">
-    <td>{{ event.title }}</td>
-    <td>{{ event.start.toDateString() }}</td>
-    <td>{{ event.end.toDateString() }}</td>
-    <td>{{ event.status }}</td>
-    <td>{{ event.participationFee }}</td>
-    <td>{{ event.maxParticipants }} </td>
-  </tr>
-</table>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-12">
+      <table class="table event-table">
+        <tr class="event-tr">
+          <th class="event-th">Title</th>
+          <th class="event-th">Start</th>
+          <th class="event-th">End</th>
+          <th class="event-th">Status</th>
+          <th class="event-th">Entrance Fee</th>
+          <th class="event-th">Max Participants</th>
+        </tr>
+        <tr *ngFor= "let event of aEvents" class="event-tr">
+          <td class="event-td">{{ event.title }}</td>
+          <td class="event-td">{{ event.start.toDateString() }}</td>
+          <td class="event-td">{{ event.end.toDateString() }}</td>
+          <td class="event-td">{{ event.status }}</td>
+          <td class="event-td">{{ event.participationFee }}</td>
+          <td class="event-td">{{ event.maxParticipants }} </td>
+        </tr>
+      </table>
+      <button type="button" class="btn btn-event">Add Events</button>
+    </div>
+  </div>
+</div>
