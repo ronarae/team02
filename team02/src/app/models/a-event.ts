@@ -1,15 +1,14 @@
 export class AEvent {
-  private title: string;
-  private start: Date;
-  private end: Date;
-  private description: string;
-  private status: AEventStatus;
-
+  title: string;
+  start: Date;
+  end: Date;
+  description: string;
+  status: AEventStatus;
 
   // tslint:disable-next-line:ban-types
-  private IsTicketed: Boolean;
-  private participationFee: number;
-  private maxParticipants: number;
+  IsTicketed: Boolean;
+  participationFee: number;
+  maxParticipants: number;
 
 }
 

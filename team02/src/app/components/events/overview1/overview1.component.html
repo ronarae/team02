@@ -1,0 +1,18 @@
+<table style="width:100%">
+  <tr>
+    <th>Title</th>
+    <th>Start</th>
+    <th>End</th>
+    <th>Status</th>
+    <th>Entrance Fee</th>
+    <th>Max Participants</th>
+  </tr>
+  <tr *ngFor= "let event of aEvents">
+    <td>{{ event.title }}</td>
+    <td>{{ event.start.toDateString() }}</td>
+    <td>{{ event.end.toDateString() }}</td>
+    <td>{{ event.status }}</td>
+    <td>{{ event.participationFee }}</td>
+    <td>{{ event.maxParticipants }} </td>
+  </tr>
+</table>
