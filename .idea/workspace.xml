@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="5a5f0986-22c8-49cc-b861-4e0ff5ccc638" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/team02/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/team02/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/team02/src/app/components/events/overview1/overview1.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/team02/src/app/components/events/overview1/overview1.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/team02/src/app/components/events/overview1/overview1.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/team02/src/app/components/events/overview1/overview1.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/team02/src/app/components/mainpage/nav-bar/nav-bar.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/team02/src/app/components/mainpage/nav-bar/nav-bar.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/team02/src/app/components/mainpage/nav-bar/nav-bar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/team02/src/app/components/mainpage/nav-bar/nav-bar.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/team02/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/team02/src/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +90,7 @@
       <workItem from="1599407325945" duration="531000" />
       <workItem from="1599420102319" duration="4735000" />
       <workItem from="1599472738140" duration="53000" />
-      <workItem from="1599511619232" duration="3782000" />
+      <workItem from="1599511619232" duration="12294000" />
     </task>
     <servers />
   </component>
@@ -129,5 +127,9 @@
     </state>
     <state x="277" y="55" key="SettingsEditor/0.0.1536.824/1920.182.1366.728@0.0.1536.824" timestamp="1599421908734" />
     <state x="277" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1599410079164" />
+    <state x="492" y="42" key="refactoring.ChangeSignatureDialog" timestamp="1599552503725">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="492" y="42" key="refactoring.ChangeSignatureDialog/0.0.1536.824/1920.182.1366.728@0.0.1536.824" timestamp="1599552503725" />
   </component>
 </project>
