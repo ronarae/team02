@@ -12,7 +12,7 @@ export class AEvent {
 
 }
 
-enum AEventStatus {
+export enum AEventStatus {
   draft = 'DRAFT',
   published = 'PUBLISHED',
   cancelled = 'CANCELLED'

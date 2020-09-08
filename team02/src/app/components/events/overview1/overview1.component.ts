@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {AEvent} from '../../../models/a-event';
+import {AEvent, AEventStatus} from '../../../models/a-event';
 
 @Component({
   selector: 'app-overview1',
@@ -47,8 +47,3 @@ export class Overview1Component implements OnInit {
 
 }
 
-enum AEventStatus {
-  draft = 'DRAFT',
-  published = 'PUBLISHED',
-  cancelled = 'CANCELLED'
-}
