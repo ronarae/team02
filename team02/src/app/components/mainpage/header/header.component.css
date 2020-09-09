@@ -14,3 +14,12 @@ header{
 .header-wrapper{
   padding: 1rem;
 }
+
+.title {
+  font-family: 'Marko One', serif;
+}
+
+.tagLine {
+  font-family: 'Pacifico', cursive;
+
+}

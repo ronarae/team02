@@ -23,7 +23,7 @@ export class Overview1Component implements OnInit {
   }
 
   // tslint:disable-next-line:typedef
-  private addRandomAEvent(index) {
+  public addRandomAEvent(index) {
   const event = new AEvent();
   event.title = 'Fantastic event ' + index;
 
@@ -42,6 +42,7 @@ export class Overview1Component implements OnInit {
   event.participationFee = Math.floor(Math.random() * 6) * 10;
   event.maxParticipants = Math.floor((Math.random() + 1) * 6) * 1000;
 
+  console.log('added events');
   return event;
   }
 
