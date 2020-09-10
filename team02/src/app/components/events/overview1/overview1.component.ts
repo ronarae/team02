@@ -40,7 +40,7 @@ export class Overview1Component implements OnInit {
   event.status = randomStatus;
 
   event.participationFee = Math.floor(Math.random() * 6) * 10;
-  event.maxParticipants = Math.floor((Math.random() + 1) * 6) * 1000;
+  event.maxParticipants = Math.floor((Math.random() + 1) * 6) * 100;
 
   console.log('added events');
   return event;
