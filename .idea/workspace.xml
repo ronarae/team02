@@ -3,11 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="5a5f0986-22c8-49cc-b861-4e0ff5ccc638" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/team02/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/team02/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/team02/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/team02/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/team02/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/team02/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/team02/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/team02/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/team02/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/team02/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/team02/src/app/components/events/overview1/overview1.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/team02/src/app/components/events/overview1/overview1.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/team02/src/app/components/events/overview1/overview1.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/team02/src/app/components/events/overview1/overview1.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/team02/src/app/models/a-event.ts" beforeDir="false" afterPath="$PROJECT_DIR$/team02/src/app/models/a-event.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +35,6 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -46,13 +43,13 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../wf-examples/jpa-examples-part-1" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="settings.typescriptcompiler" />
-    <property name="ts.external.directory.path" value="C:\Users\xshan\Documents\ICT Jaar 2\Web Frameworks\team02\team02\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="D:\Software Engineering\Sy2020-2021\WebFrameworks\team02\team02\node_modules\typescript\lib" />
   </component>
   <component name="RunManager" selected="npm.Angular CLI Server">
     <configuration name="E2E Tests (team02)" type="JavaScriptTestRunnerProtractor">
@@ -77,6 +74,7 @@
       <method v="2" />
     </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -95,22 +93,25 @@
       <workItem from="1599472738140" duration="53000" />
       <workItem from="1599511619232" duration="12772000" />
       <workItem from="1599664878485" duration="11234000" />
+      <workItem from="1600001850489" duration="611000" />
+      <workItem from="1600002533092" duration="9498000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2369" y="284" key="FileChooserDialogImpl" timestamp="1599563421524">
-      <screen x="1920" y="182" width="1366" height="728" />
+    <state x="505" y="115" key="FileChooserDialogImpl" timestamp="1600004076289">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1599120986731" />
     <state x="505" y="116" key="FileChooserDialogImpl/0.0.1536.824/1920.182.1366.728@0.0.1536.824" timestamp="1599471255377" />
     <state x="2369" y="284" key="FileChooserDialogImpl/0.0.1536.824/1920.182.1366.728@1920.182.1366.728" timestamp="1599563421524" />
+    <state x="505" y="115" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1600004076289" />
     <state width="1492" height="210" key="GridCell.Tab.0.bottom" timestamp="1599406994773">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -127,6 +128,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1492" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1599406994773" />
+    <state x="349" y="147" key="IDE.errors.dialog" timestamp="1600002314511">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="349" y="147" key="IDE.errors.dialog/0.0.1536.824@0.0.1536.824" timestamp="1600002314511" />
     <state x="277" y="55" key="SettingsEditor" timestamp="1599421908734">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -136,6 +141,10 @@
       <screen x="1920" y="182" width="1366" height="728" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1536.824/1920.182.1366.728@1920.182.1366.728" timestamp="1599682550561" />
+    <state x="436" y="0" width="1114" height="610" key="dock-window-1" timestamp="1600003095464">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="436" y="0" width="1114" height="610" key="dock-window-1/0.0.1536.824@0.0.1536.824" timestamp="1600003095464" />
     <state x="492" y="42" key="refactoring.ChangeSignatureDialog" timestamp="1599552503725">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

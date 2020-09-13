@@ -3,6 +3,7 @@
     <div class="col-lg-12">
       <table class="table event-table">
         <tr class="event-tr">
+          <th class="event-th">ID</th>
           <th class="event-th">Title</th>
           <th class="event-th">Start</th>
           <th class="event-th">End</th>
@@ -11,15 +12,18 @@
           <th class="event-th">Max Participants</th>
         </tr>
         <tr *ngFor= "let event of aEvents" class="event-tr">
+          <td class="event-td">{{ event.id }}</td>
           <td class="event-td">{{ event.title }}</td>
           <td class="event-td">{{ event.start.toDateString() }}</td>
           <td class="event-td">{{ event.end.toDateString() }}</td>
           <td class="event-td">{{ event.status }}</td>
-          <td class="event-td">{{ event.participationFee }}</td>
+          <td class="event-td">{{ event.entranceFee }}</td>
           <td class="event-td">{{ event.maxParticipants }} </td>
         </tr>
       </table>
-      <button class="btn btn-event" (click)="addRandomAEvent($event)">Add Events</button>
+      <button class="btn btn-event" (click)="addRandomAEvent(aEvents.length)">Add Events</button>
+
+
     </div>
   </div>
 </div>
