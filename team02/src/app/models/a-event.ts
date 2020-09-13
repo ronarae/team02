@@ -49,9 +49,9 @@ export class AEvent {
       event.entranceFee = Math.floor(Math.random() * 6) * 10;
       event.maxParticipants = Math.floor((Math.random() + 1) * 6) * 100;
     } else {
-
-      event.entranceFee = parseFloat(' ');
-      event.maxParticipants = parseFloat(' ');
+      const fee = null;
+      event.entranceFee = fee || 'free';
+      event.maxParticipants = fee;
     }
     return event;
 
