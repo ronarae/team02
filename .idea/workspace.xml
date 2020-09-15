@@ -47,7 +47,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../wf-examples/jpa-examples-part-1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Algorithms/ADS practicum" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -55,20 +55,9 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="settings.typescriptcompiler" />
-    <property name="ts.external.directory.path" value="D:\Software Engineering\Sy2020-2021\WebFrameworks\team02\team02\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="C:\Users\xshan\Documents\ICT Jaar 2\Web Frameworks\team02\team02\node_modules\typescript\lib" />
   </component>
   <component name="RunManager" selected="npm.Angular CLI Server">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="E2E Tests (team02)" type="JavaScriptTestRunnerProtractor">
       <config-file value="$PROJECT_DIR$/team02/e2e/protractor.conf.js" />
       <node-interpreter value="project" />
@@ -91,7 +80,7 @@
       <method v="2" />
     </configuration>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -112,20 +101,23 @@
       <workItem from="1599664878485" duration="11234000" />
       <workItem from="1600001850489" duration="611000" />
       <workItem from="1600002533092" duration="9498000" />
+      <workItem from="1600162020420" duration="2732000" />
+      <workItem from="1600171310718" duration="598000" />
+      <workItem from="1600185128358" duration="3657000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="505" y="115" key="FileChooserDialogImpl" timestamp="1600004076289">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1600185133969">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1599120986731" />
+    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1600185133969" />
     <state x="505" y="116" key="FileChooserDialogImpl/0.0.1536.824/1920.182.1366.728@0.0.1536.824" timestamp="1599471255377" />
     <state x="2369" y="284" key="FileChooserDialogImpl/0.0.1536.824/1920.182.1366.728@1920.182.1366.728" timestamp="1599563421524" />
     <state x="505" y="115" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1600004076289" />
@@ -158,14 +150,18 @@
       <screen x="1920" y="182" width="1366" height="728" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1536.824/1920.182.1366.728@1920.182.1366.728" timestamp="1599682550561" />
+    <state x="337" y="164" key="com.intellij.ide.util.TipDialog" timestamp="1600185126936">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="337" y="164" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1600185126936" />
     <state x="436" y="0" width="1114" height="610" key="dock-window-1" timestamp="1600003095464">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="436" y="0" width="1114" height="610" key="dock-window-1/0.0.1536.824@0.0.1536.824" timestamp="1600003095464" />
-    <state x="334" y="72" width="612" height="536" key="find.popup" timestamp="1600013681145">
+    <state x="334" y="72" width="612" height="536" key="find.popup" timestamp="1600189934472">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="334" y="72" width="612" height="536" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1600013681145" />
+    <state x="334" y="72" width="612" height="536" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1600189934472" />
     <state x="492" y="42" key="refactoring.ChangeSignatureDialog" timestamp="1599552503725">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -174,17 +170,5 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1599725092213" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/team02/src/app/app.module.ts</url>
-          <line>13</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {AEvent, AEventStatus} from '../../../models/a-event';
 
 @Component({
@@ -7,6 +7,7 @@ import {AEvent, AEventStatus} from '../../../models/a-event';
   styleUrls: ['./overview2.component.css']
 })
 export class Overview2Component implements OnInit {
+  selectedAEvent = null;
 
   id = [];
   title = ['Fantastic Event 0 ',
@@ -33,6 +34,7 @@ export class Overview2Component implements OnInit {
   public addRandomAEvent(index){
     this.aEvents.push(AEvent.createRandomAEvent(index));
   }
+
   // tslint:disable-next-line:typedef
   ngOnInit(): void {
     this.aEvents = [];
@@ -49,6 +51,11 @@ export class Overview2Component implements OnInit {
       );
       this.aEvents.push(event);
     }
+  }
+
+  // tslint:disable-next-line:typedef
+  isSelected(event){
+  this.selectedAEvent = event;
   }
 
 }

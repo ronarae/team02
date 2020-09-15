@@ -1,4 +1,4 @@
-<p>overview2 works!</p>
+<p>{{selectedAEvent ? selectedAEvent.title : "Selecteer een event"}}</p>
 
 <div class="container-fluid">
   <div class="row">
@@ -8,7 +8,7 @@
           <th class="event-th">Title</th>
         </tr>
         <tr *ngFor= "let event of aEvents" class="event-tr">
-          <td class="event-td" (click)="IsSelected()">{{event.title}}</td>
+          <td class="event-td" (click)="isSelected(event)">{{event.title}}</td>
         </tr>
       </table>
       <button class="btn btn-event">Add Event</button>
