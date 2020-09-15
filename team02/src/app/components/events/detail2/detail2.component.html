@@ -1,1 +1,33 @@
-<p>detail2 works!</p>
+<table *ngIf="data; else other_content">
+  <tr>
+    <th>Selected event details(id= {{data.id}})</th>
+  </tr>
+  <tr>
+    <td>Title</td>
+    <td><input type="text" [(ngModel)]="data.title"></td>
+  </tr>
+  <tr>
+    <td>Description</td>
+    <td><input type="text" [(ngModel)]="data.description"></td>
+  </tr>
+  <tr>
+    <td>Status</td>
+    <td>
+      <select [(ngModel)]="data.status">
+        <option *ngFor="let status of getStatus()" [ngValue]="status">{{status}}</option>
+      </select></td>
+  </tr>
+  <tr>
+    <td>Is Ticketed</td>
+    <td><input type="checkbox" [(ngModel)]="data.IsTicketed" [ngModelOptions]="{standalone: true}"></td>
+  </tr>
+  <tr>
+    <td>Participation fee</td>
+    <td><input type="number" [(ngModel)]="data.entranceFee"></td>
+  </tr>
+  <tr>
+    <td>Maximum participants</td>
+    <td><input type="number" [(ngModel)]="data.maxParticipants"></td>
+  </tr>
+</table>
+<ng-template #other_content>Select an event on the left..</ng-template>

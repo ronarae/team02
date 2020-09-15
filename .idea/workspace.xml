@@ -55,17 +55,6 @@
     <property name="ts.external.directory.path" value="C:\Users\xshan\Documents\ICT Jaar 2\Web Frameworks\team02\team02\node_modules\typescript\lib" />
   </component>
   <component name="RunManager" selected="npm.Angular CLI Server">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="E2E Tests (team02)" type="JavaScriptTestRunnerProtractor">
       <config-file value="$PROJECT_DIR$/team02/e2e/protractor.conf.js" />
       <node-interpreter value="project" />
@@ -88,7 +77,7 @@
       <method v="2" />
     </configuration>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -166,10 +155,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="436" y="0" width="1114" height="610" key="dock-window-1/0.0.1536.824@0.0.1536.824" timestamp="1600003095464" />
-    <state x="334" y="72" width="612" height="536" key="find.popup" timestamp="1600189934472">
+    <state x="334" y="72" width="612" height="536" key="find.popup" timestamp="1600200312847">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="334" y="72" width="612" height="536" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1600189934472" />
+    <state x="334" y="72" width="612" height="536" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1600200312847" />
     <state x="492" y="42" key="refactoring.ChangeSignatureDialog" timestamp="1599552503725">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
