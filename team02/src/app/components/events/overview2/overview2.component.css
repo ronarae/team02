@@ -8,6 +8,6 @@
   font-weight: bolder;
 }
 
-.event-td{
-
+.table tr.active td {
+  background-color:lightpink !important;
 }

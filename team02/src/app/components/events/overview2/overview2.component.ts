@@ -9,6 +9,9 @@ import {AEvent, AEventStatus} from '../../../models/a-event';
 export class Overview2Component implements OnInit {
   selectedAEvent = null;
 
+  highlightRow: number;
+  clickedRow: any;
+
   id = [];
   title = ['Fantastic Event 0 ',
     'Fantastic Event 1',
@@ -28,7 +31,12 @@ export class Overview2Component implements OnInit {
   maxParticipants = [];
   public aEvents: AEvent[];
 
-  constructor() { }
+  constructor() {
+    // tslint:disable-next-line:typedef
+    this.clickedRow = function(index){
+      this.highlightRow = index;
+    };
+  }
 
  // tslint:disable-next-line:typedef
   public addRandomAEvent(index){
@@ -57,5 +65,4 @@ export class Overview2Component implements OnInit {
   isSelected(event){
   this.selectedAEvent = event;
   }
-
 }

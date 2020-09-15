@@ -3,15 +3,21 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-lg-4">
+      <p><b>Overview of all events</b></p>
       <table class="table event-table">
         <tr class="event-tr">
           <th class="event-th">Title</th>
         </tr>
-        <tr *ngFor= "let event of aEvents" class="event-tr">
-          <td class="event-td" (click)="isSelected(event)">{{event.title}}</td>
+        <tr *ngFor= "let event of aEvents; let aEindex = index"
+            (click)="clickedRow(aEindex)" [class.active]="aEindex == highlightRow" class="event-tr">
+          <td class="event-td"(click)="isSelected(event)">{{event.title}}</td>
         </tr>
       </table>
       <button class="btn btn-event">Add Event</button>
+    </div>
+
+    <div class="col-lg-4">
+      <app-detail2></app-detail2>
     </div>
   </div>
 </div>
