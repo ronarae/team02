@@ -1,0 +1,20 @@
+.detail-table, .detail-tr, .detail-td{
+  border: 5px solid navajowhite;
+}
+
+table.detail-table>tr:last-child {
+  border: none;
+}
+
+th.detail-th{
+  background-color: navajowhite;
+}
+.detail-tr {
+  margin-bottom: -10px;
+}
+.btn-delete{
+  float: right;
+  margin-right: -400px;
+  background-color: darkorange;
+  font-weight: bolder;
+}

@@ -2,7 +2,7 @@
 
 <div class="container-fluid">
   <div class="row">
-    <div class="col-lg-4">
+    <div class="col-lg-3">
       <p><b>Overview of all events</b></p>
       <table class="table event-table">
         <tr class="event-tr">
@@ -13,10 +13,11 @@
           <td class="event-td"(click)="isSelected(event)">{{event.title}}</td>
         </tr>
       </table>
-      <button class="btn btn-event">Add Event</button>
+<!--      WIP - automatic info laden-->
+      <button class="btn btn-event" (click)="addRandomAEvent(aEvents.length)">Add Event</button>
     </div>
 
-    <div class="col-lg-4">
+    <div class="col-lg-6">
       <app-detail2 [data]="selectedAEvent"></app-detail2>
     </div>
   </div>
