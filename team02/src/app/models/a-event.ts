@@ -60,10 +60,15 @@ export class AEvent {
 
 }
 
-
 export enum AEventStatus {
   draft = 'DRAFT',
   published = 'PUBLISHED',
   cancelled = 'CANCELLED'
 }
+
+export class Title {
+  title: string;
+}
+
+
 

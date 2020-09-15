@@ -7,7 +7,7 @@ import { HeaderComponent } from './components/mainpage/header/header.component';
 import { HomeComponent } from './components/mainpage/home/home.component';
 import { NavBarComponent } from './components/mainpage/nav-bar/nav-bar.component';
 import { Overview1Component } from './components/events/overview1/overview1.component';
-import { Overview2Component } from './componets/events/overview2/overview2.component';
+import { Overview2Component } from './components/events/overview2/overview2.component';
 
 @NgModule({
   declarations: [

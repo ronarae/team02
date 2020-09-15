@@ -1,1 +1,17 @@
 <p>overview2 works!</p>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-4">
+      <table class="table event-table">
+        <tr class="event-tr">
+          <th class="event-th">Title</th>
+        </tr>
+        <tr *ngFor= "let event of aEvents" class="event-tr">
+          <td class="event-td" (click)="IsSelected()">{{event.title}}</td>
+        </tr>
+      </table>
+      <button class="btn btn-event">Add Event</button>
+    </div>
+  </div>
+</div>
