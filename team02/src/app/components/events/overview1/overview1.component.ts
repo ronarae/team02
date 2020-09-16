@@ -79,7 +79,7 @@ export class Overview1Component implements OnInit {
 
   // tslint:disable-next-line:typedef
   public addRandomAEvent(index){
-    this.aEvents.push(AEvent.createRandomAEvent(index));
+    this.aEvents.push(AEvent.createRandomAEvent());
   }
 
 
