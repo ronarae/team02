@@ -13,13 +13,10 @@
           <td class="event-td"(click)="isSelected(event)">{{event.title}}</td>
         </tr>
       </table>
-<!--      WIP - automatic info laden-->
       <button class="btn btn-event" (click)="addRandomAEvent()">Add Event</button>
     </div>
 
     <div class="col-lg-6">
-<!--      WIP delete button-->
-<!--      <app-detail2 [data]="selectedAEvent"></app-detail2>-->
       <app-detail2 [data]="selectedAEvent" (deleteEventInstanceEvent)="deleteEvent($event)"></app-detail2>
     </div>
   </div>
