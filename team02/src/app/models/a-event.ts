@@ -7,9 +7,10 @@ export class AEvent {
   status: AEventStatus;
 
   // tslint:disable-next-line:ban-types
-  IsTicketed: Boolean;
+  IsTicketed: number;
   entranceFee: number;
   maxParticipants: number;
+  private static counter: number = 0;
 
   constructor(id, title, start, end, status, IsTicketed, entranceFee, maxParticipants) {
     this.id = id;
@@ -23,18 +24,19 @@ export class AEvent {
   }
 
   // tslint:disable-next-line:typedef
-  public static createRandomAEvent(index): AEvent {
+  public static createRandomAEvent(): AEvent {
     // @ts-ignore
     const event = new AEvent();
-    event.id = index + 20001;
-    event.title = 'Fantastic event ' + index;
+    // @ts-ignore
+    event.id = 20001 + this.counter++;
+    event.title = 'Fantastic event ' + this.counter;
 
     let date = new Date();
-    date.setMonth(date.getMonth() * (index + 1));
+    date.setMonth(date.getMonth() * (this.counter + 1));
     event.start = date;
 
     date = new Date();
-    date.setMonth(date.getMonth() * (index + 1));
+    date.setMonth(date.getMonth() * (this.counter + 1));
     event.end = date;
 
     const rand = Math.floor(Math.random() * Object.keys(AEventStatus).length);
@@ -53,6 +55,8 @@ export class AEvent {
       event.entranceFee = fee || 'free';
       event.maxParticipants = fee;
     }
+
+    event.IsTicketed  = Math.round(Math.random());
     return event;
 
 

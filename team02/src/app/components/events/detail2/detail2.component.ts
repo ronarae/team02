@@ -9,11 +9,14 @@ import {AEvent, AEventStatus} from '../../../models/a-event';
 export class Detail2Component implements OnInit {
   @Input()
   data: AEvent = null;
-// WIP -OUTPUT
-  @Output()deleteEventInstanceEvent: EventEmitter<any> = new EventEmitter<any>();
 
-  onClicked(): void {
-    this.deleteEventInstanceEvent.emit(this.data);
+// WIP -OUTPUT
+  @Output()
+  deleteEventInstanceEvent: EventEmitter<any> = new EventEmitter<any>();
+
+  // tslint:disable-next-line:typedef
+  deleteAEvent(data){
+    return this.deleteEventInstanceEvent.emit(data);
   }
 
   constructor() { }

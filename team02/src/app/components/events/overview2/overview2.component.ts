@@ -8,9 +8,9 @@ import {AEvent, AEventStatus} from '../../../models/a-event';
 })
 export class Overview2Component implements OnInit {
   selectedAEvent = null;
-
   highlightRow: number;
   clickedRow: any;
+
 
   id = ['20001', '20002', '20003', '20004', '20005', '20006', '20007', '20008', '20009'];
   title = ['Fantastic Event 0 ',
@@ -23,7 +23,8 @@ export class Overview2Component implements OnInit {
     'Fantastic Event 7',
     'Fantastic Event 8',
   ];
-  start = [new Date('4/9/2020'),
+
+  start = [new Date(''),
     new Date('4/9/2020'),
     new Date('4/9/2020'),
     new Date('4/9/2020'),
@@ -96,28 +97,16 @@ export class Overview2Component implements OnInit {
   }
 
   // tslint:disable-next-line:typedef
-  public addRandomAEvent(index) {
-    this.aEvents.push(AEvent.createRandomAEvent(index));
+  public addRandomAEvent() {
+    this.aEvents.push(AEvent.createRandomAEvent());
   }
 
 
   // tslint:disable-next-line:typedef
   ngOnInit() {
     this.aEvents = [];
-    for (let i = 0; i < this.id.length; i++) {
-      const event = new AEvent(
-        this.id[i],
-        this.title[i],
-        this.start[i],
-        this.end[i],
-        this.status[i],
-        this.IsTicketed[i],
-        this.entranceFee[i],
-        this.maxParticipants[i]
-      );
-      console.log(event.id);
-
-      this.aEvents.push(event);
+    for (let i = 0; i < 8; i++) {
+        this.addRandomAEvent();
     }
   }
     // tslint:disable-next-line:typedef
@@ -126,8 +115,9 @@ export class Overview2Component implements OnInit {
       this.selectedAEvent = event;
     }
   // tslint:disable-next-line:typedef
-    deleteEvent(event: any){
-    const itemIndex = this.aEvents.findIndex(el => el === event);
+    deleteEvent(event){
+    const itemIndex = this.aEvents.indexOf(event);
     this.aEvents.splice(itemIndex, 1);
+    this.selectedAEvent = null;
     }
 }
