@@ -125,4 +125,9 @@ export class Overview2Component implements OnInit {
     {
       this.selectedAEvent = event;
     }
+  // tslint:disable-next-line:typedef
+    deleteEvent(event: any){
+    const itemIndex = this.aEvents.findIndex(el => el === event);
+    this.aEvents.splice(itemIndex, 1);
+    }
 }

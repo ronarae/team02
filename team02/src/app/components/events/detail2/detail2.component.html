@@ -32,12 +32,11 @@
           <td class="detail-td">Maximum participants</td>
           <td class="detail-td"><input type="number" [(ngModel)]="data.maxParticipants"></td>
         </tr>
-<!--        WIP-->
-<!--        <tr>-->
-<!--         <td>-->
-<!--           <button class="btn btn-delete detail-td">Delete</button>-->
-<!--         </td>-->
-<!--        </tr>-->
+        <tr>
+         <td>
+           <button class="btn btn-delete detail-td" (click)="onClicked()">Delete</button>
+         </td>
+        </tr>
       </table>
       <ng-template #other_content>Select an event on the left..</ng-template>
     </div>

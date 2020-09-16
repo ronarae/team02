@@ -18,7 +18,9 @@
     </div>
 
     <div class="col-lg-6">
-      <app-detail2 [data]="selectedAEvent"></app-detail2>
+<!--      WIP delete button-->
+<!--      <app-detail2 [data]="selectedAEvent"></app-detail2>-->
+      <app-detail2 [data]="selectedAEvent" (deleteEventInstanceEvent)="deleteEvent($event)"></app-detail2>
     </div>
   </div>
 </div>
