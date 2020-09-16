@@ -11,6 +11,9 @@ export class Overview2Component implements OnInit {
   highlightRow: number;
   clickedRow: any;
 
+  selectedIndex: number;
+  selectedEvent: AEvent;
+
 
   id = ['20001', '20002', '20003', '20004', '20005', '20006', '20007', '20008', '20009'];
   title = ['Fantastic Event 0 ',
@@ -113,6 +116,17 @@ export class Overview2Component implements OnInit {
     isSelected(event)
     {
       this.selectedAEvent = event;
+
+      this.selectedIndex = event;
+      console.log(this.aEvents[event]);
+      this.selectedEvent = this.aEvents[event];
+    }
+
+    handleClick(): void {
+    this.addRandomAEvent();
+      for (let i = 0; i < this.aEvents.length; i++) {
+        this.isSelected(i);
+      }
     }
   // tslint:disable-next-line:typedef
     deleteEvent(event){

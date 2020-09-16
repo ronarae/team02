@@ -12,11 +12,11 @@
           <td class="event-td"(click)="isSelected(event)">{{event.title}}</td>
         </tr>
       </table>
-      <button class="btn btn-event" (click)="addRandomAEvent()">Add Event</button>
+      <button class="btn btn-event" (click)="handleClick()">Add Event</button>
     </div>
 
     <div class="col-lg-6">
-      <app-detail2 [data]="selectedAEvent" (deleteEventInstanceEvent)="deleteEvent($event)"></app-detail2>
+      <app-detail2 [data]="selectedAEvent"  [data]="selectedEvent" (deleteEventInstanceEvent)="deleteEvent($event)"></app-detail2>
     </div>
   </div>
 </div>
