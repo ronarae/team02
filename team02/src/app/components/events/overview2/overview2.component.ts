@@ -49,10 +49,10 @@ export class Overview2Component implements OnInit {
     'CANCELLED',
     'CANCELLED',
     'DRAFT',
-    'CANCELLED',
-    'CANCELLED',
     'PUBLISHED',
-    'CANCELLED',
+    'PUBLISHED',
+    'PUBLISHED',
+    'PUBLISHED',
   ];
   entranceFee = [Math.floor(Math.random() * 6) * 10,
     Math.floor(Math.random() * 6) * 10,

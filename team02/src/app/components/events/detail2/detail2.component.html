@@ -1,6 +1,7 @@
-
+<div class="container-fluid">
   <div class="row">
     <div class="col-lg-12">
+      <p class="space"></p>
       <table *ngIf="data; else other_content" class="table detail-table">
         <tr class="detail-tr">
           <th class="detail-th" colspan="2">Selected event details(id= {{data.id}})</th>
@@ -41,4 +42,4 @@
       <ng-template #other_content>Select an event on the left..</ng-template>
     </div>
   </div>
-
+</div>

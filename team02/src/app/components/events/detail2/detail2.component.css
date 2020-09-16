@@ -1,20 +1,32 @@
-.detail-table, .detail-tr, .detail-td{
+.detail-td{
   border: 5px solid navajowhite;
 }
 
-table.detail-table>tr:last-child {
+.detail-table {
+  border-left: 5px solid navajowhite;
+  border-right: 5px solid navajowhite; ;
+}
+
+.detail-table:last-of-type{
   border: none;
 }
 
 th.detail-th{
+  border:5px solid navajowhite ;
   background-color: navajowhite;
 }
-.detail-tr {
-  margin-bottom: -10px;
-}
+
 .btn-delete{
   float: right;
-  margin-right: -400px;
+  margin-right: -385px;
   background-color: darkorange;
   font-weight: bolder;
+  margin-top: 10px;
+  border: none;
 }
+
+p.space{
+  margin-top: 75px;
+}
+
+
