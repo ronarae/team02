@@ -10,6 +10,7 @@ import { Overview1Component } from './components/events/overview1/overview1.comp
 import { Overview2Component } from './components/events/overview2/overview2.component';
 import {Detail2Component} from "./components/events/detail2/detail2.component";
 import {FormsModule} from "@angular/forms";
+import { Overview3Component } from './components/events/overview3/overview3.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import {FormsModule} from "@angular/forms";
     Overview1Component,
     Overview2Component,
     Detail2Component,
+    Overview3Component,
   ],
   imports: [
     BrowserModule,
