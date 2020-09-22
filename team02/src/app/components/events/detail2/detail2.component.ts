@@ -9,7 +9,7 @@ import {AEvent, AEventStatus} from '../../../models/a-event';
 export class Detail2Component implements OnInit {
   @Input()
   data: AEvent = null;
-  
+
   @Output()
   deleteEventInstanceEvent: EventEmitter<any> = new EventEmitter<any>();
 
