@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {AEventsService} from '../../../services/a-events.service';
 import {AEvent} from '../../../models/a-event';
 
@@ -8,27 +8,23 @@ import {AEvent} from '../../../models/a-event';
   styleUrls: ['./overview3.component.css']
 })
 export class Overview3Component implements OnInit {
-    selectedAeventId = -1;
+  selectedAeventId = -1;
+
 
   constructor(public aEventservice: AEventsService) {
   }
 
+  // tslint:disable-next-line:no-empty
   ngOnInit(): void {
   }
 
-  onEventSelected(aEvent: AEvent): void
-  {
+  onEventSelected(aEvent: AEvent): void {
     this.selectedAeventId = aEvent.id;
   }
 
   // tslint:disable-next-line:typedef
-  addRandomAEvent(){
+
+  handleClick() {
     this.aEventservice.addRandomAEvent();
   }
-
-  // tslint:disable-next-line:typedef
-  clickedOn(index: number){
-    this.selectedAeventId = index;
-  }
-
 }

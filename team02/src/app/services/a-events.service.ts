@@ -34,9 +34,10 @@ export class AEventsService {
   }
 
   // @ts-ignore
-  save(aEvents: AEvent): AEvent {
+  save(aEvent: AEvent): AEvent {
     // tslint:disable-next-line:max-line-length
     // TODO replace the AEvent with the same id with the provided return the old, replace aEvent add the new aEvent if none existed and return null
+    this.aEvents[aEvent.id]= aEvent;
 
   }
 

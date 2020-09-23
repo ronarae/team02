@@ -6,12 +6,12 @@
         <tr class="event-tr">
           <th class="event-th">Title</th>
         </tr>
-        <tr *ngFor= "let event of aEventservice.aEvents; let aEindex = index"
+        <tr *ngFor= "let event of aEventservice.findAll(); let aEindex = index"
             (click)="selectedAeventId = event.id" [class.active]="event.id == selectedAeventId" class="event-tr">
           <td>{{event.title}}</td>
         </tr>
       </table>
-      <button class="btn btn-event" (click)="aEventservice.addRandomAEvent()">Add Event</button>
+      <button class="btn btn-event" (click)="handleClick()">Add Event</button>
     </div>
 
     <div class="col-lg-6">
