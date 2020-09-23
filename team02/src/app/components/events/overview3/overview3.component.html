@@ -6,7 +6,7 @@
         <tr class="event-tr">
           <th class="event-th">Title</th>
         </tr>
-        <tr *ngFor= "let event of aEventservice.findAll(); let aEindex = index"
+        <tr *ngFor="let event of aEventservice.findAll()"
             (click)="selectedAeventId = event.id" [class.active]="event.id == selectedAeventId" class="event-tr">
           <td>{{event.title}}</td>
         </tr>
