@@ -34,11 +34,14 @@ export class AEventsService {
   }
 
   // @ts-ignore
-  save(aEvent: AEvent): AEvent {
+  save(aEvent: AEvent): void {
     // tslint:disable-next-line:max-line-length
     // TODO replace the AEvent with the same id with the provided return the old, replace aEvent add the new aEvent if none existed and return null
-    this.aEvents[aEvent.id]= aEvent;
-
+    // tslint:disable-next-line:triple-equals
+    // @ts-ignore
+    // tslint:disable-next-line:triple-equals no-unused-expression
+    // @ts-ignore
+    this.aEvents[this.aEvents.findIndex((event) => event.id == aEvent.id)] = aEvent;
   }
 
   deleteById(eId: number): AEvent {

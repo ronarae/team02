@@ -45,11 +45,9 @@ export class Detail3Component {
   }
 
   // tslint:disable-next-line:typedef no-empty
-  saveCurrentAEvent() {
+  saveCurrentAEvent(): void{
     // tslint:disable-next-line:triple-equals
-    const index = this.aEventservice.aEvents.findIndex((event) => event.id == this.currentAEvent.id);
-    this.aEventservice.aEvents[index] = this.currentAEvent;
-
+    this.aEventservice.save(this.currentAEvent);
   }
 
   // tslint:disable-next-line:typedef no-empty
@@ -82,8 +80,7 @@ export class Detail3Component {
     // tslint:disable-next-line:triple-equals no-empty
     // @ts-ignore
     if (JSON.stringify(this.currentAEvent) !== JSON.stringify(this.aEventservice.findById(this.editedAEventId))) {
-      const confirmMessage = confirm("are you sure to discard unsaved changes?")
-      return confirmMessage;
+      return confirm("are you sure to discard unsaved changes?");
     }
     return true;
   }
