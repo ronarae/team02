@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {AEventsService} from '../../../services/a-events.service';
 import {AEvent, AEventStatus} from '../../../models/a-event';
 import {$} from "protractor";
@@ -8,7 +8,8 @@ import {$} from "protractor";
   templateUrl: './detail3.component.html',
   styleUrls: ['./detail3.component.css']
 })
-export class Detail3Component {
+export class Detail3Component implements OnInit {
+
   @Input()
   get editedAEventId(): number {
     return this._editedAEventId;
@@ -30,6 +31,9 @@ export class Detail3Component {
 
   }
 
+  ngOnInit() {
+  }
+
   // tslint:disable-next-line:typedef
   getStatus() {
     return Object.values(AEventStatus);
@@ -48,6 +52,7 @@ export class Detail3Component {
   saveCurrentAEvent(): void{
     // tslint:disable-next-line:triple-equals
     this.aEventservice.save(this.currentAEvent);
+    this.resetCurrentAEvent();
   }
 
   // tslint:disable-next-line:typedef no-empty

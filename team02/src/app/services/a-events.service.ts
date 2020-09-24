@@ -42,6 +42,7 @@ export class AEventsService {
     // tslint:disable-next-line:triple-equals no-unused-expression
     // @ts-ignore
     this.aEvents[this.aEvents.findIndex((event) => event.id == aEvent.id)] = aEvent;
+
   }
 
   deleteById(eId: number): AEvent {
