@@ -118,7 +118,6 @@ export class Overview2Component implements OnInit {
       this.selectedAEvent = event;
 
       this.selectedIndex = event;
-      console.log(this.aEvents[event]);
       this.selectedEvent = this.aEvents[event];
     }
 
