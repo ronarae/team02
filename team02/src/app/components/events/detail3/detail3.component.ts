@@ -1,7 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {AEventsService} from '../../../services/a-events.service';
 import {AEvent, AEventStatus} from '../../../models/a-event';
-import {$} from "protractor";
 
 @Component({
   selector: 'app-detail3',
@@ -49,7 +48,7 @@ export class Detail3Component implements OnInit {
   }
 
   // tslint:disable-next-line:typedef no-empty
-  saveCurrentAEvent(): void{
+  saveCurrentAEvent(): void {
     // tslint:disable-next-line:triple-equals
     this.aEventservice.save(this.currentAEvent);
     this.resetCurrentAEvent();
@@ -90,7 +89,7 @@ export class Detail3Component implements OnInit {
     return true;
   }
 
-  disableButton(){
+  disableButton() {
     // tslint:disable-next-line:triple-equals
     if (JSON.stringify(this.currentAEvent) == JSON.stringify(this.aEventservice.findById(this.editedAEventId))) {
       return true;
