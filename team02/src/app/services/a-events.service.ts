@@ -7,7 +7,6 @@ import {AEvent} from '../models/a-event';
 })
 export class AEventsService {
   public aEvents: AEvent[];
-  public selectedaEvent: AEvent;
 
   constructor() {
     this.aEvents = [];
@@ -41,6 +40,7 @@ export class AEventsService {
     // @ts-ignore
     // tslint:disable-next-line:triple-equals no-unused-expression
     // @ts-ignore
+    // tslint:disable-next-line:triple-equals
     this.aEvents[this.aEvents.findIndex((event) => event.id == aEvent.id)] = aEvent;
   }
 
