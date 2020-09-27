@@ -7,16 +7,16 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <a routerLink="/" class="nav-link" >Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownEvents" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" id="navbarDropdownEvents" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               My Events
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownEvents">
-              <a class="dropdown-item" href="#">All events list</a>
-              <a class="dropdown-item" href="#">M/D (component store)</a>
-              <a class="dropdown-item" href="#">M/D (from service)</a>
+              <a routerLink="events/overview1" class="dropdown-item" >All events list</a>
+              <a routerLink="events/overview2" class="dropdown-item" >M/D (component store)</a>
+              <a routerLink="events/overview3" class="dropdown-item" >M/D (from service)</a>
             </div>
           </li>
           <li class="nav-item dropdown">
