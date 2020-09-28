@@ -70,6 +70,7 @@ export enum AEventStatus {
   cancelled = 'CANCELLED'
 }
 
+// tslint:disable-next-line:max-classes-per-file
 export class Title {
   title: string;
 }
