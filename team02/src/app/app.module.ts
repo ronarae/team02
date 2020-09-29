@@ -18,12 +18,18 @@ import { ErrorComponent } from './components/mainpage/error/error.component';
 import { Detail4Component } from './components/events/detail4/detail4.component';
 import { Overview4Component } from './components/events/overview4/overview4.component';
 
+//WIP
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
-  {
-    path: 'events', component: null, children: [{path: 'overview1', component: Overview1Component},
-      {path: 'overview2', component: Overview2Component}, {path: 'overview3', component: Overview3Component},
-      {path: 'overview4', component: Overview4Component}]
+  {path: 'events', component: null, children: [
+    {path: 'overview1', component: Overview1Component},
+      {path: 'overview2', component: Overview2Component, children: [
+          {path: ':id', component: Detail2Component}]},
+      {path: 'overview3', component: Overview3Component, children: [
+          {path: ':id', component: Detail3Component}]},
+      {path: 'overview4', component: Overview4Component, children: [
+          {path:':id', component: Detail4Component}]}
+          ]
   },
   {path: '404', component: ErrorComponent},
   {path: '**', redirectTo: '404'}

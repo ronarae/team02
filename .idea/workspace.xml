@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="5a5f0986-22c8-49cc-b861-4e0ff5ccc638" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/team02/src/app/components/events/detail3/detail3.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/team02/src/app/components/events/detail3/detail3.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/team02/src/app/services/a-events.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/team02/src/app/services/a-events.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/team02/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/team02/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/team02/src/app/components/events/detail4/detail4.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/team02/src/app/components/events/detail4/detail4.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/team02/src/app/components/events/overview4/overview4.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/team02/src/app/components/events/overview4/overview4.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/team02/src/app/components/events/overview4/overview4.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/team02/src/app/components/events/overview4/overview4.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +49,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Data Structures and Algorithms/team03" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -55,7 +57,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="settings.typescriptcompiler" />
-    <property name="ts.external.directory.path" value="D:\IntelliJ IDEA 2019.2.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="ts.external.directory.path" value="D:\Software Engineering\Sy2020-2021\WebFrameworks\team02\team02\node_modules\typescript\lib" />
   </component>
   <component name="RunManager" selected="npm.Angular CLI Server">
     <configuration name="E2E Tests (team02)" type="JavaScriptTestRunnerProtractor">
@@ -110,7 +112,8 @@
       <workItem from="1600368903267" duration="3937000" />
       <workItem from="1600536760438" duration="1297000" />
       <workItem from="1600687886656" duration="2670000" />
-      <workItem from="1600894549850" duration="11289000" />
+      <workItem from="1600894549850" duration="30463000" />
+      <workItem from="1601396806069" duration="4258000" />
     </task>
     <servers />
   </component>
@@ -125,13 +128,13 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="233" y="0" key="#TSLint/0.0.1280.680@0.0.1280.680" timestamp="1600254242653" />
-    <state x="505" y="115" key="FileChooserDialogImpl" timestamp="1600866636448">
+    <state x="505" y="115" key="FileChooserDialogImpl" timestamp="1601389589122">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1600185133969" />
     <state x="505" y="116" key="FileChooserDialogImpl/0.0.1536.824/1920.182.1366.728@0.0.1536.824" timestamp="1600363826980" />
-    <state x="2369" y="284" key="FileChooserDialogImpl/0.0.1536.824/1920.182.1366.728@1920.182.1366.728" timestamp="1599563421524" />
-    <state x="505" y="115" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1600866636448" />
+    <state x="2369" y="284" key="FileChooserDialogImpl/0.0.1536.824/1920.182.1366.728@1920.182.1366.728" timestamp="1601282645315" />
+    <state x="505" y="115" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1601389589122" />
     <state width="1492" height="210" key="GridCell.Tab.0.bottom" timestamp="1599406994773">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -181,5 +184,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1599725092213" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1601397554190">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1601397554190" />
   </component>
 </project>
