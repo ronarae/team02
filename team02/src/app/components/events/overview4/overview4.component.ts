@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {AEventsService} from '../../../services/a-events.service';
 import {AEvent} from '../../../models/a-event';
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'app-overview4',
@@ -10,9 +11,13 @@ import {AEvent} from '../../../models/a-event';
 export class Overview4Component implements OnInit {
   selectedAeventId = -1;
 
-
-  constructor(public aEventservice: AEventsService) {
+  //WIP
+  constructor(public aEventservice: AEventsService,
+              public router: Router,
+              public activatedRoute: ActivatedRoute){
   }
+
+
 
   // tslint:disable-next-line:no-empty
   ngOnInit(): void {
@@ -26,5 +31,11 @@ export class Overview4Component implements OnInit {
 
   handleClick() {
     this.aEventservice.addRandomAEvent();
+  }
+
+  //WIP
+  onSelect(eId:number){
+    //activate the details page for the given a-event Id
+    this.router.navigate([eId], {relativeTo: this.activatedRoute});
   }
 }

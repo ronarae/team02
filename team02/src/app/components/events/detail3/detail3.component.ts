@@ -34,6 +34,9 @@ export class Detail3Component {
 
   }
 
+  ngOnInit() {
+  }
+
   // tslint:disable-next-line:typedef
   getStatus() {
     return Object.values(AEventStatus);
