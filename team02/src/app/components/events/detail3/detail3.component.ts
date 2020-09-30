@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {AEventsService} from '../../../services/a-events.service';
 import {AEvent, AEventStatus} from '../../../models/a-event';
 
@@ -8,22 +8,28 @@ import {AEvent, AEventStatus} from '../../../models/a-event';
   styleUrls: ['./detail3.component.css']
 })
 export class Detail3Component {
-  @Input()
-  get editedAEventId(): number {
-    return this._editedAEventId;
-  }
 
+  // tslint:disable-next-line:variable-name
+  public _editedAEventId: number = -1;
+
+  currentAEvent: AEvent;
+
+  @Output()
+  editedAEventIdChange:EventEmitter<number> = new EventEmitter<number>();
+
+  @Input()
   set editedAEventId(eId: number) {
     this._editedAEventId = eId;
+    this.editedAEventIdChange.emit(eId);
 
     // tslint:disable-next-line:max-line-length
     this.currentAEvent = Object.assign({}, this.aEventservice.findById(this.editedAEventId)); // assigned this.currentAEvent een kopie van de event die we hebben gevonden
   }
 
-  // tslint:disable-next-line:variable-name
-  private _editedAEventId = -1;
+  get editedAEventId(): number {
+    return this._editedAEventId;
+  }
 
-  currentAEvent: AEvent;
 
   constructor(private aEventservice: AEventsService) {
 
