@@ -1,13 +1,15 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {AEventsService} from '../../../services/a-events.service';
 import {AEvent, AEventStatus} from '../../../models/a-event';
+import {ActivatedRoute, Params, Router} from "@angular/router";
+import {Subscription} from "rxjs";
 
 @Component({
   selector: 'app-detail4',
   templateUrl: './detail4.component.html',
   styleUrls: ['./detail4.component.css']
 })
-export class Detail4Component {
+export class Detail4Component implements OnInit{
   // tslint:disable-next-line:variable-name
   public _editedAEventId: number = -1;
 
@@ -30,8 +32,23 @@ export class Detail4Component {
   }
 
 
-  constructor(private aEventservice: AEventsService) {
+  constructor(private aEventservice: AEventsService,
+              public router: Router,
+              public activatedRoute: ActivatedRoute) {
+  }
 
+  private childParamsSubscription: Subscription = null;
+
+  ngOnInit() {
+    //get the event id query parameter from the activated route
+    this.childParamsSubscription = this.activatedRoute.params.subscribe((params: Params) => {
+      console.log("detail setup id= " + params['id'] || -1)
+    })
+  }
+
+  ngOnDestroy(){
+    //unsubscribe from the router before disappearing
+    this.childParamsSubscription && this.childParamsSubscription.unsubscribe();
   }
 
   // tslint:disable-next-line:typedef
