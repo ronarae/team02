@@ -8,7 +8,7 @@ import {AEvent} from '../../../models/a-event';
   styleUrls: ['./overview3.component.css']
 })
 export class Overview3Component implements OnInit {
-  selectedAeventId: number = -1;
+  selectedAeventId = -1;
 
 
   constructor(public aEventservice: AEventsService) {
