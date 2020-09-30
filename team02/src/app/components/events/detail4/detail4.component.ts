@@ -42,7 +42,8 @@ export class Detail4Component implements OnInit{
   ngOnInit() {
     //get the event id query parameter from the activated route
     this.childParamsSubscription = this.activatedRoute.params.subscribe((params: Params) => {
-      console.log("detail setup id= " + params['id'] || -1)
+      console.log("detail setup id= " + params['id'] || -1);
+      this.editedAEventId = (params.id || -1);
     })
   }
 
