@@ -73,6 +73,8 @@ export class Detail4Component implements OnInit{
     // tslint:disable-next-line:triple-equals
     this.aEventservice.save(this.currentAEvent);
     this.resetCurrentAEvent();
+
+    this.router.navigateByUrl("/events/overview4/-1");
   }
 
   // tslint:disable-next-line:typedef no-empty
@@ -82,6 +84,8 @@ export class Detail4Component implements OnInit{
       const event = new AEvent();
       event.id = this.currentAEvent.id;
       this.currentAEvent = event;
+
+      this.router.navigateByUrl("/events/overview4/-1");
     }
   }
 
@@ -96,8 +100,8 @@ export class Detail4Component implements OnInit{
   cancelCurrentAEvent() {
     if (this.confirmMessage()) {
       this.resetCurrentAEvent();
-      // @ts-ignore
-      this.editedAEventId = -1;
+
+      this.router.navigateByUrl("/events/overview4/-1");
     }
   }
 
