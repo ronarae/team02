@@ -18,8 +18,10 @@ export class Detail2Component implements OnInit {
     return this.deleteEventInstanceEvent.emit(data);
   }
 
+  // tslint:disable-next-line:no-empty
   constructor() { }
 
+  // tslint:disable-next-line:no-empty
   ngOnInit(): void {
   }
 

@@ -11,26 +11,9 @@ import {Subscription} from "rxjs";
 })
 export class Detail4Component implements OnInit{
   // tslint:disable-next-line:variable-name
-  @Output()
-  public _editedAEventId: number = -1;
+  public editedAEventId: number = -1;
 
   currentAEvent: AEvent;
-
-  @Output()
-  editedAEventIdChange:EventEmitter<number> = new EventEmitter<number>();
-
-  @Input()
-  set editedAEventId(eId: number) {
-    this._editedAEventId = eId;
-    this.editedAEventIdChange.emit(eId);
-
-    // tslint:disable-next-line:max-line-length
-    this.currentAEvent = Object.assign({}, this.aEventservice.findById(this.editedAEventId)); // assigned this.currentAEvent een kopie van de event die we hebben gevonden
-  }
-
-  get editedAEventId(): number {
-    return this._editedAEventId;
-  }
 
 
   constructor(private aEventservice: AEventsService,
@@ -41,17 +24,11 @@ export class Detail4Component implements OnInit{
   private childParamsSubscription: Subscription = null;
 
   ngOnInit() {
-    //get the event id query parameter from the activated route
+    // get the event id query parameter from the activated route
     this.childParamsSubscription = this.activatedRoute.params.subscribe((params: Params) => {
-      console.log("detail setup id= " + params['id'] || -1);
       this.editedAEventId = (params.id || -1);
-      console.log(typeof this.editedAEventId);
+      this.currentAEvent = Object.assign({}, this.aEventservice.findById(this.editedAEventId));
     })
-  }
-
-  ngOnDestroy(){
-    //unsubscribe from the router before disappearing
-    this.childParamsSubscription && this.childParamsSubscription.unsubscribe();
   }
 
   // tslint:disable-next-line:typedef

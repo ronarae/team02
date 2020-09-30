@@ -18,9 +18,8 @@ export class Overview4Component implements OnInit {
   }
 
   ngOnInit() {
-    //get the event id query parameter from the activated route
+    // get the event id query parameter from the activated route
     this.activatedRoute.firstChild.params.subscribe((params: Params) => {
-      console.log("detail setup id= " + params['id'] || -1);
       this.selectedAeventId = (params.id || -1);
     })
   }
@@ -29,9 +28,4 @@ export class Overview4Component implements OnInit {
     this.aEventservice.addRandomAEvent();
   }
 
-  onSelect(eId:number) {
-    //activate the details page for the given a-event Id
-    this.router.navigate([eId], {relativeTo: this.activatedRoute});
-    console.log("ID: " + eId);
-  }
 }
