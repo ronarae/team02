@@ -1,48 +1,32 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {AEventsService} from '../../../services/a-events.service';
 import {AEvent, AEventStatus} from '../../../models/a-event';
-import {ActivatedRoute, Params, Router} from "@angular/router";
-import {Subscription} from "rxjs";
 
 @Component({
   selector: 'app-detail4',
   templateUrl: './detail4.component.html',
   styleUrls: ['./detail4.component.css']
 })
-export class Detail4Component implements OnInit{
+export class Detail4Component {
   @Input()
   get editedAEventId(): number {
     return this._editedAEventId;
   }
+
   set editedAEventId(eId: number) {
     this._editedAEventId = eId;
+
     // tslint:disable-next-line:max-line-length
     this.currentAEvent = Object.assign({}, this.aEventservice.findById(this.editedAEventId)); // assigned this.currentAEvent een kopie van de event die we hebben gevonden
   }
+
   // tslint:disable-next-line:variable-name
   private _editedAEventId = -1;
 
   currentAEvent: AEvent;
-//WIP
-  constructor(private aEventservice: AEventsService,
-              public router: Router,
-              public activatedRoute: ActivatedRoute) {
-  }
-  private childParamsSubscription: Subscription = null;
 
-  ngOnInit() {
-    //get the event id query parameter from the activated route
-    this.childParamsSubscription = this.activatedRoute.params.subscribe((params: Params) => {
-      console.log("detail setup id: " + params['id']);
-      //retrieve the event to be edited from the service
-      // @ts-ignore
-      this.editedAEventId(params['id'] || -1)
-    })
-  }
+  constructor(private aEventservice: AEventsService) {
 
-  ngDestroy() {
-    //unsubscribe from the router before disappearing
-    this.childParamsSubscription && this.childParamsSubscription.unsubscribe();
   }
 
   // tslint:disable-next-line:typedef
