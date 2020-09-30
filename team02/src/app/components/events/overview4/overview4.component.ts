@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {AEventsService} from '../../../services/a-events.service';
 import {AEvent} from '../../../models/a-event';
-import {ActivatedRoute, Router} from "@angular/router";
+import {ActivatedRoute, Params, Router} from "@angular/router";
 
 @Component({
   selector: 'app-overview4',
@@ -9,7 +9,7 @@ import {ActivatedRoute, Router} from "@angular/router";
   styleUrls: ['./overview4.component.css']
 })
 export class Overview4Component implements OnInit {
-  //selectedAeventId = -1;
+  selectedAeventId = -1;
 
 
   constructor(public aEventservice: AEventsService,
@@ -17,15 +17,13 @@ export class Overview4Component implements OnInit {
               public activatedRoute: ActivatedRoute) {
   }
 
-  // tslint:disable-next-line:no-empty
-  ngOnInit(): void {
+  ngOnInit() {
+    //get the event id query parameter from the activated route
+    this.activatedRoute.firstChild.params.subscribe((params: Params) => {
+      console.log("detail setup id= " + params['id'] || -1);
+      this.selectedAeventId = (params.id || -1);
+    })
   }
-  //
-  // onEventSelected(aEvent: AEvent): void {
-  //   this.selectedAeventId = aEvent.id;
-  // }
-
-  // tslint:disable-next-line:typedef
 
   handleClick() {
     this.aEventservice.addRandomAEvent();
@@ -33,7 +31,7 @@ export class Overview4Component implements OnInit {
 
   onSelect(eId:number) {
     //activate the details page for the given a-event Id
-    this.router.navigate([eId], {relativeTo: this.activatedRoute, queryParams: {id:eId}});
+    this.router.navigate([eId], {relativeTo: this.activatedRoute});
     console.log("ID: " + eId);
   }
 }

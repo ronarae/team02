@@ -11,6 +11,7 @@ import {Subscription} from "rxjs";
 })
 export class Detail4Component implements OnInit{
   // tslint:disable-next-line:variable-name
+  @Output()
   public _editedAEventId: number = -1;
 
   currentAEvent: AEvent;
@@ -44,6 +45,7 @@ export class Detail4Component implements OnInit{
     this.childParamsSubscription = this.activatedRoute.params.subscribe((params: Params) => {
       console.log("detail setup id= " + params['id'] || -1);
       this.editedAEventId = (params.id || -1);
+      console.log(typeof this.editedAEventId);
     })
   }
 
