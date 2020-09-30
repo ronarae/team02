@@ -7,7 +7,7 @@
           <th class="event-th">Title</th>
         </tr>
         <tr *ngFor="let event of aEventservice.findAll()"
-            (click)="selectedAeventId = event.id" [class.active]="event.id == selectedAeventId" class="event-tr">
+            (click)="onSelect(event.id)" class="event-tr">
           <td>{{event.title}}</td>
         </tr>
       </table>
@@ -15,7 +15,8 @@
     </div>
 
     <div class="col-lg-6">
-      <app-detail4 [(editedAEventId)]="selectedAeventId"></app-detail4>
+<!--      <app-detail4 [(editedAEventId)]="selectedAeventId"></app-detail4>-->
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>

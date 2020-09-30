@@ -21,9 +21,12 @@ import { Overview4Component } from './components/events/overview4/overview4.comp
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
   {
-    path: 'events', component: null, children: [{path: 'overview1', component: Overview1Component},
-      {path: 'overview2', component: Overview2Component}, {path: 'overview3', component: Overview3Component},
-      {path: 'overview4', component: Overview4Component}]
+    path: 'events', component: null, children:
+      [{path: 'overview1', component: Overview1Component},
+      {path: 'overview2', component: Overview2Component},
+        {path: 'overview3', component: Overview3Component},
+      {path: 'overview4', component: Overview4Component,
+      children: [{ path: ':id', component: Detail4Component}]}]
   },
   {path: '404', component: ErrorComponent},
   {path: '**', redirectTo: '404'}
