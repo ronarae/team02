@@ -1,6 +1,5 @@
 package nl.team02.amsterdamevents.aeserver.models;
 
-import java.sql.Timestamp;
 import java.util.Date;
 import java.util.Random;
 
@@ -33,7 +32,7 @@ public class AEvent {
 
     public static AEvent createRandomAEvent() {
         int id = counter++;
-        String title = "Event " + id;
+        String title = "A fantastic backend aEvent-" + id;
         Date start = new Date();
         Date end = new Date();
         AEventStatus status = getRandomAEventStatus();
@@ -44,9 +43,13 @@ public class AEvent {
         return new AEvent(id, title, start, end, status, participationFee, maxParticipants, isTicketed);
     }
 
-    public static Date getRandomDate() {
+    public static Date getRandomStartDate() {
 
-        return getRandomDate();
+        return getRandomStartDate();
+    }
+    public static Date getRandomEndDate() {
+
+        return getRandomEndDate();
     }
 
     public static AEventStatus getRandomAEventStatus() {
