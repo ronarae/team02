@@ -30,7 +30,7 @@
     <select />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1gzcejVudy95XlM8RCELl64FGBT" />
   <component name="ProjectLevelVcsManager">
@@ -46,7 +46,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Data Structures and Algorithms/team03" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Algorithms/ADS practicum/team01" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -54,7 +54,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="settings.typescriptcompiler" />
-    <property name="ts.external.directory.path" value="D:\IntelliJ IDEA 2019.2.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="ts.external.directory.path" value="C:\Users\xshan\Documents\ICT Jaar 2\Web Frameworks\team02\WEB_Angular\team02\node_modules\typescript\lib" />
   </component>
   <component name="RunManager" selected="npm.Angular CLI Server">
     <configuration name="E2E Tests (team02)" type="JavaScriptTestRunnerProtractor">
@@ -124,10 +124,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="233" y="0" key="#TSLint/0.0.1280.680@0.0.1280.680" timestamp="1600254242653" />
-    <state x="505" y="115" key="FileChooserDialogImpl" timestamp="1600866636448">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1601828883703">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1600185133969" />
+    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1601828883703" />
     <state x="505" y="116" key="FileChooserDialogImpl/0.0.1536.824/1920.182.1366.728@0.0.1536.824" timestamp="1600363826980" />
     <state x="2369" y="284" key="FileChooserDialogImpl/0.0.1536.824/1920.182.1366.728@1920.182.1366.728" timestamp="1599563421524" />
     <state x="505" y="115" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1600866636448" />
@@ -168,10 +168,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="436" y="0" width="1114" height="610" key="dock-window-1/0.0.1536.824@0.0.1536.824" timestamp="1600003095464" />
-    <state x="2276" y="259" width="654" height="574" key="find.popup" timestamp="1601475984198">
-      <screen x="1920" y="182" width="1366" height="728" />
+    <state x="334" y="72" width="612" height="536" key="find.popup" timestamp="1601828870422">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="334" y="72" width="612" height="536" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1600329534125" />
+    <state x="334" y="72" width="612" height="536" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1601828870422" />
     <state x="2276" y="259" width="654" height="574" key="find.popup/0.0.1536.824/1920.182.1366.728@1920.182.1366.728" timestamp="1601475984198" />
     <state x="492" y="42" key="refactoring.ChangeSignatureDialog" timestamp="1599552503725">
       <screen x="0" y="0" width="1536" height="824" />
