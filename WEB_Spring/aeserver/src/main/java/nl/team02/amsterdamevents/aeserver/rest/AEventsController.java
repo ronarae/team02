@@ -14,7 +14,7 @@ public class AEventsController {
     @Autowired
     private AEventsRepository aEventsRepository;
 
-    @GetMapping("/events")
+    @GetMapping("/aevents")
     public List<AEvent> getAllAEvents() {
         return aEventsRepository.findAll();
 
