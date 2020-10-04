@@ -31,7 +31,7 @@ export class Overview4Component implements OnInit {
   onSelect(eId:number) {
     //activate the details page for the given a-event Id
     this.router.navigate([eId], {relativeTo: this.activatedRoute});
-    console.log("ID: " + eId);
+  console.log("ID: " + eId);
   }
 
 }
