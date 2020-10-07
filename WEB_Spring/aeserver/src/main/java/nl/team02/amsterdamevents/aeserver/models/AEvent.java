@@ -47,6 +47,8 @@ public class AEvent {
 
         return getRandomStartDate();
     }
+
+    //wip
     public static Date getRandomEndDate() {
 
         return getRandomEndDate();

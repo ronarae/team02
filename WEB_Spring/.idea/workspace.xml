@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="53e8a1c9-2f6d-4452-b077-cb0d0e031223" name="Default Changelist" comment="" />
+    <list default="true" id="53e8a1c9-2f6d-4452-b077-cb0d0e031223" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/aeserver/src/main/java/nl/team02/amsterdamevents/aeserver/models/AEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/aeserver/src/main/java/nl/team02/amsterdamevents/aeserver/models/AEvent.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,7 +33,6 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -108,28 +112,6 @@
       <method v="2" />
     </configuration>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-            </expand>
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -193,22 +175,26 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1601838165345" />
-    <state width="845" height="168" key="GridCell.Tab.0.bottom" timestamp="1601845246022">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1323" height="167" key="GridCell.Tab.0.bottom" timestamp="1602080212915">
+      <screen x="1920" y="182" width="1366" height="728" />
     </state>
     <state width="845" height="168" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1601845246022" />
-    <state width="845" height="168" key="GridCell.Tab.0.center" timestamp="1601845246022">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1323" height="167" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.182.1366.728@1920.182.1366.728" timestamp="1602080212915" />
+    <state width="1323" height="167" key="GridCell.Tab.0.center" timestamp="1602080212914">
+      <screen x="1920" y="182" width="1366" height="728" />
     </state>
     <state width="845" height="168" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1601845246022" />
-    <state width="845" height="168" key="GridCell.Tab.0.left" timestamp="1601845246022">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1323" height="167" key="GridCell.Tab.0.center/0.0.1536.824/1920.182.1366.728@1920.182.1366.728" timestamp="1602080212914" />
+    <state width="1323" height="167" key="GridCell.Tab.0.left" timestamp="1602080212914">
+      <screen x="1920" y="182" width="1366" height="728" />
     </state>
     <state width="845" height="168" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1601845246022" />
-    <state width="845" height="168" key="GridCell.Tab.0.right" timestamp="1601845246022">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1323" height="167" key="GridCell.Tab.0.left/0.0.1536.824/1920.182.1366.728@1920.182.1366.728" timestamp="1602080212914" />
+    <state width="1323" height="167" key="GridCell.Tab.0.right" timestamp="1602080212915">
+      <screen x="1920" y="182" width="1366" height="728" />
     </state>
     <state width="845" height="168" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1601845246022" />
+    <state width="1323" height="167" key="GridCell.Tab.0.right/0.0.1536.824/1920.182.1366.728@1920.182.1366.728" timestamp="1602080212915" />
     <state width="845" height="168" key="GridCell.Tab.1.bottom" timestamp="1601845246023">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
