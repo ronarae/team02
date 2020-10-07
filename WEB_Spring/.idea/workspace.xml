@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="53e8a1c9-2f6d-4452-b077-cb0d0e031223" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../WEB_Angular/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WEB_Angular/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Web Frameworks.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Web Frameworks.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aeserver/src/main/java/nl/team02/amsterdamevents/aeserver/models/AEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/aeserver/src/main/java/nl/team02/amsterdamevents/aeserver/models/AEvent.java" afterDir="false" />
-    </list>
+    <list default="true" id="53e8a1c9-2f6d-4452-b077-cb0d0e031223" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,17 +24,11 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="D:\IntelliJ IDEA 2019.2.1\plugins\maven\lib\maven3" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
   <component name="ProjectId" id="1gxTwxYciUQ6gU8tAGVzyzleSTx" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -51,12 +36,11 @@
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="14" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../WEB_Angular" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -124,7 +108,28 @@
       <method v="2" />
     </configuration>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -159,24 +164,19 @@
       <workItem from="1601536314870" duration="3943000" />
       <workItem from="1601754576112" duration="283000" />
       <workItem from="1601817975057" duration="9603000" />
-      <workItem from="1601828039172" duration="7646000" />
-      <workItem from="1601843098190" duration="743000" />
-      <workItem from="1601843862748" duration="11597000" />
-      <workItem from="1601901006545" duration="7906000" />
-      <workItem from="1601974780208" duration="147000" />
-      <workItem from="1601976577516" duration="971000" />
-      <workItem from="1602079123795" duration="891000" />
+      <workItem from="1601828039172" duration="10881000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="1" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/aeserver/java/nl.team02.amsterdamevents.aeserver/a-event.js" />
+      </list>
+    </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="249" y="0" key="#Project_Structure" timestamp="1601843113401">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="249" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1601843113401" />
     <state x="410" y="144" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601821799022">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -189,64 +189,54 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="371" y="87" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1601823459317" />
-    <state x="2369" y="285" key="FileChooserDialogImpl" timestamp="1601890103452">
-      <screen x="1920" y="182" width="1366" height="728" />
+    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1601838165345">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1601838165345" />
-    <state x="2369" y="285" key="FileChooserDialogImpl/0.0.1536.824/1920.182.1366.728@1920.182.1366.728" timestamp="1601890103452" />
-    <state width="1323" height="167" key="GridCell.Tab.0.bottom" timestamp="1602079318389">
-      <screen x="1920" y="182" width="1366" height="728" />
-    </state>
-    <state width="845" height="208" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1601842359868" />
-    <state width="1323" height="167" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.182.1366.728@1920.182.1366.728" timestamp="1602079318389" />
-    <state width="1493" height="167" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601930877901" />
-    <state width="1323" height="167" key="GridCell.Tab.0.center" timestamp="1602079318389">
-      <screen x="1920" y="182" width="1366" height="728" />
-    </state>
-    <state width="845" height="208" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1601842359867" />
-    <state width="1323" height="167" key="GridCell.Tab.0.center/0.0.1536.824/1920.182.1366.728@1920.182.1366.728" timestamp="1602079318389" />
-    <state width="1493" height="167" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1601930877901" />
-    <state width="1323" height="167" key="GridCell.Tab.0.left" timestamp="1602079318389">
-      <screen x="1920" y="182" width="1366" height="728" />
-    </state>
-    <state width="845" height="208" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1601842359867" />
-    <state width="1323" height="167" key="GridCell.Tab.0.left/0.0.1536.824/1920.182.1366.728@1920.182.1366.728" timestamp="1602079318389" />
-    <state width="1493" height="167" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1601930877901" />
-    <state width="1323" height="167" key="GridCell.Tab.0.right" timestamp="1602079318389">
-      <screen x="1920" y="182" width="1366" height="728" />
-    </state>
-    <state width="845" height="208" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1601842359867" />
-    <state width="1323" height="167" key="GridCell.Tab.0.right/0.0.1536.824/1920.182.1366.728@1920.182.1366.728" timestamp="1602079318389" />
-    <state width="1493" height="167" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1601930877901" />
-    <state width="845" height="208" key="GridCell.Tab.1.bottom" timestamp="1601842359869">
+    <state width="845" height="168" key="GridCell.Tab.0.bottom" timestamp="1601845246022">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="845" height="208" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1601842359869" />
-    <state width="845" height="208" key="GridCell.Tab.1.center" timestamp="1601842359868">
+    <state width="845" height="168" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1601845246022" />
+    <state width="845" height="168" key="GridCell.Tab.0.center" timestamp="1601845246022">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="845" height="208" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1601842359868" />
-    <state width="845" height="208" key="GridCell.Tab.1.left" timestamp="1601842359868">
+    <state width="845" height="168" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1601845246022" />
+    <state width="845" height="168" key="GridCell.Tab.0.left" timestamp="1601845246022">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="845" height="208" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1601842359868" />
-    <state width="845" height="208" key="GridCell.Tab.1.right" timestamp="1601842359868">
+    <state width="845" height="168" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1601845246022" />
+    <state width="845" height="168" key="GridCell.Tab.0.right" timestamp="1601845246022">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="845" height="208" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1601842359868" />
-    <state x="434" y="133" key="RollbackChangesDialog" timestamp="1601843728106">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="845" height="168" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1601845246022" />
+    <state width="845" height="168" key="GridCell.Tab.1.bottom" timestamp="1601845246023">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="434" y="133" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1601843728106" />
-    <state x="170" y="0" key="SettingsEditor" timestamp="1601843793549">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="845" height="168" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1601845246023" />
+    <state width="845" height="168" key="GridCell.Tab.1.center" timestamp="1601845246023">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="845" height="168" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1601845246023" />
+    <state width="845" height="168" key="GridCell.Tab.1.left" timestamp="1601845246022">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="845" height="168" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1601845246022" />
+    <state width="845" height="168" key="GridCell.Tab.1.right" timestamp="1601845246023">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="845" height="168" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1601845246023" />
+    <state x="142" y="0" key="SettingsEditor" timestamp="1601836998938">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1601836998938" />
-    <state x="170" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1601843793549" />
     <state x="337" y="165" key="com.intellij.ide.util.TipDialog" timestamp="1601754576085">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="337" y="165" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1601754576085" />
+    <state x="371" y="106" key="extract.method.dialog" timestamp="1601845123676">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="371" y="106" key="extract.method.dialog/0.0.1280.680@0.0.1280.680" timestamp="1601845123676" />
     <state x="336" y="72" width="612" height="536" key="find.popup" timestamp="1601826749565">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -259,16 +249,5 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="303" y="1" width="672" height="160" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1599494965283" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/aeserver/src/main/java/nl/team02/amsterdamevents/aeserver/AeserverApplication.java</url>
-          <line>6</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
