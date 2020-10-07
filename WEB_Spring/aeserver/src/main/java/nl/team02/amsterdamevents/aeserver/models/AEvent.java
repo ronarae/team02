@@ -6,6 +6,7 @@ import org.apache.tomcat.jni.Local;
 import java.time.LocalDate;
 import java.util.Date;
 import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class AEvent {
     public int id;
@@ -37,8 +38,8 @@ public class AEvent {
     public static AEvent createRandomAEvent() {
         int id = counter++;
         String title = "A fantastic backend aEvent-" + id;
-        LocalDate start = getRandomStartDate();
-        LocalDate end = getRandomEndDate();
+        LocalDate start = getRandomStartDate(2020, 2021);
+        LocalDate end = getRandomEndDate (start, 2021);
         AEventStatus status = getRandomAEventStatus();
         double participationFee = getRandomParticipationFee();
         int maxParticipants = getRandomMaxParticipants();
@@ -47,16 +48,25 @@ public class AEvent {
         return new AEvent(id, title, start, end, status, participationFee, maxParticipants, isTicketed);
     }
 
-    public static LocalDate getRandomStartDate() {
-        LocalDate currentDate = LocalDate.now();
 
-        return null;
+    public static LocalDate getRandomStartDate(int startYear, int endYear) {
+        LocalDate startDate = LocalDate.of(startYear, 1, 1); //Min of start
+        LocalDate endDate = LocalDate.of(endYear, 12, 31); //Max of end
+        long start = startDate.toEpochDay();
+        long end = endDate.toEpochDay();
+
+        long randomEpochDay = ThreadLocalRandom.current().longs(start, end).findAny().getAsLong();
+        return LocalDate.ofEpochDay(randomEpochDay);
     }
 
-    //wip
-    public static LocalDate getRandomEndDate() {
+    public static LocalDate getRandomEndDate(LocalDate startDate, int endYear) {
+        long start = startDate.toEpochDay();
 
-        return null;
+        LocalDate endDate = LocalDate.of(endYear, 12, 31); //Max of end
+        long end = endDate.toEpochDay();
+
+        long randomEpochDay = ThreadLocalRandom.current().longs(start, end).findAny().getAsLong();
+        return LocalDate.ofEpochDay(randomEpochDay);
     }
 
     public static AEventStatus getRandomAEventStatus() {
