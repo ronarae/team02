@@ -1,20 +1,24 @@
 package nl.team02.amsterdamevents.aeserver.models;
 
+
+import org.apache.tomcat.jni.Local;
+
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.Random;
 
 public class AEvent {
     public int id;
     public String title;
-    public Date start;
-    public Date end;
+    public LocalDate start;
+    public LocalDate end;
     public AEventStatus status;
     public double participationFee;
     public int maxParticipants;
     public boolean isTicketed;
     public static int counter = 0;
 
-    public AEvent(int id, String title, Date start, Date end, AEventStatus status, double participationFee, int maxParticipants, boolean isTicketed) {
+    public AEvent(int id, String title, LocalDate start, LocalDate end, AEventStatus status, double participationFee, int maxParticipants, boolean isTicketed) {
         this.id = id;
         this.title = title;
         this.start = start;
@@ -33,8 +37,8 @@ public class AEvent {
     public static AEvent createRandomAEvent() {
         int id = counter++;
         String title = "A fantastic backend aEvent-" + id;
-        Date start = new Date();
-        Date end = new Date();
+        LocalDate start = getRandomStartDate();
+        LocalDate end = getRandomEndDate();
         AEventStatus status = getRandomAEventStatus();
         double participationFee = getRandomParticipationFee();
         int maxParticipants = getRandomMaxParticipants();
@@ -43,15 +47,16 @@ public class AEvent {
         return new AEvent(id, title, start, end, status, participationFee, maxParticipants, isTicketed);
     }
 
-    public static Date getRandomStartDate() {
+    public static LocalDate getRandomStartDate() {
+        LocalDate currentDate = LocalDate.now();
 
-        return getRandomStartDate();
+        return null;
     }
 
     //wip
-    public static Date getRandomEndDate() {
+    public static LocalDate getRandomEndDate() {
 
-        return getRandomEndDate();
+        return null;
     }
 
     public static AEventStatus getRandomAEventStatus() {

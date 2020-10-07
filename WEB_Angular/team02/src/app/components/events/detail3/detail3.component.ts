@@ -77,7 +77,7 @@ export class Detail3Component {
   cancelCurrentAEvent() {
     if (this.confirmMessage()) {
       this.resetCurrentAEvent();
-      // @ts-ignore
+      // @ts-ignore/
       this.editedAEventId = -1;
     }
   }
