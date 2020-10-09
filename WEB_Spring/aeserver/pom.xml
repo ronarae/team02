@@ -11,7 +11,7 @@
     <groupId>nl.team02.amsterdamevents</groupId>
     <artifactId>aeserver</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>aeserver</name>
+    <name>AEvent</name>
     <description>Amsterdam Events project for Spring Boot</description>
 
     <properties>

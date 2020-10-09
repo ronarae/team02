@@ -1,10 +1,6 @@
 package nl.team02.amsterdamevents.aeserver.models;
 
-
-import org.apache.tomcat.jni.Local;
-
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -30,16 +26,11 @@ public class AEvent {
         this.isTicketed = isTicketed;
     }
 
-    public AEvent(String title) {
-        this.id = counter++;
-        this.title = title;
-    }
-
     public static AEvent createRandomAEvent() {
         int id = counter++;
         String title = "A fantastic backend aEvent-" + id;
         LocalDate start = getRandomStartDate(2020, 2021);
-        LocalDate end = getRandomEndDate (start, 2021);
+        LocalDate end = getRandomEndDate(start, 2021);
         AEventStatus status = getRandomAEventStatus();
         double participationFee = getRandomParticipationFee();
         int maxParticipants = getRandomMaxParticipants();
