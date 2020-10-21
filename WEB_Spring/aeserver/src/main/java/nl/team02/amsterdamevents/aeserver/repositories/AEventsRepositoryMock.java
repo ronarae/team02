@@ -50,10 +50,10 @@ public class AEventsRepositoryMock implements AEventsRepository {
     @Override
     public AEvent save(AEvent aevent) {
         if (aevent.getId() == (0)) {
-            aevent.setId(aevent.getId());
+            aevent.setId(Integer.parseInt(getNextUniqueId()));
             aevents.add(aevent);
         } else {
-            int index = getAEventIndexById(getNextUniqueId());
+            int index = getAEventIndexById(Integer.toString(aevent.getId()));
             aevents.set(index, aevent);
         }
         return aevent;

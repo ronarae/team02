@@ -74,6 +74,17 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.AeserverApplication (1)">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="E2E Tests (team02)" type="JavaScriptTestRunnerProtractor">
       <config-file value="$PROJECT_DIR$/team02/team02/e2e/protractor.conf.js" />
       <node-interpreter value="project" />
@@ -109,28 +120,6 @@
       <envs />
       <method v="2" />
     </configuration>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-            </expand>
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -214,26 +203,26 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1603302835017" />
-    <state width="1237" height="111" key="GridCell.Tab.0.bottom" timestamp="1603285812740">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1603310247546">
+      <screen x="1920" y="182" width="1366" height="728" />
     </state>
     <state width="1237" height="111" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1603285812740" />
-    <state width="1323" height="167" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.182.1366.728@1920.182.1366.728" timestamp="1602080212915" />
-    <state width="1237" height="111" key="GridCell.Tab.0.center" timestamp="1603285812739">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.182.1366.728@1920.182.1366.728" timestamp="1603310247546" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1603310247498">
+      <screen x="1920" y="182" width="1366" height="728" />
     </state>
     <state width="1237" height="111" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1603285812739" />
-    <state width="1323" height="167" key="GridCell.Tab.0.center/0.0.1536.824/1920.182.1366.728@1920.182.1366.728" timestamp="1602080212914" />
-    <state width="1237" height="111" key="GridCell.Tab.0.left" timestamp="1603285812738">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1536.824/1920.182.1366.728@1920.182.1366.728" timestamp="1603310247498" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1603310247498">
+      <screen x="1920" y="182" width="1366" height="728" />
     </state>
     <state width="1237" height="111" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1603285812738" />
-    <state width="1323" height="167" key="GridCell.Tab.0.left/0.0.1536.824/1920.182.1366.728@1920.182.1366.728" timestamp="1602080212914" />
-    <state width="1237" height="111" key="GridCell.Tab.0.right" timestamp="1603285812739">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1536.824/1920.182.1366.728@1920.182.1366.728" timestamp="1603310247498" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1603310247498">
+      <screen x="1920" y="182" width="1366" height="728" />
     </state>
     <state width="1237" height="111" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1603285812739" />
-    <state width="1323" height="167" key="GridCell.Tab.0.right/0.0.1536.824/1920.182.1366.728@1920.182.1366.728" timestamp="1602080212915" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1536.824/1920.182.1366.728@1920.182.1366.728" timestamp="1603310247498" />
     <state width="845" height="190" key="GridCell.Tab.1.bottom" timestamp="1603115172064">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -270,6 +259,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="91" y="0" key="new project wizard/0.0.1280.680@0.0.1280.680" timestamp="1601819921057" />
+    <state x="2259" y="253" key="run.anything.popup" timestamp="1603309122572">
+      <screen x="1920" y="182" width="1366" height="728" />
+    </state>
+    <state x="2259" y="253" key="run.anything.popup/0.0.1536.824/1920.182.1366.728@1920.182.1366.728" timestamp="1603309122572" />
     <state x="303" y="1" width="672" height="160" key="search.everywhere.popup" timestamp="1603116399222">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
