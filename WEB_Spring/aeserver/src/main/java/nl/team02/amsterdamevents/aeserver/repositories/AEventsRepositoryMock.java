@@ -1,11 +1,10 @@
 package nl.team02.amsterdamevents.aeserver.repositories;
 
 import nl.team02.amsterdamevents.aeserver.models.AEvent;
-import org.apache.coyote.Response;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.server.ResponseStatusException;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,8 +23,10 @@ public class AEventsRepositoryMock implements AEventsRepository {
     }
 
     private String getNextUniqueId() {
-        return String.format("2020-%d", idIncrement++);
+        return String.format("2020-%05d", idIncrement++);
     }
+
+
 
     public List<AEvent> findAll() {
         return this.aevents;
@@ -38,7 +39,7 @@ public class AEventsRepositoryMock implements AEventsRepository {
 
     @Override
     public List<AEvent> getAllAEvents() {
-        return null;
+        return aevents;
     }
 
     @Override
@@ -49,28 +50,29 @@ public class AEventsRepositoryMock implements AEventsRepository {
 
     @Override
     public AEvent save(AEvent aevent) {
-        if (aevent.getId().equals("0")) {
+        if (aevent.getId().equals(0)) {
             aevent.setId(getNextUniqueId());
             aevents.add(aevent);
         } else {
-
+            int index = getAEventIndexById(aevent.getId());
+            aevents.set(index, aevent);
         }
         return null;
     }
 
     @Override
     public boolean deleteById(String id) {
-        return false;
+        int index = getAEventIndexById(id);
+        AEvent tobeDeleted = aevents.get(index);
+        aevents.remove(index);
+        return true;
     }
-
 
     private int getAEventIndexById(String id) {
         try {
             int max = (int) aevents.stream().count();
             int index = IntStream.range(0, max).filter(idx ->
-            {
-                return aevents.get(idx).equals((id));
-            }).findFirst().getAsInt();
+                    aevents.get(idx).equals((id))).findFirst().getAsInt();
             return index;
         } catch (Exception e) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "There is no event with the given ID. Are you sure this is correct?");
