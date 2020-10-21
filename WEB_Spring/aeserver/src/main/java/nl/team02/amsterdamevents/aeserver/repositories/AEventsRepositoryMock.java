@@ -27,7 +27,6 @@ public class AEventsRepositoryMock implements AEventsRepository {
     }
 
 
-
     public List<AEvent> findAll() {
         return this.aevents;
     }
@@ -50,14 +49,14 @@ public class AEventsRepositoryMock implements AEventsRepository {
 
     @Override
     public AEvent save(AEvent aevent) {
-        if (aevent.getId().equals(0)) {
-            aevent.setId(getNextUniqueId());
+        if (aevent.getId() == (0)) {
+            aevent.setId(aevent.getId());
             aevents.add(aevent);
         } else {
-            int index = getAEventIndexById(aevent.getId());
+            int index = getAEventIndexById(getNextUniqueId());
             aevents.set(index, aevent);
         }
-        return null;
+        return aevent;
     }
 
     @Override

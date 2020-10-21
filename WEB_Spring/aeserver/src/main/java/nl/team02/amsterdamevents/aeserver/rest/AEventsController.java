@@ -18,7 +18,7 @@ public class AEventsController {
 
     private URI getLocationURI(String id) {
         URI location = ServletUriComponentsBuilder.fromCurrentRequest().
-                path("/id").buildAndExpand(id).toUri();
+                path("/{id}").buildAndExpand(id).toUri();
         return location;
     }
 
@@ -27,9 +27,5 @@ public class AEventsController {
         return aEventsRepository.getAllAEvents();
     }
 
-
-
-
-
-
+    
 }
