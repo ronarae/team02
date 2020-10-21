@@ -4,11 +4,10 @@ import com.fasterxml.jackson.annotation.JsonView;
 import nl.team02.amsterdamevents.aeserver.models.AEvent;
 import nl.team02.amsterdamevents.aeserver.repositories.AEventsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
@@ -37,7 +36,7 @@ public class AEventsController {
 //        return aEventsRepository.getAllAEvents();
 //    }
 
-    @PutMapping("/aevents/{id}")
+    @GetMapping("/aevents/{id}")
     public ResponseEntity<AEvent> getAEventById(@PathVariable String id) {
         AEvent aEvent = aEventsRepository.getAEventById(id);
 
@@ -45,5 +44,23 @@ public class AEventsController {
 
         URI location = getLocationURI(intToStringId);
         return ResponseEntity.created(location).body(aEvent);
+    }
+
+    @PutMapping("/aevents/{id}")
+    public ResponseEntity<AEvent> saveAEvent(@PathVariable String id, @ModelAttribute AEvent aEvent)
+            throws ResponseStatusException {
+        if (id.equals(aEvent.getId())) {
+            AEvent savedAEvent = aEventsRepository.save(aEvent);
+            return ResponseEntity.accepted().body(savedAEvent);
+        }
+        throw new ResponseStatusException(HttpStatus.PRECONDITION_FAILED, "The requested ID does not meet the ID provided in the body");
+    }
+
+    @PostMapping("/aevents")
+    public ResponseEntity<AEvent> createAEvent(@ModelAttribute AEvent aEvent) {
+        AEvent savedAEvent = aEventsRepository.save(aEvent);
+        String savedIntToStringId = Integer.toString(savedAEvent.getId());
+        URI location = getLocationURI(savedIntToStringId);
+        return ResponseEntity.created(location).body(savedAEvent);
     }
 }
