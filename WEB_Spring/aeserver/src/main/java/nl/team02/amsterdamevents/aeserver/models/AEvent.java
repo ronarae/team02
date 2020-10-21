@@ -26,7 +26,7 @@ public class AEvent {
         this.isTicketed = isTicketed;
     }
 
-    public static AEvent createRandomAEvent() {
+    public static AEvent createRandomAEvent(String nextUniqueId) {
         int id = counter++;
         String title = "A fantastic backend aEvent-" + id;
         LocalDate start = getRandomStartDate(2020, 2021);
@@ -89,6 +89,14 @@ public class AEvent {
     @Override
     public String toString() {
         return String.format("AEvent{id=%d, title='%s', start=%s, end=%s, status=%s, participationFee=%s, maxParticipants=%d, isTicketed=%s}", id, title, start, end, status, participationFee, maxParticipants, isTicketed);
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }
 
