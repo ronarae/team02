@@ -1,21 +1,28 @@
 package nl.team02.amsterdamevents.aeserver.models;
 
+import com.fasterxml.jackson.annotation.JsonView;
+import nl.team02.amsterdamevents.aeserver.repositories.AEventsRepository;
+import nl.team02.amsterdamevents.aeserver.repositories.AEventsRepositoryMock;
+import nl.team02.amsterdamevents.aeserver.views.ViewAEvent;
+
 import java.time.LocalDate;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class AEvent {
-    public int id;
+    @JsonView(ViewAEvent.Public.class)
+    public long id;
+    @JsonView(ViewAEvent.Public.class)
     public String title;
     public LocalDate start;
     public LocalDate end;
+    @JsonView(ViewAEvent.Public.class)
     public AEventStatus status;
     public double participationFee;
     public int maxParticipants;
     public boolean isTicketed;
-    public static int counter = 0;
 
-    public AEvent(int id, String title, LocalDate start, LocalDate end, AEventStatus status, double participationFee, int maxParticipants, boolean isTicketed) {
+    public AEvent(long id, String title, LocalDate start, LocalDate end, AEventStatus status, double participationFee, int maxParticipants, boolean isTicketed) {
         this.id = id;
         this.title = title;
         this.start = start;
@@ -26,8 +33,8 @@ public class AEvent {
         this.isTicketed = isTicketed;
     }
 
-    public static AEvent createRandomAEvent(String nextUniqueId) {
-        int id = counter++;
+    public static AEvent createRandomAEvent() {
+        long id = AEventsRepositoryMock.aEventId++;
         String title = "A fantastic backend aEvent-" + id;
         LocalDate start = getRandomStartDate(2020, 2021);
         LocalDate end = getRandomEndDate(start, 2021);
@@ -86,17 +93,68 @@ public class AEvent {
         return ticketed.nextBoolean();
     }
 
-    @Override
-    public String toString() {
-        return String.format("AEvent{id=%d, title='%s', start=%s, end=%s, status=%s, participationFee=%s, maxParticipants=%d, isTicketed=%s}", id, title, start, end, status, participationFee, maxParticipants, isTicketed);
-    }
-
-    public int getId() {
+    public long getId() {
         return id;
     }
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public LocalDate getStart() {
+        return start;
+    }
+
+    public void setStart(LocalDate start) {
+        this.start = start;
+    }
+
+    public LocalDate getEnd() {
+        return end;
+    }
+
+    public void setEnd(LocalDate end) {
+        this.end = end;
+    }
+
+    public AEventStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(AEventStatus status) {
+        this.status = status;
+    }
+
+    public double getParticipationFee() {
+        return participationFee;
+    }
+
+    public void setParticipationFee(double participationFee) {
+        this.participationFee = participationFee;
+    }
+
+    public int getMaxParticipants() {
+        return maxParticipants;
+    }
+
+    public void setMaxParticipants(int maxParticipants) {
+        this.maxParticipants = maxParticipants;
+    }
+
+    public boolean isTicketed() {
+        return isTicketed;
+    }
+
+    public void setTicketed(boolean ticketed) {
+        isTicketed = ticketed;
     }
 }
 

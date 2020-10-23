@@ -5,9 +5,8 @@ import nl.team02.amsterdamevents.aeserver.models.AEvent;
 import java.util.List;
 
 public interface AEventsRepository {
-    void addAEvent(AEvent AEventmodel);
-    List<AEvent> getAllAEvents();
-    AEvent getAEventById(String id);
+    List<AEvent> findAll();
+    AEvent findById(long id);
     AEvent save(AEvent aevent);
-    boolean deleteById (String id);
+    boolean deleteById (long id);
 }

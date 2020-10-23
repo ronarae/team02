@@ -3,6 +3,7 @@ package nl.team02.amsterdamevents.aeserver.rest;
 import com.fasterxml.jackson.annotation.JsonView;
 import nl.team02.amsterdamevents.aeserver.models.AEvent;
 import nl.team02.amsterdamevents.aeserver.repositories.AEventsRepository;
+import nl.team02.amsterdamevents.aeserver.views.ViewAEvent;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import javax.servlet.Servlet;
 import java.net.URI;
 import java.util.List;
 
@@ -19,7 +21,7 @@ public class AEventsController {
     @Autowired
     private AEventsRepository aEventsRepository;
 
-    private URI getLocationURI(String id) {
+    private URI getLocationURI(long id) {
         URI location = ServletUriComponentsBuilder.fromCurrentRequest().
                 path("/{id}").buildAndExpand(id).toUri();
         return location;
@@ -27,40 +29,52 @@ public class AEventsController {
 
     @GetMapping("/aevents")
     public List<AEvent> getAllAEvents() {
-        return aEventsRepository.getAllAEvents();
+        return aEventsRepository.findAll();
     }
-//    voor E
-//    @GetMapping(path = "/aevents-summary")
-//    @JsonView(value = AEventView.SummaryView.class)
-//    public List<AEvent> getAllEventSummary(){
-//        return aEventsRepository.getAllAEvents();
-//    }
+
+    @JsonView(ViewAEvent.Public.class)
+    @GetMapping("/aevents/summary")
+    public List<AEvent> getAEventsSummary() {
+        if (aEventsRepository.findAll().size() != 0) {
+            return aEventsRepository.findAll();
+        }
+        throw new ResponseStatusException(HttpStatus.NOT_FOUND, "There are no AEvents found");
+    }
 
     @GetMapping("/aevents/{id}")
-    public ResponseEntity<AEvent> getAEventById(@PathVariable String id) {
-        AEvent aEvent = aEventsRepository.getAEventById(id);
-
-        String intToStringId = Integer.toString(aEvent.getId());
-
-        URI location = getLocationURI(intToStringId);
-        return ResponseEntity.created(location).body(aEvent);
+    public AEvent getAEventById(@PathVariable long id) throws ResponseStatusException {
+        if (aEventsRepository.findById(id) != null) {
+            return aEventsRepository.findById(id);
+        }
+        throw new ResponseStatusException(HttpStatus.PRECONDITION_FAILED, "Cannot find AEvents ID: " + id);
     }
 
-    @PutMapping("/aevents/{id}")
-    public ResponseEntity<AEvent> saveAEvent(@PathVariable String id, @ModelAttribute AEvent aEvent)
+    @PostMapping("/aevents")
+    public ResponseEntity<AEvent> createAEvent(@RequestBody AEvent aEvent) {
+        aEvent.setId(0);
+        AEvent createdAEvent = aEventsRepository.save(aEvent);
+        URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(createdAEvent.getId()).toUri();
+        return ResponseEntity.created(location).body(createdAEvent);
+    }
+
+    @PostMapping("/aevents/{id}")
+    public ResponseEntity<AEvent> saveAEvent(@PathVariable long id, @RequestBody AEvent aEvent)
             throws ResponseStatusException {
-        if (id.equals(aEvent.getId())) {
+        if (id == aEvent.getId()) {
             AEvent savedAEvent = aEventsRepository.save(aEvent);
-            return ResponseEntity.accepted().body(savedAEvent);
+            URI location = getLocationURI(savedAEvent.getId());
+            return ResponseEntity.created(location).body(savedAEvent);
         }
         throw new ResponseStatusException(HttpStatus.PRECONDITION_FAILED, "The requested ID does not meet the ID provided in the body");
     }
 
-    @PostMapping("/aevents")
-    public ResponseEntity<AEvent> createAEvent(@ModelAttribute AEvent aEvent) {
-        AEvent savedAEvent = aEventsRepository.save(aEvent);
-        String savedIntToStringId = Integer.toString(savedAEvent.getId());
-        URI location = getLocationURI(savedIntToStringId);
-        return ResponseEntity.created(location).body(savedAEvent);
+    @DeleteMapping("/aevents/{id}")
+    public ResponseEntity<Boolean> deleteById(@PathVariable long id) throws ResponseStatusException {
+        if (aEventsRepository.deleteById(id)) {
+            return ResponseEntity.ok(true);
+        }
+        throw new ResponseStatusException(HttpStatus.NOT_FOUND, "The provided AEvents ID does: " + id + " does not exist");
     }
+
+
 }
