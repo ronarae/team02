@@ -73,7 +73,7 @@ public class AEventsController {
         if (aEventsRepository.deleteById(id)) {
             return ResponseEntity.ok(true);
         }
-        throw new ResponseStatusException(HttpStatus.NOT_FOUND, "The provided AEvents ID does: " + id + " does not exist");
+        throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Cannot delete the AEvent because the provided ID: " + id + " does not exist");
     }
 
 
