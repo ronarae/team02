@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import javax.servlet.Servlet;
+
 import java.net.URI;
 import java.util.List;
 

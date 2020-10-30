@@ -1,5 +1,6 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
+import {HttpClientModule} from '@angular/common/http';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
@@ -17,6 +18,9 @@ import {RouterModule, Routes} from "@angular/router";
 import { ErrorComponent } from './components/mainpage/error/error.component';
 import { Detail4Component } from './components/events/detail4/detail4.component';
 import { Overview4Component } from './components/events/overview4/overview4.component';
+import {Detail5Component} from "./components/events/detail5/detail5.component";
+import {Overview5Component} from "./components/events/overview5/overview5.component";
+
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
@@ -32,6 +36,12 @@ const appRoutes: Routes = [
       {path: ':id', component: Detail4Component},
       {path: '', redirectTo: '/events/overview4/-1', pathMatch: 'full'},
       ]
+        },
+        {path: 'overview5', component: Overview5Component,
+          children: [
+            {path: ':id', component: Detail5Component},
+            {path: '', redirectTo: '/events/overview5/-1', pathMatch: 'full'},
+          ]
         }
       ]
   },
@@ -53,12 +63,15 @@ const appRoutes: Routes = [
     ErrorComponent,
     Detail4Component,
     Overview4Component,
+    Overview5Component,
+    Detail5Component,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes, {useHash: true})
+    RouterModule.forRoot(appRoutes, {useHash: true}),
+    HttpClientModule,
   ],
   providers: [AEventsService],
   bootstrap: [AppComponent]

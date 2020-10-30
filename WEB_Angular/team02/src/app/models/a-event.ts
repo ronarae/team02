@@ -62,6 +62,11 @@ export class AEvent {
 
   }
 
+  static trueCopy (aEvent: AEvent): AEvent {
+    // @ts-ignore
+    return (aEvent == null ? null : Object.assign(new AEvent(), aEvent));
+  }
+
 }
 
 export enum AEventStatus {

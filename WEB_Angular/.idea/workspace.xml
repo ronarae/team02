@@ -13,9 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ComposerSettings">
-    <execution>
-      <executable />
-    </execution>
+    <execution />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -49,20 +47,39 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../WEB_Spring" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs.protractor.protractor_package" value="$PROJECT_DIR$/team02/node_modules/protractor" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="settings.typescriptcompiler" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="C:\Users\xshan\Documents\ICT Jaar 2\Web Frameworks\team02\WEB_Angular\team02\node_modules\typescript\lib" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\xshan\Documents\ICT Jaar 2\Web Frameworks\team02\WEB_Angular\team02\src\app\services" />
+      <recent name="C:\Users\xshan\Documents\ICT Jaar 2\Web Frameworks\team02\WEB_Angular\team02\src\app\components\events" />
+    </key>
+  </component>
   <component name="RunManager" selected="npm.Angular CLI Server">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="E2E Tests (team02)" type="JavaScriptTestRunnerProtractor">
       <config-file value="$PROJECT_DIR$/team02/e2e/protractor.conf.js" />
       <node-interpreter value="project" />
+      <protractor-package value="$PROJECT_DIR$/team02/node_modules/protractor" />
       <protractor-options value="" />
       <envs />
       <scope-kind value="ALL" />
@@ -82,7 +99,7 @@
       <method v="2" />
     </configuration>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -122,11 +139,20 @@
       <workItem from="1601986016032" duration="11000" />
       <workItem from="1603024688387" duration="87000" />
       <workItem from="1603302838933" duration="43000" />
+      <workItem from="1604068166365" duration="589000" />
+      <workItem from="1604068936637" duration="27000" />
+      <workItem from="1604068979071" duration="4340000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/team02/src/app/services/a-events-sb.service.js" />
+        <option value="$PROJECT_DIR$/team02/src/app/models/a-event.js" />
+      </list>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -136,10 +162,14 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="233" y="0" key="#TSLint/0.0.1280.680@0.0.1280.680" timestamp="1600254242653" />
-    <state x="2369" y="284" key="FileChooserDialogImpl" timestamp="1601976572699">
-      <screen x="1920" y="182" width="1366" height="728" />
+    <state x="410" y="76" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1604068709557">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1601828883703" />
+    <state x="410" y="76" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1280.680@0.0.1280.680" timestamp="1604068709557" />
+    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1604072142204">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1604072142204" />
     <state x="505" y="116" key="FileChooserDialogImpl/0.0.1536.824/1920.182.1366.728@0.0.1536.824" timestamp="1601887376588" />
     <state x="2369" y="284" key="FileChooserDialogImpl/0.0.1536.824/1920.182.1366.728@1920.182.1366.728" timestamp="1601976572699" />
     <state x="505" y="115" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1600866636448" />
@@ -163,9 +193,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="349" y="147" key="IDE.errors.dialog/0.0.1536.824@0.0.1536.824" timestamp="1600002314511" />
-    <state x="277" y="55" key="SettingsEditor" timestamp="1599421908734">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="231" y="0" key="SettingsEditor" timestamp="1604068964181">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state x="231" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1604068964181" />
     <state x="277" y="55" key="SettingsEditor/0.0.1536.824/1920.182.1366.728@0.0.1536.824" timestamp="1599421908734" />
     <state x="277" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1599410079164" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1599682550561">
@@ -180,10 +211,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="436" y="0" width="1114" height="610" key="dock-window-1/0.0.1536.824@0.0.1536.824" timestamp="1600003095464" />
-    <state x="334" y="72" width="612" height="536" key="find.popup" timestamp="1603302873362">
+    <state x="334" y="72" width="612" height="536" key="find.popup" timestamp="1604069713247">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="334" y="72" width="612" height="536" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1603302873362" />
+    <state x="334" y="72" width="612" height="536" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1604069713247" />
     <state x="2276" y="259" width="654" height="574" key="find.popup/0.0.1536.824/1920.182.1366.728@1920.182.1366.728" timestamp="1601475984198" />
     <state x="492" y="42" key="refactoring.ChangeSignatureDialog" timestamp="1599552503725">
       <screen x="0" y="0" width="1536" height="824" />

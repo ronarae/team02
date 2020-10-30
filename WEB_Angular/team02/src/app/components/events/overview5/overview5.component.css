@@ -1,0 +1,13 @@
+.event-table, .event-tr, .event-td{
+  border: 5px solid navajowhite;
+  text-align: center;
+}
+.btn-event{
+  float: right;
+  background-color: darkorange;
+  font-weight: bolder;
+}
+
+.table tr.active td {
+  background-color:lightpink !important;
+}
