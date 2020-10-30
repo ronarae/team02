@@ -2,6 +2,7 @@ package nl.team02.amsterdamevents.aeserver.repositories;
 
 import nl.team02.amsterdamevents.aeserver.models.AEvent;
 import org.springframework.stereotype.Component;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
 
 
 import java.util.ArrayList;
@@ -58,5 +59,4 @@ public class AEventsRepositoryMock implements AEventsRepository {
         }
         return false;
     }
-
 }
