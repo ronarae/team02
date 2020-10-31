@@ -6,7 +6,7 @@ import {Subscription} from "rxjs";
 import {AEventsSbService} from "../../../services/a-events-sb.service";
 
 @Component({
-  selector: 'app-detail4',
+  selector: 'app-detail5',
   templateUrl: './detail5.component.html',
   styleUrls: ['./detail5.component.css']
 })
@@ -26,10 +26,13 @@ export class Detail5Component implements OnInit{
 
   ngOnInit() {
     // get the event id query parameter from the activated route
-    this.childParamsSubscription = this.activatedRoute.params.subscribe((params: Params) => {
-      this.editedAEventId = (params.id || -1);
-      this.currentAEvent = Object.assign({}, this.aEventservice.findById(this.editedAEventId));
-    })
+    const that = this;
+    setTimeout(function (){
+      that.childParamsSubscription = that.activatedRoute.params.subscribe((params: Params) => {
+        that.editedAEventId = (params.id || -1);
+        that.currentAEvent = Object.assign({}, that.aEventservice.findById(that.editedAEventId));
+      })
+    }, 150)
   }
 
   // tslint:disable-next-line:typedef
@@ -52,7 +55,7 @@ export class Detail5Component implements OnInit{
     this.aEventservice.save(this.currentAEvent);
     this.resetCurrentAEvent();
 
-    this.router.navigateByUrl("/events/overview4/-1");
+    this.router.navigateByUrl("/events/overview5/-1");
   }
 
   // tslint:disable-next-line:typedef no-empty
@@ -63,7 +66,7 @@ export class Detail5Component implements OnInit{
       event.id = this.currentAEvent.id;
       this.currentAEvent = event;
 
-      this.router.navigateByUrl("/events/overview4/-1");
+      this.router.navigateByUrl("/events/overview5/-1");
     }
   }
 
@@ -79,7 +82,7 @@ export class Detail5Component implements OnInit{
     if (this.confirmMessage()) {
       this.resetCurrentAEvent();
 
-      this.router.navigateByUrl("/events/overview4/-1");
+      this.router.navigateByUrl("/events/overview5/-1");
     }
   }
 

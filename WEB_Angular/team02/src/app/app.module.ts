@@ -23,6 +23,7 @@ import { Detail4Component } from './components/events/detail4/detail4.component'
 import { Overview4Component } from './components/events/overview4/overview4.component';
 import {Detail5Component} from "./components/events/detail5/detail5.component";
 import {Overview5Component} from "./components/events/overview5/overview5.component";
+import {AEventsSbService} from "./services/a-events-sb.service";
 
 
 const appRoutes: Routes = [
@@ -76,7 +77,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes, {useHash: true}),
     HttpClientModule,
   ],
-  providers: [AEventsService],
+  providers: [AEventsService, AEventsSbService, HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule {

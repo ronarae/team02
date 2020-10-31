@@ -15,6 +15,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import java.net.URI;
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
 @RestController
 public class AEventsController {
 
@@ -57,7 +58,7 @@ public class AEventsController {
         return ResponseEntity.created(location).body(createdAEvent);
     }
 
-    @PostMapping("/aevents/{id}")
+    @PutMapping("/aevents/{id}")
     public ResponseEntity<AEvent> saveAEvent(@PathVariable long id, @RequestBody AEvent aEvent)
             throws ResponseStatusException {
         if (id == aEvent.getId()) {
