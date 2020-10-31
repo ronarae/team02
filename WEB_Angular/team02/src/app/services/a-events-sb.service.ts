@@ -28,12 +28,12 @@ export class AEventsSbService {
   }
 
   findAll(): AEvent[] {
-    // TODO return all the list of all AEvents
+    //return all the list of all AEvents
     return this.aEvents;
   }
 
   findById(eId: number): AEvent {
-    // TODO find and return the AEvent with the specified ID return null if none is found
+    // find and return the AEvent with the specified ID return null if none is found
 
     // tslint:disable-next-line:triple-equals
     return this.aEvents.find((event) => event.id == eId);
