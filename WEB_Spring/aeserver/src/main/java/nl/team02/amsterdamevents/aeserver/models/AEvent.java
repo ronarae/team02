@@ -18,19 +18,19 @@ public class AEvent {
     public LocalDate end;
     @JsonView(ViewAEvent.Public.class)
     public AEventStatus status;
-    public double participationFee;
+    public double entranceFee;
     public int maxParticipants;
-    public boolean isTicketed;
+    public boolean IsTicketed;
 
-    public AEvent(long id, String title, LocalDate start, LocalDate end, AEventStatus status, double participationFee, int maxParticipants, boolean isTicketed) {
+    public AEvent(long id, String title, LocalDate start, LocalDate end, AEventStatus status, double entranceFee, int maxParticipants, boolean IsTicketed) {
         this.id = id;
         this.title = title;
         this.start = start;
         this.end = end;
         this.status = status;
-        this.participationFee = participationFee;
+        this.entranceFee = entranceFee;
         this.maxParticipants = maxParticipants;
-        this.isTicketed = isTicketed;
+        this.IsTicketed = IsTicketed;
     }
 
     public static AEvent createRandomAEvent() {
@@ -39,11 +39,13 @@ public class AEvent {
         LocalDate start = getRandomStartDate(2020, 2021);
         LocalDate end = getRandomEndDate(start, 2021);
         AEventStatus status = getRandomAEventStatus();
-        double participationFee = getRandomParticipationFee();
+        double entranceFee = getRandomEntranceFee();
         int maxParticipants = getRandomMaxParticipants();
-        boolean isTicketed = getRandomIsTicketed();
+        boolean IsTicketed = getRandomIsTicketed();
 
-        return new AEvent(id, title, start, end, status, participationFee, maxParticipants, isTicketed);
+
+
+        return new AEvent(id, title, start, end, status, entranceFee, maxParticipants, IsTicketed);
     }
 
 
@@ -74,10 +76,10 @@ public class AEvent {
         return values[randomIndex];
     }
 
-    public static double getRandomParticipationFee() {
+    public static double getRandomEntranceFee() {
         double minimumFee = 10.00;
         double maximumFee = 100.00;
-        double generatedRandomFee = Math.floor(minimumFee + new Random().nextDouble() * (maximumFee - minimumFee));
+        double generatedRandomFee = Math.floor(minimumFee + (new Random().nextDouble() * (maximumFee - minimumFee)));
         return generatedRandomFee;
     }
 
@@ -133,12 +135,12 @@ public class AEvent {
         this.status = status;
     }
 
-    public double getParticipationFee() {
-        return participationFee;
+    public double getEntranceFee() {
+        return entranceFee;
     }
 
-    public void setParticipationFee(double participationFee) {
-        this.participationFee = participationFee;
+    public void setEntranceFee(double entranceFee) {
+        this.entranceFee = entranceFee;
     }
 
     public int getMaxParticipants() {
@@ -149,12 +151,12 @@ public class AEvent {
         this.maxParticipants = maxParticipants;
     }
 
-    public boolean isTicketed() {
-        return isTicketed;
+    public boolean IsTicketed() {
+        return IsTicketed;
     }
 
     public void setTicketed(boolean ticketed) {
-        isTicketed = ticketed;
+        IsTicketed = ticketed;
     }
 }
 
