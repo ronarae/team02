@@ -33,7 +33,7 @@ export class AEventsSbService {
   }
 
   findById(eId: number): AEvent {
-    // find and return the AEvent with the specified ID return null if none is found
+    //  find and return the AEvent with the specified ID return null if none is found
 
     // tslint:disable-next-line:triple-equals
     return this.aEvents.find((event) => event.id == eId);
