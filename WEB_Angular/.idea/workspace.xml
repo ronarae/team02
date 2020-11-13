@@ -2,10 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a5f0986-22c8-49cc-b861-4e0ff5ccc638" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../WEB_Spring/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WEB_Spring/.idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WEB_Spring/.idea/libraries/Maven__com_h2database_h2_1_4_200.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WEB_Spring/.idea/libraries/Maven__com_sun_activation_jakarta_activation_1_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WEB_Spring/.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_3_0_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WEB_Spring/.idea/libraries/Maven__com_zaxxer_HikariCP_3_4_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WEB_Spring/.idea/libraries/Maven__jakarta_persistence_jakarta_persistence_api_2_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WEB_Spring/.idea/libraries/Maven__jakarta_transaction_jakarta_transaction_api_1_3_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WEB_Spring/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WEB_Spring/.idea/libraries/Maven__org_dom4j_dom4j_2_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WEB_Spring/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_runtime_2_3_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WEB_Spring/.idea/libraries/Maven__org_glassfish_jaxb_txw2_2_3_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WEB_Spring/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_1_0_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WEB_Spring/.idea/libraries/Maven__org_hibernate_hibernate_core_5_4_21_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WEB_Spring/.idea/libraries/Maven__org_javassist_javassist_3_24_0_GA.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WEB_Spring/.idea/libraries/Maven__org_jboss_jandex_2_1_3_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WEB_Spring/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_4_1_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WEB_Spring/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_2_3_4_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WEB_Spring/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_2_3_4_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WEB_Spring/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_3_4_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WEB_Spring/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_3_4_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WEB_Spring/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_2_3_4_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WEB_Spring/.idea/libraries/Maven__org_springframework_spring_aspects_5_2_9_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WEB_Spring/.idea/libraries/Maven__org_springframework_spring_jdbc_5_2_9_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WEB_Spring/.idea/libraries/Maven__org_springframework_spring_orm_5_2_9_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WEB_Spring/.idea/libraries/Maven__org_springframework_spring_tx_5_2_9_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WEB_Spring/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WEB_Spring/aeserver/src/main/java/nl/team02/amsterdamevents/aeserver/repositories/AEventsRepositoryJpa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WEB_Spring/aeserver/src/main/resources/data.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/team02/src/app/services/a-events-sb.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/team02/src/app/services/a-events-sb.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WEB_Spring/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WEB_Spring/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WEB_Spring/aeserver/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WEB_Spring/aeserver/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WEB_Spring/aeserver/src/main/java/nl/team02/amsterdamevents/aeserver/models/AEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/../WEB_Spring/aeserver/src/main/java/nl/team02/amsterdamevents/aeserver/models/AEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WEB_Spring/aeserver/src/main/java/nl/team02/amsterdamevents/aeserver/repositories/AEventsRepositoryMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/../WEB_Spring/aeserver/src/main/java/nl/team02/amsterdamevents/aeserver/repositories/AEventsRepositoryMock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WEB_Spring/aeserver/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../WEB_Spring/aeserver/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,6 +163,11 @@
       <workItem from="1604068936637" duration="27000" />
       <workItem from="1604068979071" duration="7741000" />
       <workItem from="1604151456973" duration="1678000" />
+      <workItem from="1604246275450" duration="3529000" />
+      <workItem from="1604444848078" duration="88000" />
+      <workItem from="1604688661569" duration="606000" />
+      <workItem from="1604931032840" duration="314000" />
+      <workItem from="1605282555071" duration="3706000" />
     </task>
     <servers />
   </component>
@@ -156,13 +192,13 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="410" y="76" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1280.680@0.0.1280.680" timestamp="1604068709557" />
-    <state x="505" y="115" key="FileChooserDialogImpl" timestamp="1604231226603">
+    <state x="505" y="115" key="FileChooserDialogImpl" timestamp="1605282651706">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1604151477581" />
-    <state x="505" y="116" key="FileChooserDialogImpl/0.0.1536.824/1920.182.1366.728@0.0.1536.824" timestamp="1601887376588" />
+    <state x="505" y="116" key="FileChooserDialogImpl/0.0.1536.824/1920.182.1366.728@0.0.1536.824" timestamp="1604931343152" />
     <state x="2369" y="284" key="FileChooserDialogImpl/0.0.1536.824/1920.182.1366.728@1920.182.1366.728" timestamp="1601976572699" />
-    <state x="505" y="115" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1604231226603" />
+    <state x="505" y="115" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1605282651706" />
     <state width="1492" height="210" key="GridCell.Tab.0.bottom" timestamp="1599406994773">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

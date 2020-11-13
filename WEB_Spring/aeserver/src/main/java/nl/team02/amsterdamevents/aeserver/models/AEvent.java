@@ -4,29 +4,37 @@ import com.fasterxml.jackson.annotation.JsonView;
 import nl.team02.amsterdamevents.aeserver.repositories.AEventsRepository;
 import nl.team02.amsterdamevents.aeserver.repositories.AEventsRepositoryMock;
 import nl.team02.amsterdamevents.aeserver.views.ViewAEvent;
+import org.apache.tomcat.jni.Local;
 
+import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
+
+@Entity
 public class AEvent {
     @JsonView(ViewAEvent.Public.class)
+    @Id //primary key
+    @GeneratedValue
     public long id;
     @JsonView(ViewAEvent.Public.class)
     public String title;
-    public LocalDate start;
-    public LocalDate end;
+    public LocalDate startDate;
+    public LocalDate endDate;
     @JsonView(ViewAEvent.Public.class)
     public AEventStatus status;
     public double entranceFee;
     public int maxParticipants;
     public boolean IsTicketed;
 
-    public AEvent(long id, String title, LocalDate start, LocalDate end, AEventStatus status, double entranceFee, int maxParticipants, boolean IsTicketed) {
+    public AEvent() {}
+
+    public AEvent(long id, String title, LocalDate startDate, LocalDate endDate, AEventStatus status, double entranceFee, int maxParticipants, boolean IsTicketed) {
         this.id = id;
         this.title = title;
-        this.start = start;
-        this.end = end;
+        this.startDate = startDate;
+        this.endDate = endDate;
         this.status = status;
         this.entranceFee = entranceFee;
         this.maxParticipants = maxParticipants;
@@ -111,20 +119,20 @@ public class AEvent {
         this.title = title;
     }
 
-    public LocalDate getStart() {
-        return start;
+    public LocalDate getStartDate() {
+        return startDate;
     }
 
-    public void setStart(LocalDate start) {
-        this.start = start;
+    public void setStartDate(LocalDate startDate) {
+        this.startDate = startDate;
     }
 
-    public LocalDate getEnd() {
-        return end;
+    public LocalDate getEndDate() {
+        return endDate;
     }
 
-    public void setEnd(LocalDate end) {
-        this.end = end;
+    public void setEndDate(LocalDate endDate) {
+        this.endDate = endDate;
     }
 
     public AEventStatus getStatus() {
