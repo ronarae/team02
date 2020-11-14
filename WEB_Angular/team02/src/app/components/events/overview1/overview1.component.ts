@@ -72,7 +72,7 @@ export class Overview1Component implements OnInit {
 
   IsTicketed = [];
 
-  public aEvents: AEvent[];
+  public  aEvents: AEvent[];
 
   constructor() {
   }
