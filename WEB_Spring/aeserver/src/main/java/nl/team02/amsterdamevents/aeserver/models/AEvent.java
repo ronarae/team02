@@ -26,6 +26,7 @@ public class AEvent {
     public double entranceFee;
     public int maxParticipants;
     public boolean isTicketed;
+
     @OneToMany(mappedBy = "aEvent")
     private List<Registration> registrations = new ArrayList<>();
 
@@ -41,6 +42,7 @@ public class AEvent {
         this.maxParticipants = maxParticipants;
         this.isTicketed = isTicketed;
     }
+
 
     public static AEvent createRandomAEvent() {
         long id = AEventsRepositoryMock.aEventId++;

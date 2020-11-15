@@ -1,5 +1,7 @@
 package nl.team02.amsterdamevents.aeserver.models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
@@ -13,14 +15,17 @@ public class Registration {
     public String ticketCode;
     public boolean paid;
     public LocalDateTime submissionDate;
+
     @ManyToOne
+    @JsonBackReference
     private AEvent aEvent;
 
-    public Registration(long id, String ticketCode, boolean paid, LocalDateTime submissionDate) {
+    public Registration(long id, String ticketCode, boolean paid, LocalDateTime submissionDate, AEvent aEvent) {
         this.id = id;
         this.ticketCode = ticketCode;
         this.paid = paid;
         this.submissionDate = submissionDate;
+        this.aEvent = aEvent;
     }
 
     public Registration() {

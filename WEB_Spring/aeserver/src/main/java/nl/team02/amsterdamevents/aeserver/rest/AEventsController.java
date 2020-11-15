@@ -2,7 +2,9 @@ package nl.team02.amsterdamevents.aeserver.rest;
 
 import com.fasterxml.jackson.annotation.JsonView;
 import nl.team02.amsterdamevents.aeserver.models.AEvent;
+import nl.team02.amsterdamevents.aeserver.models.Registration;
 import nl.team02.amsterdamevents.aeserver.repositories.AEventsRepository;
+import nl.team02.amsterdamevents.aeserver.repositories.RegistrationsRepositoryJpa;
 import nl.team02.amsterdamevents.aeserver.views.ViewAEvent;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -12,6 +14,7 @@ import org.springframework.web.server.ResponseStatusException;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 
+import javax.transaction.Transactional;
 import java.net.URI;
 import java.util.List;
 
@@ -21,6 +24,9 @@ public class AEventsController {
 
     @Autowired
     private AEventsRepository aEventsRepository;
+
+    @Autowired
+    private RegistrationsRepositoryJpa registrationsRepositoryJpa;
 
     private URI getLocationURI(long id) {
         URI location = ServletUriComponentsBuilder.fromCurrentRequest().
@@ -64,6 +70,17 @@ public class AEventsController {
         AEvent createdAEvent = aEventsRepository.save(aEvent);
         URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(createdAEvent.getId()).toUri();
         return ResponseEntity.created(location).body(createdAEvent);
+    }
+
+    //nog fixen!
+    @PostMapping("/rest/aevents/{id}/register")
+    @Transactional
+    public ResponseEntity<Registration> createRegistration(@RequestBody Registration registration) {
+        Registration createRegistration = registrationsRepositoryJpa.save(registration);
+        URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{aeventId}").buildAndExpand(registration.getId()).toUri();
+
+
+        return ResponseEntity.created(location).body(createRegistration);
     }
 
     @PutMapping("/aevents/{id}")
