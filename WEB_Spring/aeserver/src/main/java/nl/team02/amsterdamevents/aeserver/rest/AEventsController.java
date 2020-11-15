@@ -58,6 +58,14 @@ public class AEventsController {
         return ResponseEntity.created(location).body(createdAEvent);
     }
 
+    @PostMapping("/aevents/random")
+    public ResponseEntity<AEvent> createAEvent() {
+        AEvent aEvent = AEvent.createRandomAEvent();
+        AEvent createdAEvent = aEventsRepository.save(aEvent);
+        URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(createdAEvent.getId()).toUri();
+        return ResponseEntity.created(location).body(createdAEvent);
+    }
+
     @PutMapping("/aevents/{id}")
     public ResponseEntity<AEvent> saveAEvent(@PathVariable long id, @RequestBody AEvent aEvent)
             throws ResponseStatusException {
