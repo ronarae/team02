@@ -6,6 +6,8 @@ import nl.team02.amsterdamevents.aeserver.views.ViewAEvent;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -24,6 +26,8 @@ public class AEvent {
     public double entranceFee;
     public int maxParticipants;
     public boolean isTicketed;
+    @OneToMany(mappedBy = "aEvent")
+    private List<Registration> registrations = new ArrayList<>();
 
     public AEvent() {}
 
@@ -108,62 +112,31 @@ public class AEvent {
         this.id = id;
     }
 
-    public String getTitle() {
-        return title;
+    public List<Registration> getRegistrations() {
+        return registrations;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void addRegistration(Registration registration) {
+        this.registrations.add(registration);
     }
 
-    public LocalDate getStartDate() {
-        return startDate;
+    public void removeRegistration(Registration registration) {
+        this.registrations.remove(registration);
     }
 
-    public void setStartDate(LocalDate startDate) {
-        this.startDate = startDate;
+    @Override
+    public String toString() {
+        return "AEvent{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", startDate=" + startDate +
+                ", endDate=" + endDate +
+                ", status=" + status +
+                ", entranceFee=" + entranceFee +
+                ", maxParticipants=" + maxParticipants +
+                ", isTicketed=" + isTicketed +
+                '}';
     }
-
-    public LocalDate getEndDate() {
-        return endDate;
-    }
-
-    public void setEndDate(LocalDate endDate) {
-        this.endDate = endDate;
-    }
-
-    public AEventStatus getStatus() {
-        return status;
-    }
-
-    public void setStatus(AEventStatus status) {
-        this.status = status;
-    }
-
-    public double getEntranceFee() {
-        return entranceFee;
-    }
-
-    public void setEntranceFee(double entranceFee) {
-        this.entranceFee = entranceFee;
-    }
-
-    public int getMaxParticipants() {
-        return maxParticipants;
-    }
-
-    public void setMaxParticipants(int maxParticipants) {
-        this.maxParticipants = maxParticipants;
-    }
-
-    public boolean IsTicketed() {
-        return isTicketed;
-    }
-
-    public void setTicketed(boolean ticketed) {
-        isTicketed = ticketed;
-    }
-
 }
 
 enum AEventStatus {
