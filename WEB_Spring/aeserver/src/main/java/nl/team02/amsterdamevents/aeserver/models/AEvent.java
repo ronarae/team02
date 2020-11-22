@@ -2,10 +2,12 @@ package nl.team02.amsterdamevents.aeserver.models;
 
 import com.fasterxml.jackson.annotation.JsonView;
 import nl.team02.amsterdamevents.aeserver.repositories.AEventsRepositoryMock;
+import nl.team02.amsterdamevents.aeserver.repositories.RegistrationsRepositoryJpa;
 import nl.team02.amsterdamevents.aeserver.views.ViewAEvent;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -30,7 +32,8 @@ public class AEvent {
     @OneToMany(mappedBy = "aEvent")
     private List<Registration> registrations = new ArrayList<>();
 
-    public AEvent() {}
+    public AEvent() {
+    }
 
     public AEvent(long id, String title, LocalDate startDate, LocalDate endDate, AEventStatus status, double entranceFee, int maxParticipants, boolean isTicketed) {
         this.id = id;
@@ -43,7 +46,6 @@ public class AEvent {
         this.isTicketed = isTicketed;
     }
 
-
     public static AEvent createRandomAEvent() {
         long id = AEventsRepositoryMock.aEventId++;
         String title = "A fantastic backend aEvent-" + id;
@@ -54,11 +56,8 @@ public class AEvent {
         int maxParticipants = getRandomMaxParticipants();
         boolean isTicketed = getRandomIsTicketed();
 
-
-
         return new AEvent(id, title, start, end, status, entranceFee, maxParticipants, isTicketed);
     }
-
 
     public static LocalDate getRandomStartDate(int startYear, int endYear) {
         LocalDate startDate = LocalDate.of(startYear, 1, 1); //Min of start
@@ -106,6 +105,42 @@ public class AEvent {
         return ticketed.nextBoolean();
     }
 
+    /**
+     * @return number of registrations for this AEvent
+     */
+    public int getNumberOfRegistrations() {
+        int count = 0;
+        for (Registration registration : registrations) {
+            if (this == registration.getaEvent()) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    /**
+     * Creates and add new registration for this AEvent
+     * Check whethers this.status == PUBLISHED and
+     * maxParticipants has not been exceeded
+     //  * @param submissionDateTime
+     * @return the created registration or null
+     */
+    public Registration createNewRegistration(LocalDateTime submissionDateTime) {
+        // TODO check conditions and create and add registration
+        if (this.getStatus().equals(AEventStatus.PUBLISHED) && this.getMaxParticipants() <= this.getNumberOfRegistrations()){
+            //create a registration
+            Registration registration = new Registration();
+            //set sub date
+            registration.setSubmissionDate(submissionDateTime);
+            //add registration
+            this.addRegistration(registration);
+            return registration;
+        }
+        else {
+            return null;
+        }
+}
+
     public long getId() {
         return id;
     }
@@ -120,10 +155,27 @@ public class AEvent {
 
     public void addRegistration(Registration registration) {
         this.registrations.add(registration);
+        registration.setaEvent(this);
     }
 
     public void removeRegistration(Registration registration) {
         this.registrations.remove(registration);
+    }
+
+    public AEventStatus getStatus() {
+        return status;
+    }
+
+    public int getMaxParticipants() {
+        return maxParticipants;
+    }
+
+    public void setMaxParticipants(int maxParticipants) {
+        this.maxParticipants = maxParticipants;
+    }
+
+    public void setStatus(AEventStatus status) {
+        this.status = status;
     }
 
     @Override
@@ -139,11 +191,14 @@ public class AEvent {
                 ", isTicketed=" + isTicketed +
                 '}';
     }
+
+    public enum AEventStatus {
+        DRAFT,
+        PUBLISHED,
+        CANCELLED
+    }
 }
 
-enum AEventStatus {
-    DRAFT,
-    PUBLISHED,
-    CANCELLED
-}
+
+
 

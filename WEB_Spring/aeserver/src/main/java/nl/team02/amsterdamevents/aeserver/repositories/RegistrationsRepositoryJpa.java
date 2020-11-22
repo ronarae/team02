@@ -9,11 +9,14 @@ import org.springframework.stereotype.Repository;
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 import javax.transaction.Transactional;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
+import java.util.concurrent.ThreadLocalRandom;
 
 @Repository
 @Transactional
-@Primary
+
 public class RegistrationsRepositoryJpa {
 
     @Autowired
@@ -28,6 +31,7 @@ public class RegistrationsRepositoryJpa {
                 "select e from Registration e", Registration.class);
         return query.getResultList();
     }
+
 
     public Registration findById(long id) {
         return entityManager.find(Registration.class, id);

@@ -2,15 +2,19 @@ package nl.team02.amsterdamevents.aeserver.models;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 @Entity
 public class Registration {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "gen")
+    @SequenceGenerator(name = "gen", initialValue = 1, allocationSize = 1)
     public long id;
     public String ticketCode;
     public boolean paid;
@@ -29,7 +33,31 @@ public class Registration {
     }
 
     public Registration() {
+    }
 
+    public static Registration createRandomRegistration(){
+        Registration registration = new Registration();
+        registration.ticketCode = "ticketCode0001";
+        registration.paid = getRandomPaid();
+
+       return registration;
+    }
+
+    public static LocalDateTime randomDate(LocalDateTime start, LocalDateTime end) {
+        long startEpochDay = start.toLocalDate().toEpochDay();
+        long endEpochDay = end.toLocalDate().toEpochDay();
+        long randomDay = ThreadLocalRandom
+                .current()
+                .nextLong(startEpochDay, endEpochDay);
+        LocalTime randomTime = LocalTime.of((int) Math.floor(Math.random() * 23) + 1,
+                (int) Math.floor(Math.random() * 59) + 1,
+                (int) Math.floor(Math.random() * 59) + 1);
+        return LocalDate.ofEpochDay(randomDay).atTime(randomTime);
+    }
+
+    public static boolean getRandomPaid() {
+        Random paid = new Random();
+        return  paid.nextBoolean();
     }
 
     public long getId() {

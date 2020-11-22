@@ -16,6 +16,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import javax.transaction.Transactional;
 import java.net.URI;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
@@ -73,14 +74,27 @@ public class AEventsController {
     }
 
     //nog fixen!
-    @PostMapping("/rest/aevents/{id}/register")
+    @PostMapping("/aevents/{id}/register")
     @Transactional
-    public ResponseEntity<Registration> createRegistration(@RequestBody Registration registration) {
-        Registration createRegistration = registrationsRepositoryJpa.save(registration);
-        URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{aeventId}").buildAndExpand(registration.getId()).toUri();
+        public ResponseEntity<Registration> createNewRegistration(@PathVariable long id, @RequestBody (required = false) LocalDateTime submissionDateTime) {
+        AEvent aEvent = aEventsRepository.findById(id);
 
+        if (!aEvent.getStatus().equals(AEvent.AEventStatus.PUBLISHED)) {
+            throw new RuntimeException("AEvent-id=" + aEvent.getId() + " is not published.");
+        } else if (aEvent.getNumberOfRegistrations() >= aEvent.getMaxParticipants() && aEvent.getMaxParticipants() != 0) {
+            throw new RuntimeException("AEvent-id=" + aEvent.getId() + " has exceeded the number of participants.");
+        }
+        if (submissionDateTime == null) {
+            submissionDateTime = LocalDateTime.now();
 
-        return ResponseEntity.created(location).body(createRegistration);
+        }
+            Registration reg = aEvent.createNewRegistration(submissionDateTime);
+            aEventsRepository.save(aEvent);
+            registrationsRepositoryJpa.save(reg);
+
+        return ResponseEntity.created(
+                ServletUriComponentsBuilder.fromCurrentRequest().path("").build().toUri()
+        ).body(reg);
     }
 
     @PutMapping("/aevents/{id}")
