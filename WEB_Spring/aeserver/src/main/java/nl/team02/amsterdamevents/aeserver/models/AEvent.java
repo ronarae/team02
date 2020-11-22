@@ -1,5 +1,7 @@
 package nl.team02.amsterdamevents.aeserver.models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.JsonView;
 import nl.team02.amsterdamevents.aeserver.repositories.AEventsRepositoryMock;
 import nl.team02.amsterdamevents.aeserver.views.ViewAEvent;
@@ -29,6 +31,7 @@ public class AEvent {
     public boolean isTicketed;
 
     @OneToMany(mappedBy = "aEvent")
+    @JsonBackReference
     private List<Registration> registrations = new ArrayList<>();
 
     public AEvent() {

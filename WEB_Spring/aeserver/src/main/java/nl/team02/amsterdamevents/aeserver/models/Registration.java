@@ -1,6 +1,7 @@
 package nl.team02.amsterdamevents.aeserver.models;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -21,7 +22,7 @@ public class Registration {
     public LocalDateTime submissionDate;
 
     @ManyToOne
-    @JsonBackReference
+    @JsonManagedReference
     private AEvent aEvent;
 
     public Registration(long id, String ticketCode, boolean paid, LocalDateTime submissionDate, AEvent aEvent) {
@@ -37,10 +38,14 @@ public class Registration {
 
     public static Registration createRandomRegistration(){
         Registration registration = new Registration();
-        registration.ticketCode = "ticketCode0001";
+        registration.ticketCode = getRandomTicketCode();
         registration.paid = getRandomPaid();
 
        return registration;
+    }
+
+    public static String getRandomTicketCode(){
+        return "test";
     }
 
     public static LocalDateTime randomDate(LocalDateTime start, LocalDateTime end) {

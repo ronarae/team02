@@ -89,6 +89,7 @@ public class AEventsController {
 
         }
             Registration reg = aEvent.createNewRegistration(submissionDateTime);
+
             aEventsRepository.save(aEvent);
             registrationsRepositoryJpa.save(reg);
 
