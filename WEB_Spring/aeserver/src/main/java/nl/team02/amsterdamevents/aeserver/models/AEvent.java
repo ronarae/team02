@@ -135,6 +135,7 @@ public class AEvent {
             //set sub date
             registration.setSubmissionDate(submissionDateTime);
             //add registration
+            registration.ticketCode = generateRandomCharacterString(10);
             this.addRegistration(registration);
             return registration;
         }
@@ -143,6 +144,15 @@ public class AEvent {
         }
 }
 
+    private static String generateRandomCharacterString(int amountOfCharacters) {
+        final String ALPHA_NUMBERIC_STRING = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        StringBuilder builder = new StringBuilder();
+        while (amountOfCharacters-- != 0) {
+            int character = (int)(Math.random()*ALPHA_NUMBERIC_STRING.length());
+            builder.append(ALPHA_NUMBERIC_STRING.charAt(character));
+        }
+        return builder.toString();
+    }
     public long getId() {
         return id;
     }
