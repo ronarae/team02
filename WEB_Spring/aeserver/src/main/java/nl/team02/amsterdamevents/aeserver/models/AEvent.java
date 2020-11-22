@@ -2,7 +2,6 @@ package nl.team02.amsterdamevents.aeserver.models;
 
 import com.fasterxml.jackson.annotation.JsonView;
 import nl.team02.amsterdamevents.aeserver.repositories.AEventsRepositoryMock;
-import nl.team02.amsterdamevents.aeserver.repositories.RegistrationsRepositoryJpa;
 import nl.team02.amsterdamevents.aeserver.views.ViewAEvent;
 
 import javax.persistence.*;
@@ -127,7 +126,7 @@ public class AEvent {
      */
     public Registration createNewRegistration(LocalDateTime submissionDateTime) {
         // TODO check conditions and create and add registration
-        if (this.getStatus().equals(AEventStatus.PUBLISHED) && this.getMaxParticipants() <= this.getNumberOfRegistrations()){
+        if (this.getStatus().equals(AEventStatus.PUBLISHED) && this.getNumberOfRegistrations() < this.getMaxParticipants()){
             //create a registration
             Registration registration = new Registration();
             //set sub date

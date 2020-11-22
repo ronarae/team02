@@ -76,7 +76,7 @@ public class AEventsController {
     //nog fixen!
     @PostMapping("/aevents/{id}/register")
     @Transactional
-        public ResponseEntity<Registration> createNewRegistration(@PathVariable long id, @RequestBody (required = false) LocalDateTime submissionDateTime) {
+        public ResponseEntity<Registration> createNewRegistration(@PathVariable long id, @RequestBody LocalDateTime submissionDateTime) {
         AEvent aEvent = aEventsRepository.findById(id);
 
         if (!aEvent.getStatus().equals(AEvent.AEventStatus.PUBLISHED)) {

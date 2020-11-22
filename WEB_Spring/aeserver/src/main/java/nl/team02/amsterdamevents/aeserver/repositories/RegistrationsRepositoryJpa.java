@@ -1,18 +1,14 @@
 package nl.team02.amsterdamevents.aeserver.repositories;
 
-import nl.team02.amsterdamevents.aeserver.models.AEvent;
 import nl.team02.amsterdamevents.aeserver.models.Registration;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 import javax.transaction.Transactional;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.List;
-import java.util.concurrent.ThreadLocalRandom;
+
 
 @Repository
 @Transactional
