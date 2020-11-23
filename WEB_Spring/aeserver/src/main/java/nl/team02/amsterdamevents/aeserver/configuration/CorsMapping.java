@@ -1,4 +1,4 @@
-package nl.team02.amsterdamevents.aeserver.models;
+package nl.team02.amsterdamevents.aeserver.configuration;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
@@ -9,6 +9,7 @@ public class CorsMapping implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
+                .allowedMethods("GET", "POST", "PUT", "DELETE")
                 .allowedOrigins("http://localhost:8080", "http://localhost:4200");
     }
 }
