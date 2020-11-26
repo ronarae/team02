@@ -37,8 +37,10 @@ public class AEventsController {
         return location;
     }
 
-    @GetMapping("/aevents")
-    public List<AEvent> getAllAEvents() {
+    @GetMapping("/aevents/")
+    public List<AEvent> getAllAEvents(@RequestParam(required = false)String status,
+                                      @RequestParam(required = false)String title,
+                                      @RequestParam(required = false)String minRegistration){
         return aEventsRepositoryJpa.findAll();
     }
 
@@ -75,7 +77,7 @@ public class AEventsController {
         return ResponseEntity.created(location).body(createdAEvent);
     }
 
-    //nog fixen!
+
     @PostMapping("/aevents/{id}/register")
     @Transactional
         public ResponseEntity<Registration> createNewRegistration(@PathVariable long id, @RequestBody LocalDateTime submissionDateTime) {

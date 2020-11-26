@@ -27,6 +27,12 @@ public class AEventsRepositoryMock implements AEventsRepository {
     }
 
     @Override
+    public List findByQuery(String jpqlName, Object... params) {
+        return null;
+    }
+
+
+    @Override
     public AEvent findById(long id) {
         for (AEvent aevent : this.aevents) {
             if (aevent.getId() == id) {

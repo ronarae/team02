@@ -37,6 +37,12 @@ public class AEventsRepositoryJpa implements AEventsRepository {
     }
 
     @Override
+    public List findByQuery(String jpqlName, Object... params) {
+        //finds all instances from a named jpql-query
+        return null;
+    }
+
+    @Override
     public AEvent findById(long id) {
         return entityManager.find(AEvent.class, id);
     }

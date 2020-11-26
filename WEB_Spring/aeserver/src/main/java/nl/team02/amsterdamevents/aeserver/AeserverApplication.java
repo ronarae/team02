@@ -2,7 +2,6 @@ package nl.team02.amsterdamevents.aeserver;
 
 import nl.team02.amsterdamevents.aeserver.models.AEvent;
 import nl.team02.amsterdamevents.aeserver.models.Registration;
-import nl.team02.amsterdamevents.aeserver.repositories.AEventsRepository;
 import nl.team02.amsterdamevents.aeserver.repositories.AEventsRepositoryJpa;
 import nl.team02.amsterdamevents.aeserver.repositories.RegistrationsRepositoryJpa;
 import org.slf4j.Logger;

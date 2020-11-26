@@ -1,6 +1,5 @@
 package nl.team02.amsterdamevents.aeserver.models;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.JsonView;
 import nl.team02.amsterdamevents.aeserver.repositories.AEventsRepositoryMock;
@@ -14,9 +13,13 @@ import java.util.List;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
+@NamedQueries({
+        @NamedQuery(name = "AEvent_find_by_status", query = "select a from AEvent a where a.status like :status"),
+        @NamedQuery(name = "AEvent_find_by_title", query = "select a from AEvent a where a.title like :title"),
+        @NamedQuery(name = "minRegistrations", query = "select a from AEvent a inner join Registration r on r.aEvent = a")
+})
 @Entity
 public class AEvent {
-    @JsonView(ViewAEvent.Public.class)
     @Id //primary key
     @GeneratedValue
     public long id;
@@ -170,9 +173,6 @@ public class AEvent {
         registration.setaEvent(this);
     }
 
-    public void removeRegistration(Registration registration) {
-        this.registrations.remove(registration);
-    }
 
     public AEventStatus getStatus() {
         return status;
