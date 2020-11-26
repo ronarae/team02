@@ -2,6 +2,7 @@ package nl.team02.amsterdamevents.aeserver.models;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.JsonView;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -13,6 +14,7 @@ import java.util.concurrent.ThreadLocalRandom;
 @Entity
 public class Registration {
 
+
     @Id
     @SequenceGenerator(name = "id_gen", sequenceName = "id_seq", initialValue = 10000, allocationSize = 100)
     @GeneratedValue(generator = "id_gen")
@@ -22,7 +24,7 @@ public class Registration {
     public LocalDateTime submissionDate;
 
     @ManyToOne
-    @JsonManagedReference
+    @JsonBackReference
     private AEvent aEvent;
 
     public Registration(long id, String ticketCode, boolean paid, LocalDateTime submissionDate, AEvent aEvent) {

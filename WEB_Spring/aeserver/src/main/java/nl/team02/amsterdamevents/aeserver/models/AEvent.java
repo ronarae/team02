@@ -31,7 +31,7 @@ public class AEvent {
     public boolean isTicketed;
 
     @OneToMany(mappedBy = "aEvent", cascade = CascadeType.ALL)
-    @JsonBackReference
+    @JsonManagedReference
     private List<Registration> registrations = new ArrayList<>();
 
     public AEvent() {

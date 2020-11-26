@@ -1,5 +1,6 @@
 package nl.team02.amsterdamevents.aeserver.rest;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.JsonView;
 import nl.team02.amsterdamevents.aeserver.models.AEvent;
 import nl.team02.amsterdamevents.aeserver.models.Registration;
