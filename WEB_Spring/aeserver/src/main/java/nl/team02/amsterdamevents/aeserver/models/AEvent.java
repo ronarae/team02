@@ -30,7 +30,7 @@ public class AEvent {
     public int maxParticipants;
     public boolean isTicketed;
 
-    @OneToMany(mappedBy = "aEvent")
+    @OneToMany(mappedBy = "aEvent", cascade = CascadeType.ALL)
     @JsonBackReference
     private List<Registration> registrations = new ArrayList<>();
 
