@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonView;
 import nl.team02.amsterdamevents.aeserver.models.AEvent;
 import nl.team02.amsterdamevents.aeserver.models.Registration;
 import nl.team02.amsterdamevents.aeserver.repositories.AEventsRepository;
+import nl.team02.amsterdamevents.aeserver.repositories.AEventsRepositoryJpa;
 import nl.team02.amsterdamevents.aeserver.repositories.RegistrationsRepositoryJpa;
 import nl.team02.amsterdamevents.aeserver.views.ViewAEvent;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +25,7 @@ import java.util.List;
 public class AEventsController {
 
     @Autowired
-    private AEventsRepository aEventsRepository;
+    private AEventsRepositoryJpa aEventsRepositoryJpa;
 
     @Autowired
     private RegistrationsRepositoryJpa registrationsRepositoryJpa;
@@ -37,22 +38,22 @@ public class AEventsController {
 
     @GetMapping("/aevents")
     public List<AEvent> getAllAEvents() {
-        return aEventsRepository.findAll();
+        return aEventsRepositoryJpa.findAll();
     }
 
     @JsonView(ViewAEvent.Public.class)
     @GetMapping("/aevents/summary")
     public List<AEvent> getAEventsSummary() {
-        if (aEventsRepository.findAll().size() != 0) {
-            return aEventsRepository.findAll();
+        if (aEventsRepositoryJpa.findAll().size() != 0) {
+            return aEventsRepositoryJpa.findAll();
         }
         throw new ResponseStatusException(HttpStatus.NOT_FOUND, "There are no AEvents found");
     }
 
     @GetMapping("/aevents/{id}")
     public AEvent getAEventById(@PathVariable long id) throws ResponseStatusException {
-        if (aEventsRepository.findById(id) != null) {
-            return aEventsRepository.findById(id);
+        if (aEventsRepositoryJpa.findById(id) != null) {
+            return aEventsRepositoryJpa.findById(id);
         }
         throw new ResponseStatusException(HttpStatus.PRECONDITION_FAILED, "Cannot find AEvents ID: " + id);
     }
@@ -60,7 +61,7 @@ public class AEventsController {
     @PostMapping("/aevents")
     public ResponseEntity<AEvent> createAEvent(@RequestBody AEvent aEvent) {
         aEvent.setId(0);
-        AEvent createdAEvent = aEventsRepository.save(aEvent);
+        AEvent createdAEvent = aEventsRepositoryJpa.save(aEvent);
         URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(createdAEvent.getId()).toUri();
         return ResponseEntity.created(location).body(createdAEvent);
     }
@@ -68,7 +69,7 @@ public class AEventsController {
     @PostMapping("/aevents/random")
     public ResponseEntity<AEvent> createAEvent() {
         AEvent aEvent = AEvent.createRandomAEvent();
-        AEvent createdAEvent = aEventsRepository.save(aEvent);
+        AEvent createdAEvent = aEventsRepositoryJpa.save(aEvent);
         URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(createdAEvent.getId()).toUri();
         return ResponseEntity.created(location).body(createdAEvent);
     }
@@ -77,7 +78,7 @@ public class AEventsController {
     @PostMapping("/aevents/{id}/register")
     @Transactional
         public ResponseEntity<Registration> createNewRegistration(@PathVariable long id, @RequestBody LocalDateTime submissionDateTime) {
-        AEvent aEvent = aEventsRepository.findById(id);
+        AEvent aEvent = aEventsRepositoryJpa.findById(id);
 
         if (!aEvent.getStatus().equals(AEvent.AEventStatus.PUBLISHED)) {
             throw new RuntimeException("AEvent-id=" + aEvent.getId() + " is not published.");
@@ -90,7 +91,7 @@ public class AEventsController {
         }
             Registration reg = aEvent.createNewRegistration(submissionDateTime);
 
-            aEventsRepository.save(aEvent);
+        aEventsRepositoryJpa.save(aEvent);
             registrationsRepositoryJpa.save(reg);
 
         return ResponseEntity.created(
@@ -102,16 +103,15 @@ public class AEventsController {
     public ResponseEntity<AEvent> saveAEvent(@PathVariable long id, @RequestBody AEvent aEvent)
             throws ResponseStatusException {
         if (id == aEvent.getId()) {
-            AEvent savedAEvent = aEventsRepository.save(aEvent);
-            URI location = getLocationURI(savedAEvent.getId());
-            return ResponseEntity.created(location).body(savedAEvent);
+            AEvent updatedAEvent = aEventsRepositoryJpa.save(aEvent);
+            return ResponseEntity.created(getLocationURI(updatedAEvent.getId())).body(updatedAEvent);
         }
         throw new ResponseStatusException(HttpStatus.PRECONDITION_FAILED, "The requested ID does not meet the ID provided in the body");
     }
 
     @DeleteMapping("/aevents/{id}")
     public ResponseEntity<Boolean> deleteById(@PathVariable long id) throws ResponseStatusException {
-        if (aEventsRepository.deleteById(id)) {
+        if (aEventsRepositoryJpa.deleteById(id)) {
             return ResponseEntity.ok(true);
         }
         throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Cannot delete the AEvent because the provided ID: " + id + " does not exist");

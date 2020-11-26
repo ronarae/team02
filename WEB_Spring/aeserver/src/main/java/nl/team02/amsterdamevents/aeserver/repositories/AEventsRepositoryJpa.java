@@ -21,7 +21,12 @@ public class AEventsRepositoryJpa implements AEventsRepository {
 
     @Override
     public AEvent save(AEvent aevent) {
-        return entityManager.merge(aevent);
+        if (aevent.getId() == 0) {
+            entityManager.persist(aevent);
+        } else {
+            entityManager.merge(aevent);
+        }
+        return aevent;
     }
 
     @Override
@@ -33,11 +38,15 @@ public class AEventsRepositoryJpa implements AEventsRepository {
 
     @Override
     public AEvent findById(long id) {
-        return entityManager.find(AEvent.class,id);
+        return entityManager.find(AEvent.class, id);
     }
 
     @Override
     public boolean deleteById(long id) {
+        if (findById(id) != null) {
+            entityManager.remove(findById(id));
+            return true;
+        }
         return false;
     }
 }

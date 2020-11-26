@@ -14,8 +14,8 @@ import java.util.concurrent.ThreadLocalRandom;
 public class Registration {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "gen")
-    @SequenceGenerator(name = "gen", initialValue = 1, allocationSize = 1)
+    @SequenceGenerator(name = "id_gen", sequenceName = "id_seq", initialValue = 10000, allocationSize = 100)
+    @GeneratedValue(generator = "id_gen")
     public long id;
     public String ticketCode;
     public boolean paid;
