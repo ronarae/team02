@@ -1,5 +1,6 @@
 package nl.team02.amsterdamevents.aeserver.models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.JsonView;
 import nl.team02.amsterdamevents.aeserver.repositories.AEventsRepositoryMock;
@@ -28,14 +29,15 @@ public class AEvent {
     public LocalDate startDate;
     public LocalDate endDate;
     @JsonView(ViewAEvent.Public.class)
-    @Enumerated(EnumType.STRING)
+//    @Enumerated(EnumType.STRING)
     public AEventStatus status;
     public double entranceFee;
     public int maxParticipants;
     public boolean isTicketed;
 
-    @OneToMany(mappedBy = "aEvent", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "aEvent", cascade = CascadeType.REMOVE)
     @JsonManagedReference
+//    @JsonBackReference
     private List<Registration> registrations = new ArrayList<>();
 
     public AEvent() {

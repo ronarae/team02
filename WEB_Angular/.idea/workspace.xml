@@ -5,8 +5,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WEB_Spring/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WEB_Spring/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WEB_Spring/aeserver/src/main/java/nl/team02/amsterdamevents/aeserver/models/AEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/../WEB_Spring/aeserver/src/main/java/nl/team02/amsterdamevents/aeserver/models/AEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WEB_Spring/aeserver/src/main/java/nl/team02/amsterdamevents/aeserver/models/Registration.java" beforeDir="false" afterPath="$PROJECT_DIR$/../WEB_Spring/aeserver/src/main/java/nl/team02/amsterdamevents/aeserver/models/Registration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WEB_Spring/aeserver/src/main/java/nl/team02/amsterdamevents/aeserver/repositories/RegistrationsRepositoryJpa.java" beforeDir="false" afterPath="$PROJECT_DIR$/../WEB_Spring/aeserver/src/main/java/nl/team02/amsterdamevents/aeserver/repositories/RegistrationsRepositoryJpa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WEB_Spring/aeserver/src/main/java/nl/team02/amsterdamevents/aeserver/rest/AEventsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../WEB_Spring/aeserver/src/main/java/nl/team02/amsterdamevents/aeserver/rest/AEventsController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

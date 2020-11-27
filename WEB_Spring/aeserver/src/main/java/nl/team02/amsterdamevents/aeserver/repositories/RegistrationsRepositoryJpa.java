@@ -19,6 +19,9 @@ public class RegistrationsRepositoryJpa {
     private EntityManager entityManager;
 
     public Registration save(Registration registration) {
+        if (registration.getId() == 0){
+            this.entityManager.persist(registration);
+        }
         return entityManager.merge(registration);
     }
 
