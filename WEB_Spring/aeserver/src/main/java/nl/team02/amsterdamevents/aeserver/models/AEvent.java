@@ -14,7 +14,7 @@ import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 @NamedQueries({
-        @NamedQuery(name = "AEvent_find_by_status", query = "select a from AEvent a where a.status = AEvent.status"),
+        @NamedQuery(name = "AEvent_find_by_status", query = "select a from AEvent a where a.status like :status"),
         @NamedQuery(name = "AEvent_find_by_title", query = "select a from AEvent a where a.title like :title"),
         @NamedQuery(name = "minRegistrations", query = "select a from AEvent a inner join Registration r on r.aEvent = a")
 })
@@ -28,7 +28,6 @@ public class AEvent {
     public LocalDate startDate;
     public LocalDate endDate;
     @JsonView(ViewAEvent.Public.class)
-    @Enumerated(EnumType.STRING)
     public AEventStatus status;
     public double entranceFee;
     public int maxParticipants;
@@ -174,9 +173,6 @@ public class AEvent {
         registration.setaEvent(this);
     }
 
-    public void removeRegistration(Registration registration) {
-        this.registrations.remove(registration);
-    }
 
     public AEventStatus getStatus() {
         return status;
