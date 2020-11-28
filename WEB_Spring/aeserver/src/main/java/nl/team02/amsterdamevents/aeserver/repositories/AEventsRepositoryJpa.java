@@ -32,7 +32,7 @@ public class AEventsRepositoryJpa implements AEventsRepository {
     @Override
     public List<AEvent> findAll() {
         TypedQuery<AEvent> query = this.entityManager.createQuery(
-                "select e from AEvent e", AEvent.class);
+                "select a from AEvent a", AEvent.class);
         return query.getResultList();
     }
 
