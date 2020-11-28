@@ -37,10 +37,29 @@ public class AEventsController {
         return location;
     }
 
-    @GetMapping("/aevents/")
-    public List<AEvent> getAllAEvents(@RequestParam(required = false)String status,
-                                      @RequestParam(required = false)String title,
-                                      @RequestParam(required = false)String minRegistration){
+    @GetMapping("/aevents")
+    public List<AEvent> getAllAEvents(@RequestParam(name = "status", required = false) String status,
+                                      @RequestParam(name = "title", required = false) String title,
+                                      @RequestParam(name = "minRegistrations", required = false) String minRegistration) {
+
+        if (status != null) {
+            for (AEvent.AEventStatus value : AEvent.AEventStatus.values()) {
+                if (value.name().equals(status)) {
+                    return aEventsRepositoryJpa.findByQuery("AEvent_find_by_status", value);
+                }
+            }
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "This AEvent status is not a valid. Please try again.");
+
+        }
+        if (title != null) {
+            return aEventsRepositoryJpa.findByQuery("AEvent_find_by_title", title);
+        }
+
+        if (minRegistration != null) {
+            return aEventsRepositoryJpa.findByQuery("AEvent_find_by_minRegistrations", minRegistration);
+        }
+
+
         return aEventsRepositoryJpa.findAll();
     }
 
@@ -80,7 +99,7 @@ public class AEventsController {
 
     @PostMapping("/aevents/{id}/register")
     @Transactional
-        public ResponseEntity<Registration> createNewRegistration(@PathVariable long id, @RequestBody LocalDateTime submissionDateTime) {
+    public ResponseEntity<Registration> createNewRegistration(@PathVariable long id, @RequestBody LocalDateTime submissionDateTime) {
         AEvent aEvent = aEventsRepositoryJpa.findById(id);
 
         if (!aEvent.getStatus().equals(AEvent.AEventStatus.PUBLISHED)) {
@@ -92,10 +111,10 @@ public class AEventsController {
             submissionDateTime = LocalDateTime.now();
 
         }
-            Registration reg = aEvent.createNewRegistration(submissionDateTime);
+        Registration reg = aEvent.createNewRegistration(submissionDateTime);
 
         aEventsRepositoryJpa.save(aEvent);
-            registrationsRepositoryJpa.save(reg);
+        registrationsRepositoryJpa.save(reg);
 
         return ResponseEntity.created(
                 ServletUriComponentsBuilder.fromCurrentRequest().path("").build().toUri()

@@ -36,10 +36,23 @@ public class AEventsRepositoryJpa implements AEventsRepository {
         return query.getResultList();
     }
 
-    @Override
+    @Transactional
     public List findByQuery(String jpqlName, Object... params) {
-        //finds all instances from a named jpql-query
-        return null;
+        TypedQuery<AEvent> query = entityManager.createNamedQuery(jpqlName, AEvent.class);
+
+        switch (jpqlName) {
+            case "AEvent_find_by_status":
+                query.setParameter("status", params[0]);
+                break;
+            case "AEvent_find_by_title":
+                query.setParameter("title", params[0]);
+                break;
+            case "AEvent_find_by_minRegistrations":
+                query.setParameter("minimum registrations", params[0]);
+                break;
+        }
+
+        return query.getResultList();
     }
 
     @Override

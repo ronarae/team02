@@ -17,9 +17,9 @@ import java.util.concurrent.ThreadLocalRandom;
 @NamedQueries({
         @NamedQuery(name = "AEvent_find_by_status", query = "select a from AEvent a where a.status = :status"),
         @NamedQuery(name = "AEvent_find_by_title", query = "select a from AEvent a where a.title like :title"),
-        @NamedQuery(name = "minRegistrations", query = "select a from AEvent a inner join Registration r on r.aEvent = a")
+        @NamedQuery(name = "AEvent_find_by_minRegistrations", query = "select DISTINCT a FROM AEvent a join Registration r on r.aEvent = a AND a.registrations >= :minValue")
 })
-@Entity
+@Entity(name = "AEvent")
 public class AEvent {
     @Id //primary key
     @GeneratedValue
@@ -142,7 +142,10 @@ public class AEvent {
             registration.setSubmissionDate(submissionDateTime);
             //add registration
             registration.ticketCode = generateRandomCharacterString(10);
-            this.addRegistration(registration);
+            registration.setaEvent(this);
+
+            registrations.add(registration);
+
             return registration;
         }
         else {

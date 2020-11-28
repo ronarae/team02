@@ -37,8 +37,8 @@ public class AeserverApplication implements CommandLineRunner {
             AEvent aEvent = AEvent.createRandomAEvent();
             Registration registration = Registration.createRandomRegistration();
 
-            this.aEventsRepositoryJpa.save(aEvent);
-            this.registrationsRepositoryJpa.save(registration);
+            aEventsRepositoryJpa.save(aEvent).addRegistration(registration);
+            registrationsRepositoryJpa.save(registration);
         }
     }
 
