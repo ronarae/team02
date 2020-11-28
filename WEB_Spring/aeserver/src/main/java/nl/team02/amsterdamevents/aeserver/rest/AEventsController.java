@@ -40,7 +40,7 @@ public class AEventsController {
     @GetMapping("/aevents")
     public List<AEvent> getAllAEvents(@RequestParam(name = "status", required = false) String status,
                                       @RequestParam(name = "title", required = false) String title,
-                                      @RequestParam(name = "minRegistrations", required = false) String minRegistration) {
+                                      @RequestParam(name = "minRegistrations", required = false) Integer minRegistration) {
 
 
         if (status != null) {

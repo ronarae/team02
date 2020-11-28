@@ -46,10 +46,9 @@ public class AEventsRepositoryJpa implements AEventsRepository {
                 break;
             case "AEvent_find_by_title":
                 query.setParameter("title", params[0]);
-                System.out.println("shantest" + params[0]);
                 break;
             case "AEvent_find_by_minRegistrations":
-                query.setParameter("minimum registrations", params[0]);
+                query.setParameter("minRegistration", params[0]);
                 break;
         }
 

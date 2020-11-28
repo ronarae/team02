@@ -19,7 +19,7 @@ import java.util.concurrent.ThreadLocalRandom;
         @NamedQuery(name = "AEvent_find_by_title",
                query = "select a from AEvent a where a.title like :title"
         ),
-        @NamedQuery(name = "AEvent_find_by_minRegistrations", query = "select DISTINCT a FROM AEvent a join Registration r on r.aEvent = a AND a.registrations >= :minValue")
+        @NamedQuery(name = "AEvent_find_by_minRegistrations", query = "select distinct a FROM AEvent a join Registration r on r.aEvent = a AND a.registrations.size >= :minRegistration")
 
 })
 @Entity(name = "AEvent")
@@ -33,7 +33,7 @@ public class AEvent {
     public LocalDate startDate;
     public LocalDate endDate;
     @JsonView(ViewAEvent.Public.class)
-//    @Enumerated(EnumType.STRING)
+
     public AEventStatus status;
     public double entranceFee;
     public int maxParticipants;
