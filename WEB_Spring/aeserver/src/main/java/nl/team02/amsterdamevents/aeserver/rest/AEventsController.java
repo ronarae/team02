@@ -42,6 +42,9 @@ public class AEventsController {
                                       @RequestParam(name = "title", required = false) String title,
                                       @RequestParam(name = "minRegistrations", required = false) Integer minRegistration) {
 
+        if (status != null && title != null || status != null && minRegistration != null || minRegistration != null && title != null) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Can only handle one request parameter title=, status= or minRegistration=");
+        }
 
         if (status != null) {
             for (AEvent.AEventStatus value : AEvent.AEventStatus.values()) {
