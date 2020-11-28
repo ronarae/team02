@@ -41,7 +41,7 @@ public class AEventsController {
     public List<AEvent> getAllAEvents(@RequestParam(name = "status", required = false) String status,
                                       @RequestParam(name = "title", required = false) String title,
                                       @RequestParam(name = "minRegistrations", required = false) Integer minRegistration) {
-
+        status = status.toUpperCase();
         if (status != null && title != null || status != null && minRegistration != null || minRegistration != null && title != null) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Can only handle one request parameter title=, status= or minRegistration=");
         }
