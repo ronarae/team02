@@ -42,6 +42,7 @@ public class AEventsController {
                                       @RequestParam(name = "title", required = false) String title,
                                       @RequestParam(name = "minRegistrations", required = false) String minRegistration) {
 
+
         if (status != null) {
             for (AEvent.AEventStatus value : AEvent.AEventStatus.values()) {
                 if (value.name().equals(status)) {
@@ -52,7 +53,7 @@ public class AEventsController {
 
         }
         if (title != null) {
-            return aEventsRepositoryJpa.findByQuery("AEvent_find_by_title", title);
+            return aEventsRepositoryJpa.findByQuery("AEvent_find_by_title",'%' + title + '%');
         }
 
         if (minRegistration != null) {

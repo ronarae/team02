@@ -37,7 +37,7 @@ public class AEventsRepositoryJpa implements AEventsRepository {
     }
 
     @Transactional
-    public List findByQuery(String jpqlName, Object... params) {
+    public List<AEvent> findByQuery(String jpqlName, Object... params) {
         TypedQuery<AEvent> query = entityManager.createNamedQuery(jpqlName, AEvent.class);
 
         switch (jpqlName) {
@@ -46,6 +46,7 @@ public class AEventsRepositoryJpa implements AEventsRepository {
                 break;
             case "AEvent_find_by_title":
                 query.setParameter("title", params[0]);
+                System.out.println("shantest" + params[0]);
                 break;
             case "AEvent_find_by_minRegistrations":
                 query.setParameter("minimum registrations", params[0]);

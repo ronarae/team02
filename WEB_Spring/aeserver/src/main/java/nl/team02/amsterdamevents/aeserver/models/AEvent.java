@@ -16,11 +16,15 @@ import java.util.concurrent.ThreadLocalRandom;
 
 @NamedQueries({
         @NamedQuery(name = "AEvent_find_by_status", query = "select a from AEvent a where a.status = :status"),
-        @NamedQuery(name = "AEvent_find_by_title", query = "select a from AEvent a where a.title like :title"),
+        @NamedQuery(name = "AEvent_find_by_title",
+               query = "select a from AEvent a where a.title like :title"
+        ),
         @NamedQuery(name = "AEvent_find_by_minRegistrations", query = "select DISTINCT a FROM AEvent a join Registration r on r.aEvent = a AND a.registrations >= :minValue")
+
 })
 @Entity(name = "AEvent")
 public class AEvent {
+
     @Id //primary key
     @GeneratedValue
     public long id;
