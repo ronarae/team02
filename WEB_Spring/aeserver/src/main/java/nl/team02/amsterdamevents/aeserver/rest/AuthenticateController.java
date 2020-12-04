@@ -6,7 +6,9 @@ import nl.team02.amsterdamevents.aeserver.repositories.UserRepository;
 import nl.team02.amsterdamevents.aeserver.repositories.UserRepositoryJpa;
 import nl.team02.amsterdamevents.aeserver.resource.exception.AuthorizationException;
 import nl.team02.amsterdamevents.aeserver.resource.security.JWToken;
+import nl.team02.amsterdamevents.aeserver.resource.security.JWToken;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -24,42 +26,54 @@ import javax.transaction.Transactional;
 @RequestMapping("/authenticate")
 public class AuthenticateController {
 
-    @Autowired
-    private UserRepositoryJpa userRepo;
+    // JWT configuration that can be adjusted from application.properties
+    @Value("${jwt.issuer:private company}")
+    private String issuer;
 
-//    @Autowired
-//    private JWToken jwToken;
+    @Value("${jwt.pass-phrase: This is very secret information for my private company @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@}")
+    private String passPhrase;
+
+    @Value("${jwt.duration-of-:1200}") //default 20 minutes
+    private int tokenDurationOfValidity;
+
+
+    @Autowired
+    private UserRepositoryJpa userRepositoryJpa;
+
+    @Autowired
+    private JWToken jwToken;
 
     @PostMapping("/login")
-    public ResponseEntity<User> authenticateUser(@RequestBody ObjectNode user,
+    public ResponseEntity<User> authenticateUser(@RequestBody ObjectNode signOnInfo,
                                                  HttpServletRequest request,
                                                  HttpServletResponse response) throws AuthenticationException {
 
-        String email = user.get("email").asText();
-        String password = user.get("password").asText();
+        String email = signOnInfo.get("email").asText();
+        String password = signOnInfo.get("password").asText();
 
-        //User user = userRepo.findByEmail(userEmail);
         String nameInMail = email.substring(0, email.lastIndexOf("@"));
+
         //password incorrect
         if (!password.equals(nameInMail)) {
             throw new AuthorizationException("Cannot authenticate user by email= " + email
                     + "and password=" + password);
         }
+
 //        if(user == null) {
 //            throw new AuthenticationException("No user found!");
 //        }
-//
-//        if(user.getHashedPassword() != password) {
-//            throw new AuthenticationException("Invalid password!");
-//        }
-//
-//        throw new ResponseStatusException(HttpStatus.PRECONDITION_FAILED, "Error");
 
-       // String tokenString = jwToken.encode(userEmail,false);
+        String tokenString = jwToken.encode(issuer,passPhrase,tokenDurationOfValidity);
+
+//        if (nameInMail == email) {
+//            return ResponseEntity.accepted()
+//                    .header(HttpHeaders.AUTHORIZATION, "Bearer " + tokenString)
+//                    .body(user);
+//        }
+//        return null;
 
         return ResponseEntity.accepted()
-//                .header(HttpHeaders.AUTHORIZATION, "Bearer " + tokenString)
-                //.header(HttpHeaders.AUTHORIZATION, "Bearer ")
-                .body(new User(1, nameInMail, email, false));
+                    .header(HttpHeaders.AUTHORIZATION, "Bearer " + tokenString)
+                    .body(new User(1, nameInMail, email, false));
     }
 }

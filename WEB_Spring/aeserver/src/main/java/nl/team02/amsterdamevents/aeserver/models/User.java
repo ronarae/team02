@@ -7,7 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 
-@Entity (name = "User")
+@Entity
 public class User {
 
     @Id
@@ -15,24 +15,24 @@ public class User {
     @GeneratedValue(generator = "id_gen")
     public long id;
     private String name;
-    private String eMail;
+    private String email;
     private String hashedPassword;
     private boolean isAdmin;
 
-    public  User(){}
+    public User(){}
 
-    public User(long id, String name, String eMail, String hashedPassword, boolean isAdmin) {
+    public User(long id, String name, String email, String hashedPassword, boolean isAdmin) {
         this.id = id;
         this.name = name;
-        this.eMail = eMail;
+        this.email = email;
         this.hashedPassword = hashedPassword;
         this.isAdmin = isAdmin;
     }
 
-    public User(long id, String name, String eMail, boolean isAdmin) {
+    public User(long id, String name, String email, boolean isAdmin) {
         this.id = id;
         this.name = name;
-        this.eMail = eMail;
+        this.email = email;
         this.isAdmin = isAdmin;
     }
 
@@ -53,11 +53,11 @@ public class User {
     }
 
     public String geteMail() {
-        return eMail;
+        return email;
     }
 
-    public void seteMail(String eMail) {
-        this.eMail = eMail;
+    public void seteMail(String email) {
+        this.email = email;
     }
 
     public boolean isAdmin() {
@@ -71,4 +71,5 @@ public class User {
     public boolean validateEncodedPassword(String given) {
         return hashedPassword.equals(given);
     }
+
 }

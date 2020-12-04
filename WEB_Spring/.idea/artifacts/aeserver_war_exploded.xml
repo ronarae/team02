@@ -71,6 +71,9 @@
           <element id="library" level="project" name="Maven: jakarta.activation:jakarta.activation-api:1.2.2" />
           <element id="library" level="project" name="Maven: org.springframework:spring-core:5.2.9.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-jcl:5.2.9.RELEASE" />
+          <element id="library" level="project" name="Maven: io.jsonwebtoken:jjwt-api:0.10.7" />
+          <element id="library" level="project" name="Maven: io.jsonwebtoken:jjwt-impl:0.10.7" />
+          <element id="library" level="project" name="Maven: io.jsonwebtoken:jjwt-jackson:0.10.7" />
         </element>
       </element>
       <element id="directory" name="META-INF">
