@@ -1,0 +1,29 @@
+<header>
+  <div class="container-fluid">
+    <div class="row header-wrapper">
+
+      <div class="col-4 logo1">
+        <img src="assets/Images/logo1.png"> <br><br>
+        <p class="tagLine">Date: {{today}}</p>
+      </div>
+
+      <div class="col-4 title">
+        <h1>{{websiteTitle}}</h1><br>
+      </div>
+
+      <div class="col-4 logo2">
+        <img src="assets/Images/logo2.png"><br><br>
+        <p class="tagLine">Explore the beautiful Amsterdam with us!</p>
+      </div>
+    </div>
+  </div>
+
+  <ng-template [ngIf]="!sessionService.isAuthenticated()">
+    <a class="nav-item" routerLinkActive="highlight"
+       routerLink="/register">Register</a>
+    <a class="nav-item" routerLinkActive="highlight"
+       routerLink="/login" [queryParams]="{returnUrl: '/aevents/overview/1'}">Log in</a>
+  </ng-template>
+  <a class="nav-item" *ngIf="sessionService.isAuthenticated()"
+     routerLink="/home" (click)="sessionService.signOff()">Log out</a>
+</header>

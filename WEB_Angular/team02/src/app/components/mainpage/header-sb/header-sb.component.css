@@ -1,0 +1,25 @@
+header-sb{
+  background-color: floralwhite;
+}
+
+.logo1 img, .logo2 img{
+  height: 50px;
+  width: auto;
+}
+
+.logo2{
+  text-align: right;
+}
+
+.header-wrapper{
+  padding: 1rem;
+}
+
+.title {
+  font-family: 'Marko One', serif;
+}
+
+.tagLine {
+  font-family: 'Pacifico', cursive;
+
+}

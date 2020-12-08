@@ -2,7 +2,6 @@ import {Injectable} from '@angular/core';
 import {AEvent} from '../models/a-event';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from "rxjs";
-import {map} from "rxjs/operators";
 
 
 @Injectable({

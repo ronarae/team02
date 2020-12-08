@@ -77,17 +77,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.AeserverApplication (1)">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="E2E Tests (team02)" type="JavaScriptTestRunnerProtractor">
       <config-file value="$PROJECT_DIR$/team02/team02/e2e/protractor.conf.js" />
       <node-interpreter value="project" />
@@ -195,7 +184,10 @@
       <workItem from="1607092780344" duration="2055000" />
       <workItem from="1607171382055" duration="2829000" />
       <workItem from="1607271490941" duration="2120000" />
-      <workItem from="1607429749749" duration="3537000" />
+      <workItem from="1607429749749" duration="4303000" />
+      <workItem from="1607434105746" duration="77000" />
+      <workItem from="1607435852226" duration="302000" />
+      <workItem from="1607436361925" duration="13000" />
     </task>
     <servers />
   </component>
