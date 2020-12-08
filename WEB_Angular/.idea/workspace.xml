@@ -4,9 +4,8 @@
     <list default="true" id="5a5f0986-22c8-49cc-b861-4e0ff5ccc638" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WEB_Spring/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WEB_Spring/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WEB_Spring/aeserver/src/main/java/nl/team02/amsterdamevents/aeserver/models/AEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/../WEB_Spring/aeserver/src/main/java/nl/team02/amsterdamevents/aeserver/models/AEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WEB_Spring/aeserver/src/main/java/nl/team02/amsterdamevents/aeserver/models/Registration.java" beforeDir="false" afterPath="$PROJECT_DIR$/../WEB_Spring/aeserver/src/main/java/nl/team02/amsterdamevents/aeserver/models/Registration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WEB_Spring/aeserver/src/main/java/nl/team02/amsterdamevents/aeserver/repositories/RegistrationsRepositoryJpa.java" beforeDir="false" afterPath="$PROJECT_DIR$/../WEB_Spring/aeserver/src/main/java/nl/team02/amsterdamevents/aeserver/repositories/RegistrationsRepositoryJpa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WEB_Spring/aeserver/src/main/java/nl/team02/amsterdamevents/aeserver/resource/security/JWToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/../WEB_Spring/aeserver/src/main/java/nl/team02/amsterdamevents/aeserver/resource/security/JWToken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WEB_Spring/aeserver/src/main/java/nl/team02/amsterdamevents/aeserver/rest/AuthenticateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../WEB_Spring/aeserver/src/main/java/nl/team02/amsterdamevents/aeserver/rest/AuthenticateController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +56,7 @@
     <property name="nodejs.protractor.protractor_package" value="$PROJECT_DIR$/team02/node_modules/protractor" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-    <property name="ts.external.directory.path" value="D:\IntelliJ IDEA 2019.2.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="ts.external.directory.path" value="C:\Users\xshan\Documents\ICT Jaar 2\Web Frameworks\team02\WEB_Angular\team02\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -139,6 +138,8 @@
       <workItem from="1604931032840" duration="314000" />
       <workItem from="1605282555071" duration="4305000" />
       <workItem from="1605903921090" duration="1308000" />
+      <workItem from="1607271512157" duration="644000" />
+      <workItem from="1607278814238" duration="656000" />
     </task>
     <servers />
   </component>

@@ -53,11 +53,10 @@ public class JWToken {
             Key key  = getKey(passPhrase);
             Jws<Claims> jws = Jwts.parser().setSigningKey(key).parseClaimsJws(token);
             Claims claims = jws.getBody();
-
             JWToken jwToken = new JWToken(
-                    claims.get(JWT_USERNAME_CLAIM).toString(),
-                    Long.valueOf(claims.get(JWT_USERID_CLAIM).toString()),
-                    (boolean) claims.get(JWT_ADMIN_CLAIM)
+                    claims.get("iss").toString(),
+                    Long.valueOf(claims.get("iat").toString()),
+                    (boolean) claims.get("admin")
             );
 
             return jwToken;

@@ -65,13 +65,6 @@ public class AuthenticateController {
 
         String tokenString = jwToken.encode(issuer,passPhrase,tokenDurationOfValidity);
 
-//        if (nameInMail == email) {
-//            return ResponseEntity.accepted()
-//                    .header(HttpHeaders.AUTHORIZATION, "Bearer " + tokenString)
-//                    .body(user);
-//        }
-//        return null;
-
         return ResponseEntity.accepted()
                     .header(HttpHeaders.AUTHORIZATION, "Bearer " + tokenString)
                     .body(new User(1, nameInMail, email, false));

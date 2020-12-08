@@ -1,6 +1,7 @@
 package nl.team02.amsterdamevents.aeserver.resource.security;
 
 import nl.team02.amsterdamevents.aeserver.resource.exception.AuthenticationException;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Component;
@@ -22,6 +23,7 @@ public class JWTRequestFilter extends OncePerRequestFilter {
     private static final Set<String> SECURED_PATHS =
             Set.of("/aevents", "registrations", "/users");
 
+    @Value("${jwt.pass-phrase: This is very secret information for my private company @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@}")
     private String passPhrase;
 
     @Override
