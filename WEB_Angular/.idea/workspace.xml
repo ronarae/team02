@@ -2,26 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a5f0986-22c8-49cc-b861-4e0ff5ccc638" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/team02/src/app/models/user.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/team02/src/app/models/user.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/team02/src/app/sbheader/sbheader.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/team02/src/app/sbheader/sbheader.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/team02/src/app/sbheader/sbheader.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/team02/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/team02/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/team02/src/app/components/mainpage/header-sb/header-sb.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/team02/src/app/components/mainpage/header-sb/header-sb.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/team02/src/app/components/mainpage/header-sb/header-sb.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/team02/src/app/sbheader/sbheader.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/team02/src/app/components/mainpage/header-sb/header-sb.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/team02/src/app/components/mainpage/sign-on/sign-on.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/team02/src/app/components/mainpage/sign-on/sign-on.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/team02/src/app/components/mainpage/sign-on/sign-on.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/team02/src/app/components/mainpage/sign-on/sign-on.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/team02/src/app/services/session.sb.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/team02/src/app/services/session.sb.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WEB_Spring/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WEB_Spring/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/team02/src/app/components/mainpage/sbheader/sbheader.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/team02/src/app/components/mainpage/sbheader/sbheader.component.html" afterDir="false" />
     </list>
-    <list id="164baf24-2bf5-4ed9-bf26-ded0264e7686" name="Changes by ronar" comment="">
-      <change beforePath="$PROJECT_DIR$/team02/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/team02/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/team02/src/app/services/session.sb.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/team02/src/app/services/session.sb.service.ts" afterDir="false" />
-    </list>
+    <list id="164baf24-2bf5-4ed9-bf26-ded0264e7686" name="Changes by ronar" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -67,11 +51,11 @@
     </file>
     <file path="$PROJECT_DIR$/team02/src/app/app.module.ts">
       <ranges>
-        <range start1="9" end1="10" start2="9" end2="10" changelist="5a5f0986-22c8-49cc-b861-4e0ff5ccc638" />
-        <range start1="21" end1="24" start2="21" end2="24" changelist="164baf24-2bf5-4ed9-bf26-ded0264e7686" />
-        <range start1="29" end1="29" start2="29" end2="30" changelist="164baf24-2bf5-4ed9-bf26-ded0264e7686" />
-        <range start1="62" end1="63" start2="63" end2="64" changelist="164baf24-2bf5-4ed9-bf26-ded0264e7686" />
-        <range start1="76" end1="76" start2="77" end2="78" changelist="164baf24-2bf5-4ed9-bf26-ded0264e7686" />
+        <range start1="9" end1="10" start2="9" end2="9" changelist="5a5f0986-22c8-49cc-b861-4e0ff5ccc638" />
+        <range start1="21" end1="24" start2="20" end2="23" changelist="164baf24-2bf5-4ed9-bf26-ded0264e7686" />
+        <range start1="29" end1="29" start2="28" end2="29" changelist="164baf24-2bf5-4ed9-bf26-ded0264e7686" />
+        <range start1="62" end1="63" start2="62" end2="62" changelist="164baf24-2bf5-4ed9-bf26-ded0264e7686" />
+        <range start1="76" end1="76" start2="75" end2="76" changelist="164baf24-2bf5-4ed9-bf26-ded0264e7686" />
       </ranges>
     </file>
   </component>
@@ -200,7 +184,7 @@
       <workItem from="1607519103698" duration="2241000" />
       <workItem from="1607521527187" duration="1514000" />
       <workItem from="1607599500530" duration="34000" />
-      <workItem from="1607600418086" duration="5308000" />
+      <workItem from="1607600418086" duration="6401000" />
     </task>
     <servers />
   </component>
