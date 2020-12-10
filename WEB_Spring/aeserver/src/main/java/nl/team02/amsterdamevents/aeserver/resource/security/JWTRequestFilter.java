@@ -1,6 +1,7 @@
 package nl.team02.amsterdamevents.aeserver.resource.security;
 
 import nl.team02.amsterdamevents.aeserver.resource.exception.AuthenticationException;
+import org.apache.catalina.filters.ExpiresFilter;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -28,41 +29,42 @@ public class JWTRequestFilter extends OncePerRequestFilter {
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
+        try {
+            String servletPath = request.getServletPath();
 
-        String servletPath = request.getServletPath();
+            if (HttpMethod.OPTIONS.matches(request.getMethod()) ||
+                    SECURED_PATHS.stream().noneMatch(servletPath::startsWith)) {
+                filterChain.doFilter(request, response);
+                return;
+            }
 
-        if (HttpMethod.OPTIONS.matches(request.getMethod()) ||
-        SECURED_PATHS.stream().noneMatch(servletPath::startsWith)) {
+            JWToken jwToken = null;
+            String encryptedToken = null;
+
+            //get encripted token string from authorization request header
+            encryptedToken = request.getHeader(HttpHeaders.AUTHORIZATION);
+
+            if (encryptedToken != null) {
+                // remove bearer token prefix if used
+                encryptedToken = encryptedToken.replace("Bearer ", "");
+
+                //decode token
+                jwToken = JWToken.decode(encryptedToken, this.passPhrase);
+            }
+
+            //validate the token
+            if (jwToken == null) {
+                throw new AuthenticationException("You need to login first");
+            }
+
+            // pass-on the token info as an attribute for the request
+            request.setAttribute(JWToken.JWT_ATTRIBUTE_NAME, jwToken);
             filterChain.doFilter(request, response);
-            return;
+
+        } catch (AuthenticationException exception) {
+            response.sendError(response.SC_UNAUTHORIZED, "Authentication error");
         }
-
-        JWToken jwToken = null;
-        String encryptedToken = null;
-
-        //get encripted token string from authorization request header
-        encryptedToken = request.getHeader(HttpHeaders.AUTHORIZATION);
-
-        if (encryptedToken != null){
-            // remove bearer token prefix if used
-            encryptedToken = encryptedToken.replace("Bearer ", "");
-
-            //decode token
-            jwToken = JWToken.decode(encryptedToken, this.passPhrase);
-        }
-
-        //validate the token
-        if(jwToken == null){
-            throw new AuthenticationException("You need to login first");
-        }
-
-        // pass-on the token info as an attribute for the request
-        request.setAttribute(JWToken.JWT_ATTRIBUTE_NAME,jwToken);
-
-        filterChain.doFilter(request, response);
     }
-
-
 
 
 }
