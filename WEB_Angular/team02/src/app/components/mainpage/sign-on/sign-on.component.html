@@ -1,11 +1,37 @@
-<div class="container">
-  <div class="row">
-    <form (ngSubmit)="onSignIn()">
-      <input type="email"
-             [(ngModel)]="userMail">
-      <input type="password"
-             [(ngModel)]="userPassword">
-      <button type="submit" value="Login">LOGIN</button>
-    </form>
-  </div>
-</div>
+<form class="spaced" #editForm="ngForm" (ngSubmit)="onSignIn()">
+  <table class="validate qform">
+    <tr>
+      <td>Email:</td>
+      <td>
+      <input name="email" type="text" required
+             (keydown.enter)="$event.preventDefault()"
+             [(ngModel)]="userEmail">
+      </td>
+    </tr>
+    <tr>
+      <td>Password:</td>
+      <td>
+        <input ngModel name="password" type="password"
+        required minlength="6"
+               [(ngModel)]="userPassword">>
+      </td>
+    </tr>
+  </table>
+  <button type="submit" class="qbutton" [disabled]="!editForm.valid">Log on</button>
+  <p class="error message" *ngIf="!editForm.valid">
+    <br>Please fix the input errors in the highlighted fields</p>
+</form>
+
+
+
+<!--<div class="container">-->
+<!--  <div class="row">-->
+<!--    <form (ngSubmit)="onSignIn()">-->
+<!--      <input type="email"-->
+<!--             [(ngModel)]="userMail">-->
+<!--      <input type="password"-->
+<!--             [(ngModel)]="userPassword">-->
+<!--      <button type="submit" value="Login">LOGIN</button>-->
+<!--    </form>-->
+<!--  </div>-->
+<!--</div>-->

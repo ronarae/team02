@@ -3,20 +3,21 @@ import {HttpClient, HttpResponse} from "@angular/common/http";
 import {shareReplay} from "rxjs/operators";
 import {Router} from "@angular/router";
 import {environment} from "../../environments/environment";
-
-
+import {User} from "../models/user";
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class SessionSbService {
-  public readonly REST_BASE_URL = environment.BACKEND_URL;
+  //public readonly REST_BASE_URL = environment.BACKEND_URL;
 
-  private readonly BS_TOKEN_NAME = "AE_SB_AUTH_TOKEN";
+  public readonly BACKEND_AUTH_URL = "http://localost:8080/authenticate"; //not sure if is 8080 or 8084
+
+  public readonly BS_TOKEN_NAME = "AE_SB_AUTH_TOKEN";
   public currentUserName: string = null;
 
-  constructor(private http: HttpClient, private router: Router) {
+  constructor(public http: HttpClient, public router: Router) {
     this.getTokenFromSessionStorage();
   }
 
@@ -24,13 +25,12 @@ export class SessionSbService {
     return this.currentUserName != null;
   }
 
-
   signIn(eMail: string, password: string, targetUrl?: string){
     console.log("login " + eMail + "/" + password);
     let signInResponse =
-      this.http.post(HttpResponse<User>>(this.BACKEND_AUTH_URL + "authenticate/login",
-        {eMail: email, passWord: password},
-        {observe: "response"}).pipe(shareReplay(1)));
+      this.http.post <HttpResponse<User>>(this.BACKEND_AUTH_URL + "authenticate/login",
+        {eMail: eMail, passWord: password},
+        {observe: "response"}).pipe(shareReplay(1));
 
     signInResponse
       .subscribe(

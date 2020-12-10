@@ -3,19 +3,20 @@ import {SessionSbService} from "../../../services/session.sb.service";
 import {ActivatedRoute} from "@angular/router";
 import {NgForm} from "@angular/forms";
 
+
 @Component({
-  selector: 'app-header',
-  templateUrl: './header-sb.component.html',
-  styleUrls: ['./header-sb.component.css']
+  selector: 'app-sbheader',
+  templateUrl: './sbheader.component.html',
+  styleUrls: ['./sbheader.component.css']
 })
-export class HeaderSBComponent implements OnInit {
+export class SbheaderComponent implements OnInit {
   websiteTitle = 'Amsterdam Events';
   todayDate;
 
   private targetURL;
 
-  constructor(private sessionService: SessionSbService,
-              private activatedRoute: ActivatedRoute) {
+  constructor(public sessionService: SessionSbService,
+              public activatedRoute: ActivatedRoute) {
     //get target URL from route parameters or default to '/'
     this.targetURL = this.activatedRoute.snapshot.queryParams['targetURL'] || '/home';
 
@@ -32,14 +33,15 @@ export class HeaderSBComponent implements OnInit {
   }
 
   @ViewChild('editForm')
-   private detailForm: NgForm;
-  private userMail: string;
-  private userPassword: string;
+  public detailForm: NgForm;
+  public userMail: string;
+  public userPassword: string;
 
-  private onSignIn() {
+  public onSignIn() {
     this.sessionService.signIn(
       this.userMail, this.userPassword
     )
   }
 
 }
+

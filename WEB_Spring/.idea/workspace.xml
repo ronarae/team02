@@ -26,13 +26,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="D:\IntelliJ IDEA 2019.2.1\plugins\maven\lib\maven3" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
   <component name="ProjectId" id="1gxTwxYciUQ6gU8tAGVzyzleSTx" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -197,7 +190,8 @@
       <workItem from="1607436361925" duration="13000" />
       <workItem from="1607518921100" duration="83000" />
       <workItem from="1607521368761" duration="155000" />
-      <workItem from="1607599538998" duration="297000" />
+      <workItem from="1607599538998" duration="1052000" />
+      <workItem from="1607602647739" duration="254000" />
     </task>
     <servers />
   </component>
