@@ -35,12 +35,22 @@
           </li>
         </ul>
         <ul class="navbar-nav">
-          <li class="nav-item">
-            <a routerLink="signup" class="nav-link" >Sign up</a>
-          </li>
-          <li class="nav-item">
-            <a routerLink="login" class="nav-link" >Log in</a>
-          </li>
+          <ng-template [ngIf]="!sessionService.isAuthenticated()">
+            <li class="nav-item">
+             <a class="nav-link" routerLinkActive="highlight"
+                routerLink="/register">Sign up
+             </a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" routerLinkActive="highlight"
+               routerLink="/login" [queryParams]="{returnUrl: '/aevents/overview/1'}">Log in
+            </a>
+            </li>
+          </ng-template>
+            <li class="nav-item">
+              <a class="nav-item" *ngIf="sessionService.isAuthenticated()"
+                 routerLink="/home" (click)="sessionService.signOff()">Log out</a>
+            </li>
         </ul>
       </div>
     </nav>

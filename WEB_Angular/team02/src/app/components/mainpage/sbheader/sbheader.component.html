@@ -13,7 +13,7 @@
 
       <div class="col-4 logo2">
         <img src="assets/Images/logo2.png"><br><br>
-        <p class="tagLine">Explore the beautiful Amsterdam with us!</p>
+        <p class="tagLine">Explore the beautiful Amsterdam with us!</p><br>
       </div>
       <table>
         <tr>
@@ -22,13 +22,4 @@
       </table>
     </div>
   </div>
-
-  <ng-template [ngIf]="!sessionService.isAuthenticated()">
-    <a class="nav-item" routerLinkActive="highlight"
-       routerLink="/register">Register</a>
-    <a class="nav-item" routerLinkActive="highlight"
-       routerLink="/login" [queryParams]="{returnUrl: '/aevents/overview/1'}">Log in</a>
-  </ng-template>
-  <a class="nav-item" *ngIf="sessionService.isAuthenticated()"
-     routerLink="/home" (click)="sessionService.signOff()">Log out</a>
 </header>
