@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {SessionSbService} from "../../../services/session.sb.service";
 
 @Component({
   selector: 'app-error',

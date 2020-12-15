@@ -3,13 +3,22 @@
   <component name="ChangeListManager">
     <list default="true" id="5a5f0986-22c8-49cc-b861-4e0ff5ccc638" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/team02/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/team02/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/team02/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/team02/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/team02/src/app/components/mainpage/nav-bar/nav-bar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/team02/src/app/components/mainpage/nav-bar/nav-bar.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/team02/src/app/components/mainpage/nav-bar/nav-bar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/team02/src/app/components/mainpage/nav-bar/nav-bar.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/team02/src/app/components/mainpage/sbheader/sbheader.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/team02/src/app/components/mainpage/sbheader/sbheader.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/team02/src/app/components/mainpage/sbheader/sbheader.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/team02/src/app/components/mainpage/sbheader/sbheader.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/team02/src/app/components/mainpage/sign-on/sign-on.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/team02/src/app/components/mainpage/sign-on/sign-on.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/team02/src/app/components/mainpage/sign-on/sign-on.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/team02/src/app/components/mainpage/sign-on/sign-on.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/team02/src/app/services/session.sb.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/team02/src/app/services/session.sb.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WEB_Spring/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WEB_Spring/.idea/workspace.xml" afterDir="false" />
     </list>
-    <list id="164baf24-2bf5-4ed9-bf26-ded0264e7686" name="Changes by ronar" comment="" />
+    <list id="164baf24-2bf5-4ed9-bf26-ded0264e7686" name="Changes by ronar" comment="">
+      <change beforePath="$PROJECT_DIR$/team02/src/app/components/mainpage/error/error.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/team02/src/app/components/mainpage/error/error.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/team02/src/app/components/mainpage/nav-bar/nav-bar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/team02/src/app/components/mainpage/nav-bar/nav-bar.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/team02/src/app/components/mainpage/nav-bar/nav-bar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/team02/src/app/components/mainpage/nav-bar/nav-bar.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/team02/src/app/components/mainpage/sign-on/sign-on.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/team02/src/app/components/mainpage/sign-on/sign-on.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/team02/src/app/components/mainpage/sign-on/sign-on.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/team02/src/app/components/mainpage/sign-on/sign-on.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/team02/src/app/services/session.sb.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/team02/src/app/services/session.sb.service.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,6 +51,40 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/team02/src/app/components/mainpage/sign-on/sign-on.component.html">
+      <ranges>
+        <range start1="0" end1="25" start2="0" end2="11" changelist="5a5f0986-22c8-49cc-b861-4e0ff5ccc638" />
+        <range start1="26" end1="37" start2="12" end2="35" changelist="164baf24-2bf5-4ed9-bf26-ded0264e7686" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/team02/src/app/components/mainpage/nav-bar/nav-bar.component.html">
+      <ranges>
+        <range start1="43" end1="47" start2="43" end2="48" changelist="164baf24-2bf5-4ed9-bf26-ded0264e7686" />
+        <range start1="50" end1="51" start2="51" end2="52" changelist="5a5f0986-22c8-49cc-b861-4e0ff5ccc638" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/team02/src/app/components/mainpage/sign-on/sign-on.component.ts">
+      <ranges>
+        <range start1="2" end1="3" start2="2" end2="3" changelist="164baf24-2bf5-4ed9-bf26-ded0264e7686" />
+        <range start1="4" end1="4" start2="4" end2="5" changelist="164baf24-2bf5-4ed9-bf26-ded0264e7686" />
+        <range start1="13" end1="13" start2="14" end2="18" changelist="164baf24-2bf5-4ed9-bf26-ded0264e7686" />
+        <range start1="15" end1="16" start2="20" end2="22" changelist="164baf24-2bf5-4ed9-bf26-ded0264e7686" />
+        <range start1="21" end1="23" start2="27" end2="28" changelist="164baf24-2bf5-4ed9-bf26-ded0264e7686" />
+        <range start1="26" end1="28" start2="31" end2="39" changelist="5a5f0986-22c8-49cc-b861-4e0ff5ccc638" />
+        <range start1="29" end1="33" start2="40" end2="48" changelist="164baf24-2bf5-4ed9-bf26-ded0264e7686" />
+        <range start1="34" end1="34" start2="49" end2="53" changelist="164baf24-2bf5-4ed9-bf26-ded0264e7686" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/team02/src/app/services/session.sb.service.ts">
+      <ranges>
+        <range start1="14" end1="15" start2="14" end2="15" changelist="164baf24-2bf5-4ed9-bf26-ded0264e7686" />
+        <range start1="30" end1="31" start2="30" end2="31" changelist="5a5f0986-22c8-49cc-b861-4e0ff5ccc638" />
+        <range start1="40" end1="42" start2="40" end2="42" changelist="5a5f0986-22c8-49cc-b861-4e0ff5ccc638" />
+        <range start1="53" end1="54" start2="53" end2="54" changelist="5a5f0986-22c8-49cc-b861-4e0ff5ccc638" />
+      </ranges>
+    </file>
+  </component>
   <component name="ProjectId" id="1gzcejVudy95XlM8RCELl64FGBT" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -57,7 +100,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../WEB_Spring" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -66,7 +109,7 @@
     <property name="nodejs.protractor.protractor_package" value="$PROJECT_DIR$/team02/node_modules/protractor" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-    <property name="ts.external.directory.path" value="D:\Software Engineering\Sy2020-2021\WebFrameworks\team02\WEB_Angular\team02\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="C:\Users\xshan\Documents\ICT Jaar 2\Web Frameworks\team02\WEB_Angular\team02\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -156,9 +199,13 @@
       <workItem from="1607519103698" duration="2241000" />
       <workItem from="1607521527187" duration="1514000" />
       <workItem from="1607599500530" duration="34000" />
-      <workItem from="1607600418086" duration="6401000" />
-      <workItem from="1607633905834" duration="1850000" />
-      <workItem from="1607804105518" duration="2332000" />
+      <workItem from="1607600418086" duration="6581000" />
+      <workItem from="1607628639974" duration="51000" />
+      <workItem from="1607694434666" duration="680000" />
+      <workItem from="1607698923757" duration="135000" />
+      <workItem from="1607948702837" duration="916000" />
+      <workItem from="1607950313241" duration="2312000" />
+      <workItem from="1608023687447" duration="10080000" />
     </task>
     <servers />
   </component>
@@ -174,11 +221,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1607633960138">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1607633960138" />
   </component>
 </project>

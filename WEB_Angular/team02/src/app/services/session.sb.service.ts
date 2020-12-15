@@ -12,7 +12,7 @@ import {User} from "../models/user";
 export class SessionSbService {
   //public readonly REST_BASE_URL = environment.BACKEND_URL;
 
-  public readonly BACKEND_AUTH_URL = "http://localost:8080/authenticate"; //not sure if is 8080 or 8084
+  public readonly BACKEND_AUTH_URL = "http://localhost:8080/authenticate"; //not sure if is 8080 or 8084
 
   public readonly BS_TOKEN_NAME = "AE_SB_AUTH_TOKEN";
   public currentUserName: string = null;
@@ -28,7 +28,7 @@ export class SessionSbService {
   signIn(eMail: string, password: string, targetUrl?: string){
     console.log("login " + eMail + "/" + password);
     let signInResponse =
-      this.http.post <HttpResponse<User>>(this.BACKEND_AUTH_URL + "authenticate/login",
+      this.http.post <HttpResponse<User>>(this.BACKEND_AUTH_URL + "/login",
         {eMail: eMail, passWord: password},
         {observe: "response"}).pipe(shareReplay(1));
 
@@ -38,8 +38,8 @@ export class SessionSbService {
         console.log(response);
         this.saveTokenIntoSessionStorage(
           response.headers.get('Authorization'),
-          ((response.body as unknown as User).name
-          ));
+          (response.body as unknown as User).name
+          );
          this.router.navigate([targetUrl || '/']);
       },
       error => {
@@ -51,7 +51,7 @@ export class SessionSbService {
     return signInResponse;
   }
 
-  signOff() {
+  signOff(): void{
     this.saveTokenIntoSessionStorage(null, null);
   }
 

@@ -13,4 +13,7 @@ export class NavBarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  isAuthenticated():boolean {
+    return this.sessionService.isAuthenticated();
+  }
 }

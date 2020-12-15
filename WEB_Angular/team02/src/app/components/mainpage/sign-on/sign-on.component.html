@@ -1,37 +1,35 @@
-<form class="spaced" #editForm="ngForm" (ngSubmit)="onSignIn()">
-  <table class="validate qform">
-    <tr>
-      <td>Email:</td>
-      <td>
-      <input name="email" type="text" required
-             (keydown.enter)="$event.preventDefault()"
-             [(ngModel)]="userEmail">
-      </td>
-    </tr>
-    <tr>
-      <td>Password:</td>
-      <td>
-        <input ngModel name="password" type="password"
-        required minlength="6"
-               [(ngModel)]="userPassword">>
-      </td>
-    </tr>
-  </table>
-  <button type="submit" class="qbutton" [disabled]="!editForm.valid">Log on</button>
-  <p class="error message" *ngIf="!editForm.valid">
-    <br>Please fix the input errors in the highlighted fields</p>
-</form>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <form #editForm="ngForm" (ngSubmit)="onSignIn()">
+        <div class="form-group">
+          <label for="inputEmail">Email: </label>
+            <input type="email" class="form-control" id="inputEmail"
+                   name="email" [(ngModel)]="user.email" required email #emailComponent="ngModel">
+          <div *ngIf="!emailComponent.valid && emailComponent.touched" class="alert alalert-warning">
+            Please enter valid email
+          </div>
 
+          <div class="form-group">
+            <label for="inputPassword">Password: </label>
+              <input type="password" class="form-control" [(ngModel)]="user.password" id="inputPassword"
+                     name="password" #passwordComponent="ngModel" required>
+            <div *ngIf="!passwordComponent.valid && passwordComponent.touched" class="alert alalert-warning">
+              Please enter valid password
+            </div>
+            <button type="submit" class="btn btn-primary" [disabled]="!editForm.valid">Log on</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="col-sm-3">
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col">
+        <p class="error message" *ngIf="errorMessage"> {{errorMessage}}</p>
+      </div>
+    </div>
+  </div>
+</div>
 
-
-<!--<div class="container">-->
-<!--  <div class="row">-->
-<!--    <form (ngSubmit)="onSignIn()">-->
-<!--      <input type="email"-->
-<!--             [(ngModel)]="userMail">-->
-<!--      <input type="password"-->
-<!--             [(ngModel)]="userPassword">-->
-<!--      <button type="submit" value="Login">LOGIN</button>-->
-<!--    </form>-->
-<!--  </div>-->
-<!--</div>-->

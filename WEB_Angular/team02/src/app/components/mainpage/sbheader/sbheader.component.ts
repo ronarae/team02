@@ -32,6 +32,14 @@ export class SbheaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  logOut(): void {
+    this.sessionService.signOff();
+  }
+
+  isLoggedIn(): boolean {
+    return this.sessionService.isAuthenticated();
+  }
+
   @ViewChild('editForm')
   public detailForm: NgForm;
   public userMail: string;

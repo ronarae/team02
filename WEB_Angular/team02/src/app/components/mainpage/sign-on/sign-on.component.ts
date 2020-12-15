@@ -1,7 +1,8 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {SessionSbService} from "../../../services/session.sb.service";
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router, Params} from "@angular/router";
 import {NgForm} from "@angular/forms";
+import {User} from "../../../models/user";
 
 @Component({
   selector: 'app-sign-on',
@@ -12,24 +13,42 @@ export class SignOnComponent implements OnInit {
 
   private targetUrl;
 
+  user: User;
+  expectedUrl: string;
+  errorMessage: string;
+
   constructor(private sessionService: SessionSbService,
-              private activatedRoute: ActivatedRoute) {
+              private activatedRoute: ActivatedRoute,
+              private router: Router) {
     //get target url from route param or default to '/'
     this.targetUrl = this.activatedRoute.snapshot.queryParams['targetUrl'] || 'home';
   }
 
 
-  ngOnInit() {
-  }
+  ngOnInit(){}
 
   @ViewChild('editForm')
   public detailForm: NgForm
-  public userEmail: string;
-  public userPassword: string;
 
-  public onSignIn(){
-    this.sessionService.signIn(
-      this.userEmail, this.userPassword
-    );
+  logOut(): void {
+    this.sessionService.signOff();
   }
+
+  isAuthenticated(): boolean {
+    return this.sessionService.isAuthenticated();
+  }
+
+
+  public onSignIn(): void {
+    this.sessionService.signIn(this.user.email, this.user.password).subscribe((data) => {
+      this.router.navigate([this.expectedUrl]);
+    },
+      (error) => {
+        this.errorMessage = error.error.message || 'Apparently your server is down: ' + error.message;
+      });
+  }
+
+
+
+
 }
